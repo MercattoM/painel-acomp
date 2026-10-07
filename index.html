@@ -217,11 +217,11 @@ footer{margin-top:28px;display:flex;justify-content:space-between;gap:12px;flex-
     </section>
   </div>
 
-  <footer><span>Mercatto · Sempre conectada a você</span><span>Gerado em 07/10/2026 às 15:56 · base completa · v5 - BANCO DIGIMAIS I A IV / V E VI</span></footer>
+  <footer><span>Mercatto · Sempre conectada a você</span><span>Gerado em 07/10/2026 às 16:09 · base completa · v6 - BANCO DIGIMAIS I A IV / V E VI</span></footer>
 </main>
 
 <script>
-const D = {"carteiras": [{"nome": "BANCO DIGIMAIS V E VI", "a": 0, "w": 62, "n": 2}, {"nome": "BANCO DIGIMAIS I A IV", "a": 0, "w": 2, "n": 0}, {"nome": "HATIKVAH JURÍDICO", "a": 0, "w": 0, "n": 0}, {"nome": "HATIKVAH", "a": 0, "w": 0, "n": 0}, {"nome": "SIMPALA", "a": 0, "w": 0, "n": 0}, {"nome": "INNOVA", "a": 0, "w": 0, "n": 0}], "ops": {}, "opoc": {}, "oc": {"BANCO DIGIMAIS I A IV": [{"cod": "77", "desc": "ENVIO/CONTATO WHATSAPP", "tipo": "SEM CONTATO", "q": 1}], "BANCO DIGIMAIS V E VI": [{"cod": "53", "desc": "MUDO/CAIU LIGAÇÃO", "tipo": "SEM CONTATO", "q": 32}, {"cod": "77", "desc": "ENVIO/CONTATO WHATSAPP", "tipo": "SEM CONTATO", "q": 16}, {"cod": "52", "desc": "NÃO ATENDE", "tipo": "SEM CONTATO", "q": 4}]}, "cron": [{"dia": "Segunda-feira", "itens": [{"label": "BANCO DIGIMAIS I A IV", "nomes": ["BANCO DIGIMAIS I A IV"], "env": 2}, {"label": "HATIKVAH JURÍDICO", "nomes": ["HATIKVAH JURÍDICO"], "env": 0}]}, {"dia": "Terça-feira", "itens": [{"label": "HATIKVAH", "nomes": ["HATIKVAH"], "env": 0}]}, {"dia": "Quarta-feira", "itens": [{"label": "BANCO DIGIMAIS V E VI", "nomes": ["BANCO DIGIMAIS V E VI"], "env": 64}]}, {"dia": "Quinta-feira", "itens": [{"label": "SIMPALA", "nomes": ["SIMPALA"], "env": 0}, {"label": "INNOVA", "nomes": ["INNOVA"], "env": 0}]}, {"dia": "Sexta-feira", "itens": [{"label": "BANCO DIGIMAIS V E VI", "nomes": ["BANCO DIGIMAIS V E VI"], "env": 64}]}], "hoje": 2};
+const D = {"carteiras": [{"nome": "HATIKVAH PARTICIPACOES LTDA", "a": 2, "w": 0, "n": 78}, {"nome": "BANCO DIGIMAIS V E VI", "a": 0, "w": 62, "n": 2}, {"nome": "BANCO DIGIMAIS I A IV", "a": 0, "w": 2, "n": 0}, {"nome": "HATIKVAH JURÍDICO", "a": 0, "w": 0, "n": 0}, {"nome": "SIMPALA", "a": 0, "w": 0, "n": 0}, {"nome": "INNOVA", "a": 0, "w": 0, "n": 0}], "ops": {"HATIKVAH PARTICIPACOES LTDA": {"BRUNA.CSANTOS": 4}}, "opoc": {"HATIKVAH PARTICIPACOES LTDA": {"BRUNA.CSANTOS": [{"cod": "77", "desc": "ENVIO/CONTATO WHATSAPP", "tipo": "SEM CONTATO", "q": 2}]}}, "oc": {"HATIKVAH PARTICIPACOES LTDA": [{"cod": "77", "desc": "ENVIO/CONTATO WHATSAPP", "tipo": "SEM CONTATO", "q": 1}]}, "cron": [{"dia": "Segunda-feira", "itens": [{"label": "BANCO DIGIMAIS I A IV", "nomes": ["BANCO DIGIMAIS I A IV"], "env": 2}, {"label": "HATIKVAH JURÍDICO", "nomes": ["HATIKVAH JURÍDICO"], "env": 0}]}, {"dia": "Terça-feira", "itens": [{"label": "HATIKVAH", "nomes": ["HATIKVAH PARTICIPACOES LTDA"], "env": 80}]}, {"dia": "Quarta-feira", "itens": [{"label": "BANCO DIGIMAIS V E VI", "nomes": ["BANCO DIGIMAIS V E VI"], "env": 64}]}, {"dia": "Quinta-feira", "itens": [{"label": "SIMPALA", "nomes": ["SIMPALA"], "env": 0}, {"label": "INNOVA", "nomes": ["INNOVA"], "env": 0}]}, {"dia": "Sexta-feira", "itens": [{"label": "BANCO DIGIMAIS V E VI", "nomes": ["BANCO DIGIMAIS V E VI"], "env": 64}]}], "hoje": 2};
 const TCOR = {"LOCALIZADO":"#12a77d","SEM CONTATO":"#6b7785","ADMINISTRATIVO":"#2d6fd0","PROMESSAS":"#d98a0b","OUTROS":"#8a5cc7"};
 const cor = t => TCOR[String(t||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toUpperCase()] || "#94a3b8";
 const cap = s => { s = String(s||"").toLowerCase(); return s.charAt(0).toUpperCase()+s.slice(1); };
@@ -311,16 +311,17 @@ function ocorrencias(){
   else (st.sel ? [st.sel] : Object.keys(D.oc)).forEach(c => (D.oc[c]||[]).forEach(add));
   let lista = Object.values(ag).sort((a,b) => b.q-a.q);
   $("tOc").textContent = "Ocorrências dos CPCs" + (u ? " · "+u : "");
-  $("limpaOp").hidden = !u; $("sOc").hidden = !u;
-  $("sOc").textContent = u ? "Ocorrência tabulada dos clientes acionados por "+u+(st.sel ? " em "+st.sel : "")+". Percentuais sobre os acionamentos dele." : "";
-  $("thPct").textContent = u ? "% do operador" : "% dos CPCs";
+  $("limpaOp").hidden = !u; $("sOc").hidden = false;
+  $("sOc").textContent = u ? "Ocorrência tabulada dos clientes acionados por "+u+(st.sel ? " em "+st.sel : "")+". Percentuais sobre os acionamentos dele."
+    : "Só os clientes acionados pelos operadores válidos de cada carteira.";
+  $("thPct").textContent = u ? "% do operador" : "% dos acionados";
   const porTipo = {}; lista.forEach(o => porTipo[o.tipo] = (porTipo[o.tipo]||0)+o.q);
   const tiposOrd = Object.entries(porTipo).sort((a,b) => b[1]-a[1]), soTipos = tiposOrd.reduce((s,[,q]) => s+q, 0);
   if(st.tipo && !(st.tipo in porTipo)) st.tipo = null;
   $("bTipos").innerHTML = tiposOrd.map(([t,q]) => `<span class="seg" style="width:${q/soTipos*100}%;background:${cor(t)}" title="${esc(cap(t))}: ${q}"></span>`).join("");
   $("tipos").innerHTML = tiposOrd.map(([t,q]) => `<button class="tp" style="--c:${cor(t)}" aria-pressed="${st.tipo===t}" data-t="${esc(t)}"><i></i>${esc(cap(t))} <b>${q}</b></button>`).join("");
   $("tipos").querySelectorAll("button").forEach(b => b.onclick = () => { st.tipo = st.tipo === b.dataset.t ? null : b.dataset.t; ocorrencias(); });
-  const q = st.qOc.trim().toLowerCase(), env = u ? lista.reduce((t,o) => t+o.q, 0) : soma("a")+soma("w")+soma("n");
+  const q = st.qOc.trim().toLowerCase(), env = u ? lista.reduce((t,o) => t+o.q, 0) : soma("a");
   if(st.tipo) lista = lista.filter(o => o.tipo === st.tipo);
   if(q) lista = lista.filter(o => (o.cod+" "+o.desc+" "+o.tipo).toLowerCase().includes(q));
   const max = lista.length ? lista[0].q : 1;
@@ -328,7 +329,7 @@ function ocorrencias(){
     <td><span class="chip" style="--c:${cor(o.tipo)}">${esc(cap(o.tipo))}</span></td><td class="c"><b class="num">${o.q}</b></td>
     <td class="c num">${env ? (o.q/env*100).toFixed(1).replace(".",",") : "0,0"}%</td>
     <td class="bar"><div class="band"><span class="seg" style="--c:${cor(o.tipo)};width:${o.q/max*100}%"></span></div></td></tr>`).join("")
-    || '<tr><td colspan="6" class="vazio">Sem ocorrências para mostrar.</td></tr>';
+    || `<tr><td colspan="6" class="vazio">${(q || st.tipo) ? "Nenhuma ocorrência encontrada para esta busca." : u ? "Sem ocorrência tabulada para este operador." : "Nenhum cliente foi acionado pelos operadores válidos neste filtro, então não há ocorrências para mostrar."}</td></tr>`;
 }
 
 function render(){ chips(); kpis(); cronograma(); carteiras(); operadores(); ocorrencias(); }
