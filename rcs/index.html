@@ -56,7 +56,9 @@ svg.chart{width:100%;height:auto;display:block;overflow:visible}
 .tw{overflow-x:auto;margin:0 -8px}
 table{width:100%;border-collapse:collapse;font-size:13px;min-width:560px}
 th{text-align:right;color:var(--muted);font-weight:600;font-size:12px;padding:8px 12px;border-bottom:1px solid var(--line);cursor:pointer;white-space:nowrap;user-select:none}
-th:first-child,td:first-child{text-align:left}
+th:first-child,td:first-child,th:nth-child(2),td:nth-child(2){text-align:left}td:first-child{min-width:260px}
+.tw{max-height:480px;overflow:auto}th{position:sticky;top:0;background:#fff;z-index:1}
+.mat{font-weight:620;color:var(--navy);word-break:break-word}.dt{margin-left:8px;font-size:11.5px;color:var(--muted);font-weight:500}
 td{text-align:right;padding:10px 12px;border-bottom:1px solid #eef2f7;font-variant-numeric:tabular-nums}
 tr:hover td{background:#f7fafd}
 .pill{display:inline-block;padding:2px 9px;border-radius:99px;font-size:11.5px;font-weight:650;background:#e5f6fc;color:#087fc0}
@@ -76,14 +78,12 @@ footer{padding:6px 0 34px;color:var(--muted);font-size:12px;display:flex;justify
   <div class="shell">
     <div class="top">
       <a class="back" href="../index.html"><svg viewBox="0 0 16 16" fill="none"><path d="M10 3 5 8l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Central Mercatto</a>
-      <span class="live"><i></i><span id="upd">Atualizado com os dados do relatório</span></span>
+      <span class="live"><i></i><span id="upd">Carregando dados…</span></span>
     </div>
     <div class="head">
       <div><h1>Painel RCS</h1><p>Envios, custo, carteiras e dias de disparo em uma única visão.</p></div>
       <div class="ctrls">
         <select id="fc" aria-label="Filtrar por carteira"></select>
-        <button class="btn" id="up" type="button">Carregar CSV</button>
-        <input type="file" id="file" accept=".csv,text/csv" hidden>
       </div>
     </div>
   </div>
@@ -99,62 +99,59 @@ footer{padding:6px 0 34px;color:var(--muted);font-size:12px;display:flex;justify
     </div>
     <div class="card">
       <h2>Carteiras</h2>
-      <p class="sub">Participação nos envios</p>
+      <p class="sub">Participação nos envios e taxa de entrega</p>
       <div class="rank" id="rank"></div>
     </div>
   </section>
   <section class="card" style="margin-top:16px">
     <h2>Detalhe por dia de disparo</h2>
-    <p class="sub">Clique no título da coluna para ordenar</p>
+    <p class="sub">Cada linha é um material disparado, com a data ao lado. Clique no título da coluna para ordenar.</p>
     <div class="tw"><table id="tb"></table></div>
   </section>
-  <div class="drop" id="drop"><span>Arraste o CSV analítico aqui para atualizar o painel. Colunas: <b>data, carteira, envios, custo</b>.</span><span id="src">Dados de exemplo</span></div>
+  <div class="drop" id="drop"><span>Os dados vêm do arquivo <b>dados.json</b>, gerado pelo script de atualização a partir dos CSVs.</span><span id="src">Carregando…</span></div>
 </main>
 <footer class="shell"><span>MERCATTO · Sempre conectada a você</span><span>Central Mercatto · Painel RCS</span></footer>
 <div id="tip"></div>
 <script>
-/* Para alimentar via Python, substitua o conteúdo de DADOS por linhas do CSV:
-   [{data:"2026-10-01",carteira:"Carteira A",envios:1200,custo:96.5}, ...] */
-let DADOS = null;
-const $ = s => document.querySelector(s);
-const fmtN = n => Math.round(n).toLocaleString("pt-BR");
-const fmtR = n => n.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
-const fmtK = n => n>=1e6?(n/1e6).toFixed(1).replace(".",",")+" mi":n>=1e3?(n/1e3).toFixed(n>=1e4?0:1).replace(".",",")+" mil":String(Math.round(n));
-const dm = iso => iso.slice(8,10)+"/"+iso.slice(5,7);
-const wd = iso => ["dom","seg","ter","qua","qui","sex","sáb"][new Date(iso+"T12:00:00").getDay()];
+const $=s=>document.querySelector(s);
+const fmtN=n=>Math.round(n).toLocaleString("pt-BR");
+const fmtR=n=>n.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+const fmtP=n=>(n*100).toLocaleString("pt-BR",{maximumFractionDigits:1})+"%";
+const fmtK=n=>n>=1e6?(n/1e6).toFixed(1).replace(".",",")+" mi":n>=1e3?(n/1e3).toFixed(n>=1e4?0:1).replace(".",",")+" mil":String(Math.round(n));
+const dm=iso=>iso.slice(8,10)+"/"+iso.slice(5,7);
+const wd=iso=>["dom","seg","ter","qua","qui","sex","sáb"][new Date(iso+"T12:00:00").getDay()];
+let DADOS=[],sortK="data",sortD=-1;
 
+/* Só para pré-visualizar quando o dados.json não é encontrado */
 function amostra(){
   let s=7;const r=()=>(s=(s*16807)%2147483647)/2147483647;
-  const cs=[["Cartão",.9],["Varejo",.6],["Consignado",.4]],out=[];
-  for(let d=1;d<=14;d++){const dt=new Date(2026,9,d),w=dt.getDay();if(w===0)continue;
-    cs.forEach(([c,k])=>{if(r()>.78)return;const e=Math.round((4000+r()*9000)*k*(w===6?.5:1));
-      out.push({data:"2026-10-"+String(d).padStart(2,"0"),carteira:c,envios:e,custo:+(e*(.075+r()*.02)).toFixed(2)})})}
+  const cs=[["BANRI",.9,"BANRI_OFERTA_RENEGOCIACAO"],["AREZZO",.6,"AREZZO_LEMBRETE_VENCIMENTO"],["BRK",.4,"BRK_COBRANCA_AMIGAVEL"]],out=[];
+  for(let d=1;d<=14;d++){const w=new Date(2026,9,d).getDay();if(w===0)continue;
+    cs.forEach(([c,k,m])=>{if(r()>.78)return;const e=Math.round((4000+r()*9000)*k*(w===6?.5:1)),en=Math.round(e*(.9+r()*.07));
+      out.push({data:"2026-10-"+String(d).padStart(2,"0"),material:m,carteira:c,envios:e,entregues:en,custo:+(en*.11).toFixed(2)})})}
   return out;
 }
-DADOS = amostra();
-
 function agg(rows,key){const m=new Map();
-  rows.forEach(x=>{const k=x[key],o=m.get(k)||{k,envios:0,custo:0,n:0};o.envios+=x.envios;o.custo+=x.custo;o.n++;m.set(k,o)});
+  rows.forEach(x=>{const k=x[key],o=m.get(k)||{k,envios:0,entregues:0,custo:0};o.envios+=x.envios;o.entregues+=x.entregues;o.custo+=x.custo;m.set(k,o)});
   return [...m.values()];}
 
-let sortK="data",sortD=1;
 function render(){
   const sel=$("#fc").value||"Todas";
   const rows=DADOS.filter(x=>sel==="Todas"||x.carteira===sel);
-  if(!rows.length){$("#kpis").innerHTML='<div class="card empty" style="grid-column:1/-1">Nenhum dado para exibir. Carregue um CSV.</div>';return}
-  const E=rows.reduce((a,x)=>a+x.envios,0),C=rows.reduce((a,x)=>a+x.custo,0);
+  if(!rows.length){$("#kpis").innerHTML='<div class="card empty" style="grid-column:1/-1">Nenhum dado para exibir.</div>';["#daily","#rank","#tb"].forEach(i=>$(i).innerHTML="");return}
+  const E=rows.reduce((a,x)=>a+x.envios,0),N=rows.reduce((a,x)=>a+x.entregues,0),C=rows.reduce((a,x)=>a+x.custo,0);
   const dias=agg(rows,"data").sort((a,b)=>a.k<b.k?-1:1),cart=agg(rows,"carteira").sort((a,b)=>b.envios-a.envios);
   const pico=dias.reduce((a,b)=>b.envios>a.envios?b:a);
   const ic=p=>`<svg viewBox="0 0 20 20" fill="none"><path d="${p}" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
   const K=[["Envios realizados",fmtN(E),dias.length+" dias de disparo","var(--blue)",ic("M3 10 17 3l-4 14-3-6-7-1Z")],
-    ["Custo total",fmtR(C),"no período","var(--amber)",ic("M10 3v14m3-11H8.5a2 2 0 0 0 0 4h3a2 2 0 0 1 0 4H7")],
-    ["Custo por envio",fmtR(C/E),"média ponderada","var(--green)",ic("M4 16 16 4M6 6h.01M14 14h.01")],
+    ["Entregues",fmtN(N),fmtP(N/E)+" de taxa de entrega","var(--green)",ic("M4 10.5 8 14.5 16 6")],
+    ["Custo total",fmtR(C),"cobrado sobre entregues","var(--amber)",ic("M10 3v14m3-11H8.5a2 2 0 0 0 0 4h3a2 2 0 0 1 0 4H7")],
     ["Maior disparo",fmtK(pico.envios),dm(pico.k)+" · "+wd(pico.k),"var(--cyan)",ic("M4 16V9m4 7V5m4 11v-5m4 5V8")]];
   $("#kpis").innerHTML=K.map(k=>`<div class="card kpi" style="--c:${k[3]}"><div class="l">${k[4]}${k[0]}</div><div class="v">${k[1]}</div><div class="s">${k[2]}</div></div>`).join("");
   chart(dias);
   const mx=cart[0].envios;
-  $("#rank").innerHTML=cart.map(c=>`<div class="rk"><div class="t"><b>${c.k}</b><span>${fmtN(c.envios)} · ${(c.envios/E*100).toFixed(0)}%</span></div><div class="track"><i style="width:${c.envios/mx*100}%"></i></div><div class="sub" style="margin:0">${fmtR(c.custo)} · ${fmtR(c.custo/c.envios)} por envio</div></div>`).join("");
-  table(rows,pico.k);
+  $("#rank").innerHTML=cart.map(c=>`<div class="rk"><div class="t"><b>${c.k}</b><span>${fmtN(c.envios)} · ${(c.envios/E*100).toFixed(0)}%</span></div><div class="track"><i style="width:${c.envios/mx*100}%"></i></div><div class="sub" style="margin:0">${fmtR(c.custo)} · ${fmtP(c.entregues/c.envios)} entregues</div></div>`).join("");
+  table(rows);
 }
 function chart(d){
   const W=720,H=290,L=46,R=46,T=14,B=30,w=W-L-R,h=H-T-B;
@@ -173,43 +170,37 @@ function chart(d){
       tip.innerHTML=`<b>${dm(x.k)} · ${wd(x.k)}</b><br>${fmtN(x.envios)} envios<br>${fmtR(x.custo)}`};
     b.onmouseleave=()=>tip.style.opacity=0});
 }
-function table(rows,pico){
-  const d=agg(rows,"data").map(x=>({data:x.k,env:x.envios,custo:x.custo,cpe:x.custo/x.envios,cart:x.n}));
-  d.sort((a,b)=>(a[sortK]>b[sortK]?1:-1)*sortD);
+function table(rows){
+  const m=new Map();
+  rows.forEach(x=>{const k=x.data+"|"+x.material+"|"+x.carteira,o=m.get(k)||{data:x.data,material:x.material,carteira:x.carteira,env:0,ent:0,custo:0};o.env+=x.envios;o.ent+=x.entregues;o.custo+=x.custo;m.set(k,o)});
+  const d=[...m.values()].map(x=>({...x,taxa:x.ent/x.env}));
+  d.sort((a,b)=>(a[sortK]>b[sortK]?1:a[sortK]<b[sortK]?-1:0)*sortD);
   const th=(k,t)=>`<th data-k="${k}">${t}${sortK===k?(sortD>0?" ↑":" ↓"):""}</th>`;
-  $("#tb").innerHTML=`<thead><tr>${th("data","Dia")}${th("env","Envios")}${th("custo","Custo")}${th("cpe","Custo/envio")}${th("cart","Carteiras")}</tr></thead><tbody>`+
-    d.map(x=>`<tr><td>${dm(x.data)} <span class="pill ${x.data===pico?"top":""}">${wd(x.data)}${x.data===pico?" · pico":""}</span></td><td>${fmtN(x.env)}</td><td>${fmtR(x.custo)}</td><td>${fmtR(x.cpe)}</td><td>${x.cart}</td></tr>`).join("")+"</tbody>";
+  $("#tb").innerHTML=`<thead><tr>${th("material","Material disparado")}${th("carteira","Carteira")}${th("env","Envios")}${th("ent","Entregues")}${th("taxa","Entrega")}${th("custo","Custo")}</tr></thead><tbody>`+
+    d.map(x=>`<tr><td><span class="mat" title="${x.material}">${x.material}</span><span class="dt">${dm(x.data)} · ${wd(x.data)}</span></td><td>${x.carteira}</td><td>${fmtN(x.env)}</td><td>${fmtN(x.ent)}</td><td>${fmtP(x.taxa)}</td><td>${fmtR(x.custo)}</td></tr>`).join("")+"</tbody>";
   $("#tb").querySelectorAll("th").forEach(t=>t.onclick=()=>{const k=t.dataset.k;sortD=sortK===k?-sortD:1;sortK=k;render()});
 }
 function filtros(){
-  const cs=[...new Set(DADOS.map(x=>x.carteira))].sort();
+  const cur=$("#fc").value,cs=[...new Set(DADOS.map(x=>x.carteira))].sort();
   $("#fc").innerHTML=["Todas",...cs].map(c=>`<option>${c}</option>`).join("");
+  if(cs.includes(cur))$("#fc").value=cur;
 }
-/* CSV */
-const norm=s=>s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim();
-const num=v=>{v=String(v).replace(/[R$\s]/g,"");if(v.includes(","))v=v.replace(/\./g,"").replace(",",".");return parseFloat(v)||0};
-const dt=v=>{v=v.trim().slice(0,10);const m=v.match(/^(\d{2})\/(\d{2})\/(\d{4})/);return m?`${m[3]}-${m[2]}-${m[1]}`:v};
-function lerCSV(txt,nome){
-  const ls=txt.replace(/^\uFEFF/,"").split(/\r?\n/).filter(l=>l.trim());
-  const sep=(ls[0].match(/;/g)||[]).length>=(ls[0].match(/,/g)||[]).length?";":",";
-  const hd=ls[0].split(sep).map(norm);
-  const f=(...n)=>hd.findIndex(h=>n.some(x=>h.includes(x)));
-  const i={d:f("data","dia"),c:f("carteira"),e:f("envio","qtd","quant"),v:f("custo","valor")};
-  if(i.d<0||i.e<0||i.v<0){alert("Não encontrei as colunas data, envios e custo no CSV.");return}
-  const out=ls.slice(1).map(l=>{const c=l.split(sep).map(x=>x.replace(/^"|"$/g,""));
-    return{data:dt(c[i.d]),carteira:i.c>=0?c[i.c].trim()||"Sem carteira":"Geral",envios:num(c[i.e]),custo:num(c[i.v])}}).filter(x=>/^\d{4}-\d{2}-\d{2}$/.test(x.data)&&x.envios>0);
-  if(!out.length){alert("Nenhuma linha válida encontrada.");return}
-  DADOS=out;$("#src").textContent=nome+" · "+out.length+" linhas";filtros();render();
+async function carregar(){
+  try{
+    const r=await fetch("dados.json?v="+Date.now(),{cache:"no-store"});if(!r.ok)throw new Error(r.status);
+    const j=await r.json();
+    DADOS=j.registros.map(x=>({data:x.data,material:x.campanha,carteira:x.carteira,envios:+x.envios,entregues:+x.entregues,custo:+x.custo}));
+    $("#upd").textContent="Atualizado em "+j.atualizado_em;
+    $("#src").textContent=DADOS.length+" linhas · dados.json";
+  }catch(e){
+    DADOS=amostra();
+    $("#upd").textContent="Pré-visualização";
+    $("#src").textContent="Dados de exemplo: dados.json não encontrado (abra pelo GitHub Pages ou um servidor local)";
+  }
+  filtros();render();
 }
-const rd=f=>{const r=new FileReader();r.onload=()=>lerCSV(r.result,f.name);r.readAsText(f,"utf-8")};
-$("#up").onclick=()=>$("#file").click();
-$("#file").onchange=e=>e.target.files[0]&&rd(e.target.files[0]);
-const dp=$("#drop");
-["dragover","dragenter"].forEach(t=>dp.addEventListener(t,e=>{e.preventDefault();dp.classList.add("on")}));
-["dragleave","drop"].forEach(t=>dp.addEventListener(t,e=>{e.preventDefault();dp.classList.remove("on")}));
-dp.addEventListener("drop",e=>e.dataTransfer.files[0]&&rd(e.dataTransfer.files[0]));
 $("#fc").onchange=render;
-filtros();render();
+carregar();
 </script>
 </body>
 </html>
