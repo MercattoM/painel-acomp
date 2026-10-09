@@ -2,7 +2,8 @@
 <html lang="pt-BR"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Acompanhamento CPCs</title>
-<meta name="gerado" content="09/10/2026 às 15:03">
+<meta name="gerado" content="09/10/2026 às 15:20">
+<meta name="gerado-iso" content="2026-10-09T15:20:46">
 <style>
 :root{
   --navy:#0b1f4b;--navy2:#13306e;--cy:#19c3f0;--bl:#0a8fd0;
@@ -292,7 +293,7 @@ footer span:first-child{font-weight:700;color:var(--navy)}
     </section>
   </div>
 
-  <footer><span>MERCATTO · Sempre conectada a você</span><span>Central Mercatto · Portal corporativo · Gerado em 09/10/2026 às 15:03 · 2 cliente(s) fora da base não entram na contagem · v10.5 - acordos pela base de promessas (cod. 990)</span></footer>
+  <footer><span>MERCATTO · Sempre conectada a você</span><span>Central Mercatto · Portal corporativo · Gerado em 09/10/2026 às 15:20 · 2 cliente(s) fora da base não entram na contagem · v10.5 - acordos pela base de promessas (cod. 990)</span></footer>
 </main>
 
 <script>
@@ -467,5 +468,29 @@ baseStatus();
 relogio();
 setInterval(relogio, 1000);
 setInterval(verificarNovo, 300000);
+</script>
+<script>
+/* Atualização automática: se o servidor já tem uma versão mais nova do painel,
+   recarrega sozinho (sem depender do link com ?v=). */
+(function(){
+  const meta = document.querySelector('meta[name="gerado-iso"]');
+  const minha = meta ? meta.content : "";
+  if(!minha || location.protocol === "file:") return;
+  let ocupado = false;
+  async function checar(){
+    if(ocupado || document.hidden) return;
+    ocupado = true;
+    try{
+      const r = await fetch(location.pathname + "?_=" + Date.now(), {cache:"no-store"});
+      if(!r.ok) return;
+      const m = (await r.text()).match(/name="gerado-iso" content="([^"]+)"/);
+      if(m && m[1] > minha) location.replace(location.pathname + "?v=" + encodeURIComponent(m[1]));
+    }catch(e){}
+    finally{ ocupado = false; }
+  }
+  checar();
+  setInterval(checar, 120000);
+  document.addEventListener("visibilitychange", checar);
+})();
 </script>
 </body></html>
