@@ -2,8 +2,8 @@
 <html lang="pt-BR"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Acompanhamento CPCs</title>
-<meta name="gerado" content="13/10/2026 às 10:20">
-<meta name="gerado-iso" content="2026-10-13T10:20:31">
+<meta name="gerado" content="13/10/2026 às 10:26">
+<meta name="gerado-iso" content="2026-10-13T10:26:45">
 <style>
 :root{
   --navy:#0b1f4b;--navy2:#13306e;--cy:#19c3f0;--bl:#0a8fd0;
@@ -226,7 +226,6 @@ footer span:first-child{font-weight:700;color:var(--navy)}
     <div class="tit">
       <div class="eyebrow">PORTAL DE INTELIGÊNCIA · CPCs</div>
       <h1>Acompanhamento<br>de CPCs</h1>
-      <p>Controle diário dos CPCs enviados à operação. Vale o acionamento feito do dia do CPC até 1 dia(s) útil(eis) depois (CPC de sexta vale até segunda).</p>
       <div class="cta"><button class="btn solid" onclick="window.print()">Imprimir / salvar PDF</button></div>
     </div>
     <div class="orb" aria-hidden="true">
@@ -293,7 +292,6 @@ footer span:first-child{font-weight:700;color:var(--navy)}
     </section>
   </div>
 
-  <footer><span>MERCATTO · Sempre conectada a você</span><span>Central Mercatto · Portal corporativo · Gerado em 13/10/2026 às 10:20 · 4 cliente(s) fora da base não entram na contagem · v10.5 - acordos pela base de promessas (cod. 990)</span></footer>
 </main>
 
 <script>
@@ -385,7 +383,11 @@ function operadores(){
 
 function ocorrencias(){
   const ag = {}, u = st.opSel;
-  const add = o => { const k = o.cod+"|"+o.desc+"|"+o.tipo; (ag[k] = ag[k] || {...o, q:0}).q += o.q; };
+  const add = o => {
+    // acordos (cód. 990): "acordos pendentes" e "acordo formalizado" viram uma linha só
+    if(String(o.cod) === "990") o = {...o, desc:"ACORDOS", tipo:"PROMESSAS"};
+    const k = o.cod+"|"+o.desc+"|"+o.tipo; (ag[k] = ag[k] || {...o, q:0}).q += o.q;
+  };
   if(u) (st.sel ? [st.sel] : Object.keys(D.opoc)).forEach(c => ((D.opoc[c]||{})[u]||[]).forEach(add));
   else (st.sel ? [st.sel] : Object.keys(D.oc)).forEach(c => (D.oc[c]||[]).forEach(add));
   let lista = Object.values(ag).sort((a,b) => b.q-a.q);
