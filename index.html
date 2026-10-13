@@ -160,6 +160,8 @@
     }
     @media print{.hero-art,.hero-meta,.primary-link{display:none}.hero{min-height:0;padding-bottom:24px}main{padding-top:24px}.card{break-inside:avoid;box-shadow:none}}
   </style>
+  <script>(()=>{try{const saved=localStorage.getItem('mercatto-theme');document.documentElement.dataset.theme=saved==='dark'||saved==='light'?saved:(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(_){document.documentElement.dataset.theme='light'}})()</script>
+  <link rel="stylesheet" href="assets/mercatto-ui.css">
 </head>
 <body>
   <header class="hero">
@@ -277,5 +279,6 @@
       atualizarPainéis();
     })();
   </script>
+  <script src="assets/mercatto-ui.js"></script>
 </body>
 </html>

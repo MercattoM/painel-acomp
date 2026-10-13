@@ -218,7 +218,10 @@ footer span:first-child{font-weight:700;color:var(--navy)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important}}
 .dh small.dd{display:block;font-size:12px;color:var(--mut);margin-top:1px}
 @media print{.orb{display:none}}
-</style></head><body>
+</style>
+<script>(()=>{try{const saved=localStorage.getItem('mercatto-theme');document.documentElement.dataset.theme=saved==='dark'||saved==='light'?saved:(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(_){document.documentElement.dataset.theme='light'}})()</script>
+<link rel="stylesheet" href="../assets/mercatto-ui.css">
+</head><body>
 
 <header class="hero"><div class="in">
   <a class="portal-back" href="../index.html">← Central Mercatto</a>
@@ -505,4 +508,5 @@ setInterval(verificarNovo, 300000);
   document.addEventListener("visibilitychange", checar);
 })();
 </script>
+<script src="../assets/mercatto-ui.js"></script>
 </body></html>
