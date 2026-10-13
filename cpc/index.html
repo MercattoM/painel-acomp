@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Acompanhamento CPCs</title>
 <meta name="gerado" content="13/10/2026 às 13:26">
-<meta name="gerado-iso" content="2026-10-13T13:26:02">
+<meta name="gerado-iso" content="2026-10-13T16:56:44.188289">
 <script>(()=>{try{const saved=localStorage.getItem('mercatto-theme');document.documentElement.dataset.theme=saved==='dark'||saved==='light'?saved:(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(_){document.documentElement.dataset.theme='light'}})()</script>
 <link rel="stylesheet" href="../assets/mercatto-ui.css">
 <style>
@@ -289,7 +289,7 @@ footer span:first-child{font-weight:700;color:var(--navy)}
       <div class="band" id="bTipos" style="height:14px;margin-top:14px"></div>
       <div class="tipos" id="tipos"></div>
       <div class="scroll" tabindex="0"><table>
-        <thead><tr><th>Nº</th><th>Ocorrência</th><th>Tipo</th><th class="c">Qtd</th><th class="c" id="thPct">% dos CPCs</th><th class="bar"></th></tr></thead>
+        <thead><tr><th>Ocorrência</th><th class="c">Qtd</th><th class="bar c" id="thPct">% dos acionados</th></tr></thead>
         <tbody id="tb"></tbody></table></div>
     </section>
   </div>
@@ -297,7 +297,7 @@ footer span:first-child{font-weight:700;color:var(--navy)}
 </main>
 
 <script>
-const D = {"carteiras": [{"nome": "HATIKVAH PARTICIPACOES LTDA", "a": 77, "w": 0, "n": 1}, {"nome": "BANCO DIGIMAIS V E VI", "a": 40, "w": 0, "n": 24}, {"nome": "INNOVA - VEICULOS", "a": 10, "w": 0, "n": 0}, {"nome": "SIMPALA", "a": 2, "w": 0, "n": 2}, {"nome": "BANCO DIGIMAIS I A IV", "a": 1, "w": 0, "n": 0}, {"nome": "HATIKVAH JURÍDICO", "a": 0, "w": 0, "n": 0}], "ops": {"BANCO DIGIMAIS I A IV": {"ADRIANA.ARVARGAS": 1}, "BANCO DIGIMAIS V E VI": {"VANIA.APINTO": 34, "JOSIANE.MSILVEIRA": 8}, "HATIKVAH PARTICIPACOES LTDA": {"PAULA.RSPEREIRA": 83, "BRUNA.CSANTOS": 79}, "INNOVA - VEICULOS": {"VANDERLEIA.ASANTOS": 15}, "SIMPALA": {"ADRIANA.SANTOS": 2, "JANEIDE.RSILVA": 2}}, "opoc": {"BANCO DIGIMAIS I A IV": {"ADRIANA.ARVARGAS": [{"cod": "77", "desc": "ENVIO/CONTATO WHATSAPP", "tipo": "SEM CONTATO", "q": 1}]}, "BANCO DIGIMAIS V E VI": {"JOSIANE.MSILVEIRA": [{"cod": "76", "desc": "RECADO-WHATSAPP", "tipo": "SEM CONTATO", "q": 6}, {"cod": "77", "desc": "ENVIO/CONTATO WHATSAPP", "tipo": "SEM CONTATO", "q": 2}], "VANIA.APINTO": [{"cod": "77", "desc": "ENVIO/CONTATO WHATSAPP", "tipo": "SEM CONTATO", "q": 30}, {"cod": "53", "desc": "MUDO/CAIU LIGAÇÃO", "tipo": "SEM CONTATO", "q": 3}, {"cod": "52", "desc": "NÃO ATENDE", "tipo": "SEM CONTATO", "q": 1}]}, "HATIKVAH PARTICIPACOES LTDA": {"BRUNA.CSANTOS": [{"cod": "77", "desc": "ENVIO/CONTATO WHATSAPP", "tipo": "SEM CONTATO", "q": 55}, {"cod": "52", "desc": "NÃO ATENDE", "tipo": "SEM CONTATO", "q": 10}, {"cod": "990", "desc": "ACORDOS PENDENTES", "tipo": "PROMESSAS", "q": 4}, {"cod": "76", "desc": "RECADO-WHATSAPP", "tipo": "SEM CONTATO", "q": 2}, {"cod": "54", "desc": "MSGS OPERADORA/CAIXA DE MSG", "tipo": "SEM CONTATO", "q": 1}, {"cod": "57", "desc": "CONTATO DIRETO C/INTERESSADO", "tipo": "LOCALIZADO", "q": 1}], "PAULA.RSPEREIRA": [{"cod": "77", "desc": "ENVIO/CONTATO WHATSAPP", "tipo": "SEM CONTATO", "q": 42}, {"cod": "52", "desc": "NÃO ATENDE", "tipo": "SEM CONTATO", "q": 20}, {"cod": "106", "desc": "PD-DEV.SEM CONDIÇÕES DE PAGAR", "tipo": "LOCALIZADO", "q": 4}, {"cod": "57", "desc": "CONTATO DIRETO C/INTERESSADO", "tipo": "LOCALIZADO", "q": 4}, {"cod": "110", "desc": "PD-DEV POSSUI AÇÃO CONTRA CREDOR", "tipo": "LOCALIZADO", "q": 3}, {"cod": "54", "desc": "MSGS OPERADORA/CAIXA DE MSG", "tipo": "SEM CONTATO", "q": 3}, {"cod": "76", "desc": "RECADO-WHATSAPP", "tipo": "SEM CONTATO", "q": 3}, {"cod": "990", "desc": "ACORDOS PENDENTES", "tipo": "PROMESSAS", "q": 3}]}, "INNOVA - VEICULOS": {"VANDERLEIA.ASANTOS": [{"cod": "77", "desc": "ENVIO/CONTATO WHATSAPP", "tipo": "SEM CONTATO", "q": 7}, {"cod": "57", "desc": "CONTATO DIRETO C/INTERESSADO", "tipo": "LOCALIZADO", "q": 1}, {"cod": "78", "desc": "SOLICITAÇÃO DE ANALISE DE PROPOSTA", "tipo": "LOCALIZADO", "q": 1}]}, "SIMPALA": {"ADRIANA.SANTOS": [{"cod": "990", "desc": "ACORDOS PENDENTES", "tipo": "PROMESSAS", "q": 2}], "JANEIDE.RSILVA": [{"cod": "990", "desc": "ACORDOS PENDENTES", "tipo": "PROMESSAS", "q": 2}]}}, "oc": {"BANCO DIGIMAIS I A IV": [{"cod": "77", "desc": "ENVIO/CONTATO WHATSAPP", "tipo": "SEM CONTATO", "q": 1}], "BANCO DIGIMAIS V E VI": [{"cod": "77", "desc": "ENVIO/CONTATO WHATSAPP", "tipo": "SEM CONTATO", "q": 30}, {"cod": "76", "desc": "RECADO-WHATSAPP", "tipo": "SEM CONTATO", "q": 6}, {"cod": "53", "desc": "MUDO/CAIU LIGAÇÃO", "tipo": "SEM CONTATO", "q": 3}, {"cod": "52", "desc": "NÃO ATENDE", "tipo": "SEM CONTATO", "q": 1}], "HATIKVAH PARTICIPACOES LTDA": [{"cod": "77", "desc": "ENVIO/CONTATO WHATSAPP", "tipo": "SEM CONTATO", "q": 50}, {"cod": "52", "desc": "NÃO ATENDE", "tipo": "SEM CONTATO", "q": 13}, {"cod": "990", "desc": "ACORDOS PENDENTES", "tipo": "PROMESSAS", "q": 4}, {"cod": "54", "desc": "MSGS OPERADORA/CAIXA DE MSG", "tipo": "SEM CONTATO", "q": 2}, {"cod": "57", "desc": "CONTATO DIRETO C/INTERESSADO", "tipo": "LOCALIZADO", "q": 2}, {"cod": "106", "desc": "PD-DEV.SEM CONDIÇÕES DE PAGAR", "tipo": "LOCALIZADO", "q": 1}, {"cod": "110", "desc": "PD-DEV POSSUI AÇÃO CONTRA CREDOR", "tipo": "LOCALIZADO", "q": 1}, {"cod": "76", "desc": "RECADO-WHATSAPP", "tipo": "SEM CONTATO", "q": 1}, {"cod": "990", "desc": "ACORDO FORMALIZADO", "tipo": "PROMESSAS", "q": 1}], "INNOVA - VEICULOS": [{"cod": "77", "desc": "ENVIO/CONTATO WHATSAPP", "tipo": "SEM CONTATO", "q": 4}, {"cod": "57", "desc": "CONTATO DIRETO C/INTERESSADO", "tipo": "LOCALIZADO", "q": 1}, {"cod": "78", "desc": "SOLICITAÇÃO DE ANALISE DE PROPOSTA", "tipo": "LOCALIZADO", "q": 1}], "SIMPALA": [{"cod": "990", "desc": "ACORDOS PENDENTES", "tipo": "PROMESSAS", "q": 2}]}, "cron": [{"dia": "Segunda-feira", "itens": [{"label": "BANCO DIGIMAIS I A IV", "nomes": ["BANCO DIGIMAIS I A IV"], "env": 1}, {"label": "HATIKVAH JURÍDICO", "nomes": ["HATIKVAH JURÍDICO"], "env": 0}]}, {"dia": "Terça-feira", "itens": [{"label": "HATIKVAH", "nomes": ["HATIKVAH PARTICIPACOES LTDA"], "env": 78}]}, {"dia": "Quarta-feira", "itens": [{"label": "BANCO DIGIMAIS V E VI", "nomes": ["BANCO DIGIMAIS V E VI"], "env": 64}]}, {"dia": "Quinta-feira", "itens": [{"label": "SIMPALA", "nomes": ["SIMPALA"], "env": 4}, {"label": "INNOVA", "nomes": ["INNOVA - VEICULOS"], "env": 10}]}, {"dia": "Sexta-feira", "itens": [{"label": "BANCO DIGIMAIS V E VI", "nomes": ["BANCO DIGIMAIS V E VI"], "env": 64}]}], "hoje": 1, "data": "2026-10-13", "base_ate": "2026-10-13", "base_lim": null, "base_atras": false};
+const D = {"carteiras":[{"nome":"HATIKVAH PARTICIPACOES LTDA","a":77,"w":0,"n":0,"enviados":77,"pct":100},{"nome":"BANCO DIGIMAIS V E VI","a":40,"w":0,"n":24,"enviados":64,"pct":63},{"nome":"INNOVA - VEICULOS","a":10,"w":0,"n":0,"enviados":10,"pct":100},{"nome":"SIMPALA","a":2,"w":0,"n":2,"enviados":4,"pct":50},{"nome":"BANCO DIGIMAIS I A IV","a":1,"w":0,"n":0,"enviados":1,"pct":100},{"nome":"HATIKVAH JURÍDICO","a":0,"w":0,"n":0,"enviados":0,"pct":0}],"totais":{"a":130,"w":0,"n":26,"enviados":156,"pct":83},"ops":{"BANCO DIGIMAIS I A IV":{"ADRIANA.ARVARGAS":1},"BANCO DIGIMAIS V E VI":{"VANIA.APINTO":34,"JOSIANE.MSILVEIRA":8},"HATIKVAH PARTICIPACOES LTDA":{"PAULA.RSPEREIRA":83,"BRUNA.CSANTOS":79},"INNOVA - VEICULOS":{"VANDERLEIA.ASANTOS":15},"SIMPALA":{"ADRIANA.SANTOS":2,"JANEIDE.RSILVA":2}},"opoc":{"BANCO DIGIMAIS I A IV":{"ADRIANA.ARVARGAS":[{"cod":"77","desc":"ENVIO/CONTATO WHATSAPP","tipo":"SEM CONTATO","q":1}]},"BANCO DIGIMAIS V E VI":{"JOSIANE.MSILVEIRA":[{"cod":"76","desc":"RECADO-WHATSAPP","tipo":"SEM CONTATO","q":6},{"cod":"77","desc":"ENVIO/CONTATO WHATSAPP","tipo":"SEM CONTATO","q":2}],"VANIA.APINTO":[{"cod":"77","desc":"ENVIO/CONTATO WHATSAPP","tipo":"SEM CONTATO","q":30},{"cod":"53","desc":"MUDO/CAIU LIGAÇÃO","tipo":"SEM CONTATO","q":3},{"cod":"52","desc":"NÃO ATENDE","tipo":"SEM CONTATO","q":1}]},"HATIKVAH PARTICIPACOES LTDA":{"BRUNA.CSANTOS":[{"cod":"77","desc":"ENVIO/CONTATO WHATSAPP","tipo":"SEM CONTATO","q":55},{"cod":"52","desc":"NÃO ATENDE","tipo":"SEM CONTATO","q":10},{"cod":"990","desc":"ACORDOS PENDENTES","tipo":"PROMESSAS","q":4},{"cod":"76","desc":"RECADO-WHATSAPP","tipo":"SEM CONTATO","q":2},{"cod":"54","desc":"MSGS OPERADORA/CAIXA DE MSG","tipo":"SEM CONTATO","q":1},{"cod":"57","desc":"CONTATO DIRETO C/INTERESSADO","tipo":"LOCALIZADO","q":1}],"PAULA.RSPEREIRA":[{"cod":"77","desc":"ENVIO/CONTATO WHATSAPP","tipo":"SEM CONTATO","q":42},{"cod":"52","desc":"NÃO ATENDE","tipo":"SEM CONTATO","q":20},{"cod":"106","desc":"PD-DEV.SEM CONDIÇÕES DE PAGAR","tipo":"LOCALIZADO","q":4},{"cod":"57","desc":"CONTATO DIRETO C/INTERESSADO","tipo":"LOCALIZADO","q":4},{"cod":"110","desc":"PD-DEV POSSUI AÇÃO CONTRA CREDOR","tipo":"LOCALIZADO","q":3},{"cod":"54","desc":"MSGS OPERADORA/CAIXA DE MSG","tipo":"SEM CONTATO","q":3},{"cod":"76","desc":"RECADO-WHATSAPP","tipo":"SEM CONTATO","q":3},{"cod":"990","desc":"ACORDOS PENDENTES","tipo":"PROMESSAS","q":3}]},"INNOVA - VEICULOS":{"VANDERLEIA.ASANTOS":[{"cod":"77","desc":"ENVIO/CONTATO WHATSAPP","tipo":"SEM CONTATO","q":7},{"cod":"57","desc":"CONTATO DIRETO C/INTERESSADO","tipo":"LOCALIZADO","q":1},{"cod":"78","desc":"SOLICITAÇÃO DE ANALISE DE PROPOSTA","tipo":"LOCALIZADO","q":1}]},"SIMPALA":{"ADRIANA.SANTOS":[{"cod":"990","desc":"ACORDOS PENDENTES","tipo":"PROMESSAS","q":2}],"JANEIDE.RSILVA":[{"cod":"990","desc":"ACORDOS PENDENTES","tipo":"PROMESSAS","q":2}]}},"oc":{"BANCO DIGIMAIS I A IV":[{"cod":"77","desc":"ENVIO/CONTATO WHATSAPP","tipo":"SEM CONTATO","q":1}],"BANCO DIGIMAIS V E VI":[{"cod":"77","desc":"ENVIO/CONTATO WHATSAPP","tipo":"SEM CONTATO","q":30},{"cod":"76","desc":"RECADO-WHATSAPP","tipo":"SEM CONTATO","q":6},{"cod":"53","desc":"MUDO/CAIU LIGAÇÃO","tipo":"SEM CONTATO","q":3},{"cod":"52","desc":"NÃO ATENDE","tipo":"SEM CONTATO","q":1}],"HATIKVAH PARTICIPACOES LTDA":[{"cod":"77","desc":"ENVIO/CONTATO WHATSAPP","tipo":"SEM CONTATO","q":50},{"cod":"52","desc":"NÃO ATENDE","tipo":"SEM CONTATO","q":13},{"cod":"990","desc":"ACORDOS PENDENTES","tipo":"PROMESSAS","q":4},{"cod":"54","desc":"MSGS OPERADORA/CAIXA DE MSG","tipo":"SEM CONTATO","q":2},{"cod":"57","desc":"CONTATO DIRETO C/INTERESSADO","tipo":"LOCALIZADO","q":2},{"cod":"106","desc":"PD-DEV.SEM CONDIÇÕES DE PAGAR","tipo":"LOCALIZADO","q":1},{"cod":"110","desc":"PD-DEV POSSUI AÇÃO CONTRA CREDOR","tipo":"LOCALIZADO","q":1},{"cod":"76","desc":"RECADO-WHATSAPP","tipo":"SEM CONTATO","q":1}],"INNOVA - VEICULOS":[{"cod":"77","desc":"ENVIO/CONTATO WHATSAPP","tipo":"SEM CONTATO","q":4},{"cod":"57","desc":"CONTATO DIRETO C/INTERESSADO","tipo":"LOCALIZADO","q":1},{"cod":"78","desc":"SOLICITAÇÃO DE ANALISE DE PROPOSTA","tipo":"LOCALIZADO","q":1}],"SIMPALA":[{"cod":"990","desc":"ACORDOS PENDENTES","tipo":"PROMESSAS","q":2}]},"cron":[{"dia":"Segunda-feira","itens":[{"label":"BANCO DIGIMAIS I A IV","nomes":["BANCO DIGIMAIS I A IV"],"env":1},{"label":"HATIKVAH JURÍDICO","nomes":["HATIKVAH JURÍDICO"],"env":0}]},{"dia":"Terça-feira","itens":[{"label":"HATIKVAH","nomes":["HATIKVAH PARTICIPACOES LTDA"],"env":77}]},{"dia":"Quarta-feira","itens":[{"label":"BANCO DIGIMAIS V E VI","nomes":["BANCO DIGIMAIS V E VI"],"env":64}]},{"dia":"Quinta-feira","itens":[{"label":"SIMPALA","nomes":["SIMPALA"],"env":4},{"label":"INNOVA","nomes":["INNOVA - VEICULOS"],"env":10}]},{"dia":"Sexta-feira","itens":[{"label":"BANCO DIGIMAIS V E VI","nomes":["BANCO DIGIMAIS V E VI"],"env":64}]}],"hoje":1,"data":"2026-10-13","base_ate":"2026-10-13","base_lim":null,"base_atras":false};
 const TCOR = {"LOCALIZADO":"#12a77d","SEM CONTATO":"#6b7785","ADMINISTRATIVO":"#2d6fd0","PROMESSAS":"#d98a0b","OUTROS":"#8a5cc7"};
 const cor = t => TCOR[String(t||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toUpperCase()] || "#94a3b8";
 const cap = s => { s = String(s||"").toLowerCase(); return s.charAt(0).toUpperCase()+s.slice(1); };
@@ -308,7 +308,10 @@ const reduce = matchMedia("(prefers-reduced-motion:reduce)").matches;
 const st = {sel:null, tipo:null, todosOp:false, qOp:"", qOc:"", ord:"env", opSel:null};
 
 const pctDe = (a,t) => t ? Math.round(a/t*100) : 0;
+const pctPainel = (a,t) => { if(!t) return null; const c = st.sel ? D.carteiras.find(x => x.nome === st.sel) : D.totais; return c && Number.isInteger(c.pct) ? c.pct : pctDe(a,t); };
 const tot = c => c.a + c.w + c.n;
+const totalCarteira = c => Number.isInteger(c.enviados) ? c.enviados : tot(c);
+const totalPainel = (a,w,n) => { const c = st.sel ? D.carteiras.find(x => x.nome === st.sel) : D.totais; return c && Number.isInteger(c.enviados) ? c.enviados : a+w+n; };
 const escolhidas = () => st.sel ? D.carteiras.filter(c => c.nome === st.sel) : D.carteiras;
 const soma = k => escolhidas().reduce((s,c) => s+c[k], 0);
 
@@ -339,8 +342,8 @@ function cronograma(){
 }
 
 function kpis(){
-  const a = soma("a"), w = soma("w"), n = soma("n"), t = a+w+n, C = 2*Math.PI*50;
-  $("pct").textContent = t ? pctDe(a,t)+"%" : "-";
+  const a = soma("a"), w = soma("w"), n = soma("n"), t = totalPainel(a,w,n), C = 2*Math.PI*50;
+  $("pct").textContent = t ? pctPainel(a,t)+"%" : "-";
   $("capSel").textContent = st.sel ? (t ? "de "+st.sel+" já foram acionados" : st.sel+": nenhum CPC neste relatório") : "dos CPCs enviados já foram acionados";
   const seg = (id,ini,q) => { const l = t ? q/t*C : 0; const e = $(id);
     e.style.strokeDasharray = l+" "+(C-l); e.style.strokeDashoffset = -ini; };
@@ -350,11 +353,11 @@ function kpis(){
 }
 
 function carteiras(){
-  const f = {env:(a,b)=>tot(b)-tot(a), pct:(a,b)=>pctDe(b.a,tot(b))-pctDe(a.a,tot(a)), pctasc:(a,b)=>pctDe(a.a,tot(a))-pctDe(b.a,tot(b)), no:(a,b)=>b.n-a.n}[st.ord];
+  const f = {env:(a,b)=>totalCarteira(b)-totalCarteira(a), pct:(a,b)=>pctDe(b.a,tot(b))-pctDe(a.a,tot(a)), pctasc:(a,b)=>pctDe(a.a,tot(a))-pctDe(b.a,tot(b)), no:(a,b)=>b.n-a.n}[st.ord];
   const lista = [...D.carteiras].sort(f);
-  $("carts").innerHTML = lista.map(c => { const t = tot(c), s = (k,cl) => c[k] ? `<span class="seg ${cl}" style="width:${c[k]/t*100}%" title="${c[k]}"></span>` : "";
+  $("carts").innerHTML = lista.map(c => { const t = totalCarteira(c), s = (k,cl) => c[k] ? `<span class="seg ${cl}" style="width:${c[k]/t*100}%" title="${c[k]}"></span>` : "";
     return `<button class="cart" aria-pressed="${st.sel===c.nome}" data-c="${esc(c.nome)}">
-      <div class="top"><span class="nome">${esc(c.nome)}</span><span class="p">${pctDe(c.a,t)}%</span></div>
+      <div class="top"><span class="nome">${esc(c.nome)}</span><span class="p">${pctPainel(c.a,t)}%</span></div>
       <div class="band">${s("a","ok")}${s("w","wt")}${s("n","no")}</div>
       <div class="meta"><span><i class="dot" style="--c:var(--ok)"></i><b>${c.a}</b> acionados</span><span><i class="dot" style="--c:var(--wt)"></i><b>${c.w}</b> aguardando</span><span><i class="dot" style="--c:var(--no)"></i><b>${c.n}</b> não acionados</span></div>
       <div class="env">${t ? t+" CPCs enviados" : "Sem CPC neste relatório"}</div></button>`; }).join("") || '<p class="vazio">Nenhum CPC dentro da base neste relatório.</p>';
@@ -408,11 +411,12 @@ function ocorrencias(){
   if(st.tipo) lista = lista.filter(o => o.tipo === st.tipo);
   if(q) lista = lista.filter(o => (o.cod+" "+o.desc+" "+o.tipo).toLowerCase().includes(q));
   const max = lista.length ? lista[0].q : 1;
-  $("tb").innerHTML = lista.map(o => `<tr><td class="cod">${esc(o.cod)}</td><td class="d">${esc(o.desc)}</td>
-    <td><span class="chip" style="--c:${cor(o.tipo)}">${esc(cap(o.tipo))}</span></td><td class="c"><b class="num">${o.q}</b></td>
-    <td class="c num">${env ? (o.q/env*100).toFixed(1).replace(".",",") : "0,0"}%</td>
-    <td class="bar"><div class="band"><span class="seg" style="--c:${cor(o.tipo)};width:${o.q/max*100}%"></span></div></td></tr>`).join("")
-    || `<tr><td colspan="6" class="vazio">${(q || st.tipo) ? "Nenhuma ocorrência encontrada para esta busca." : u ? "Sem ocorrência tabulada para este operador." : "Nenhum cliente foi acionado pelos operadores válidos neste filtro, então não há ocorrências para mostrar."}</td></tr>`;
+  $("tb").innerHTML = lista.map(o => {
+    const percentual = env ? (o.q/env*100).toFixed(1).replace(".",",") : "0,0";
+    return `<tr><td class="d">${esc(o.desc)}</td><td class="c"><b class="num">${o.q}</b></td>
+      <td class="bar"><div class="occ-pct"><span class="num">${percentual}%</span><div class="band"><span class="seg" style="--c:${cor(o.tipo)};width:${o.q/max*100}%"></span></div></div></td></tr>`;
+  }).join("")
+    || `<tr><td colspan="3" class="vazio">${(q || st.tipo) ? "Nenhuma ocorrência encontrada para esta busca." : u ? "Sem ocorrência tabulada para este operador." : "Nenhum cliente foi acionado pelos operadores válidos neste filtro, então não há ocorrências para mostrar."}</td></tr>`;
 }
 
 
@@ -460,7 +464,7 @@ document.addEventListener("pointermove", e => {
   t.style.setProperty("--mx", (e.clientX - r.left) + "px"); t.style.setProperty("--my", (e.clientY - r.top) + "px");
 });
 
-function orbita(){ const a=soma("a"), t=a+soma("w")+soma("n"); $("fcPct").textContent = t ? pctDe(a,t)+"%" : "-"; $("fcEnv").textContent = fmt(t); }
+function orbita(){ const a=soma("a"), w=soma("w"), n=soma("n"), t=totalPainel(a,w,n); $("fcPct").textContent = t ? pctPainel(a,t)+"%" : "-"; $("fcEnv").textContent = fmt(t); }
 function render(){ orbita(); chips(); kpis(); cronograma(); carteiras(); operadores(); ocorrencias(); }
 $("ord").onchange = e => { st.ord = e.target.value; carteiras(); };
 $("qOp").oninput = e => { st.qOp = e.target.value; operadores(); };
