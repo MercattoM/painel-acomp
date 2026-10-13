@@ -128,14 +128,14 @@ select:focus,input:focus,button:focus-visible{outline:2px solid var(--cy);outlin
 .tp b{font-family:Bahnschrift,"Segoe UI",Arial,sans-serif}
 .tp[aria-pressed=true]{background:var(--navy);color:#fff;border-color:var(--navy)}
 .scroll{max-height:560px;overflow:auto;border-top:1px solid var(--line);margin-top:6px}
-table{width:100%;border-collapse:collapse;font-size:14px}
+table{width:100%;min-width:600px;table-layout:fixed;border-collapse:collapse;font-size:14px}
 th{position:sticky;top:0;background:var(--surf);text-align:left;color:var(--mut);font-weight:600;font-size:12.5px;padding:10px 8px;border-bottom:1px solid var(--line)}
 td{padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
 tr:hover td{background:#f7fafd}
 td.c,th.c{text-align:right}
 td.cod{color:var(--mut);font-family:Bahnschrift,"Segoe UI",Arial,sans-serif}
 td.d{overflow-wrap:anywhere}
-td.bar{width:20%}
+th.bar,td.bar{width:24%}
 td.bar .band{height:7px}
 td.bar .seg{background:var(--c,var(--bl))}
 .chip{display:inline-block;border-radius:999px;padding:2px 11px;font-size:12.5px;font-weight:600;color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent);white-space:nowrap}
@@ -288,15 +288,16 @@ footer span:first-child{font-weight:700;color:var(--navy)}
       <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center">
         <h2 id="tOc">Ocorrências dos CPCs</h2>
         <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><button class="chipf" id="limpaOp" hidden>Ver todas</button>
+        <select id="tipoFiltro" aria-label="Filtrar ocorrências por tipo"><option value="">Todos os tipos</option></select>
         <input type="search" id="qOc" placeholder="Buscar ocorrência..." aria-label="Buscar ocorrência"></div>
       </div>
       <p id="sOc" style="margin:6px 0 0;color:var(--mut);font-size:13px" hidden></p>
       
       
       <div class="band" id="bTipos" style="height:14px;margin-top:14px"></div>
-      <div class="tipos" id="tipos"></div>
       <div class="scroll" tabindex="0"><table>
-        <thead><tr><th>Nº</th><th>Ocorrência</th><th>Tipo</th><th class="c">Qtd</th><th class="c" id="thPct">% dos CPCs</th><th class="bar"></th></tr></thead>
+        <colgroup><col style="width:46%"><col style="width:12%"><col style="width:18%"><col style="width:24%"></colgroup>
+        <thead><tr><th>Ocorrência</th><th class="c">Qtd</th><th class="c" id="thPct">% dos CPCs</th><th class="bar" aria-label="Proporção visual">Barra</th></tr></thead>
         <tbody id="tb"></tbody></table></div>
     </section>
   </div>
@@ -409,17 +410,17 @@ function ocorrencias(){
   const tiposOrd = Object.entries(porTipo).sort((a,b) => b[1]-a[1]), soTipos = tiposOrd.reduce((s,[,q]) => s+q, 0);
   if(st.tipo && !(st.tipo in porTipo)) st.tipo = null;
   $("bTipos").innerHTML = tiposOrd.map(([t,q]) => `<span class="seg" style="width:${q/soTipos*100}%;background:${cor(t)}" title="${esc(cap(t))}: ${q}"></span>`).join("");
-  $("tipos").innerHTML = tiposOrd.map(([t,q]) => `<button class="tp" style="--c:${cor(t)}" aria-pressed="${st.tipo===t}" data-t="${esc(t)}"><i></i>${esc(cap(t))} <b>${q}</b></button>`).join("");
-  $("tipos").querySelectorAll("button").forEach(b => b.onclick = () => { st.tipo = st.tipo === b.dataset.t ? null : b.dataset.t; ocorrencias(); });
+  $("tipoFiltro").innerHTML = `<option value="">Todos os tipos</option>` + tiposOrd.map(([t]) => `<option value="${esc(t)}">${esc(cap(t))}</option>`).join("");
+  $("tipoFiltro").value = st.tipo || "";
+  $("tipoFiltro").onchange = e => { st.tipo = e.target.value || null; ocorrencias(); };
   const q = st.qOc.trim().toLowerCase(), env = u ? lista.reduce((t,o) => t+o.q, 0) : soma("a");
   if(st.tipo) lista = lista.filter(o => o.tipo === st.tipo);
   if(q) lista = lista.filter(o => (o.cod+" "+o.desc+" "+o.tipo).toLowerCase().includes(q));
   const max = lista.length ? lista[0].q : 1;
-  $("tb").innerHTML = lista.map(o => `<tr><td class="cod">${esc(o.cod)}</td><td class="d">${esc(o.desc)}</td>
-    <td><span class="chip" style="--c:${cor(o.tipo)}">${esc(cap(o.tipo))}</span></td><td class="c"><b class="num">${o.q}</b></td>
+  $("tb").innerHTML = lista.map(o => `<tr><td class="d">${esc(o.desc)}</td><td class="c"><b class="num">${o.q}</b></td>
     <td class="c num">${env ? (o.q/env*100).toFixed(1).replace(".",",") : "0,0"}%</td>
     <td class="bar"><div class="band"><span class="seg" style="--c:${cor(o.tipo)};width:${o.q/max*100}%"></span></div></td></tr>`).join("")
-    || `<tr><td colspan="6" class="vazio">${(q || st.tipo) ? "Nenhuma ocorrência encontrada para esta busca." : u ? "Sem ocorrência tabulada para este operador." : "Nenhum cliente foi acionado pelos operadores válidos neste filtro, então não há ocorrências para mostrar."}</td></tr>`;
+    || `<tr><td colspan="4" class="vazio">${(q || st.tipo) ? "Nenhuma ocorrência encontrada para esta busca." : u ? "Sem ocorrência tabulada para este operador." : "Nenhum cliente foi acionado pelos operadores válidos neste filtro, então não há ocorrências para mostrar."}</td></tr>`;
 }
 
 
