@@ -293,6 +293,11 @@ body[data-page="cpc"] .baseChip i,
 body[data-page="cpc"] .dia.hoje,
 body[data-page="cpc"] .kpis > * { animation: none !important; }
 
+@media (prefers-reduced-motion: reduce) {
+  body[data-page="cpc"] .r2 { animation: gira 28s linear infinite !important; }
+  body[data-page="cpc"] .fchip { animation: flutua 6s ease-in-out infinite !important; }
+}
+
 /* CPC: ocorrencias */
 body[data-page="cpc"] .bloco[aria-label="Ocorrências"] {
   padding: 20px;
