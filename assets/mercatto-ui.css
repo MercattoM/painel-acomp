@@ -170,6 +170,7 @@ body { min-width: 320px; background: var(--mt-page); color: var(--mt-text); }
 :root[data-theme="dark"] body[data-page="cpc"] .mi,
 :root[data-theme="dark"] body[data-page="cpc"] .op .v,
 :root[data-theme="dark"] body[data-page="cpc"] .op .n small { color: #e1efff; }
+:root[data-theme="dark"] body[data-page="cpc"] .card { border-color: var(--mt-line); background: var(--mt-surface); color: var(--mt-text); }
 :root[data-theme="dark"] body[data-page="cpc"] .cart,
 :root[data-theme="dark"] body[data-page="cpc"] .dia,
 :root[data-theme="dark"] body[data-page="cpc"] .mi,
@@ -289,8 +290,6 @@ body[data-page="cpc"] .band .seg { transition: none !important; }
 body[data-page="cpc"] .band .seg::after { content: none !important; animation: none !important; }
 body[data-page="cpc"] .live i,
 body[data-page="cpc"] .baseChip i,
-body[data-page="cpc"] .r2,
-body[data-page="cpc"] .fchip,
 body[data-page="cpc"] .dia.hoje,
 body[data-page="cpc"] .kpis > * { animation: none !important; }
 
