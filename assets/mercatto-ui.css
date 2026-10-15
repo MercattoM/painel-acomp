@@ -370,7 +370,7 @@ body[data-page="cpc"] .bloco[aria-label="Ocorrências"] .scroll::-webkit-scrollb
 body[data-page="cpc"] .bloco[aria-label="Ocorrências"] .scroll::-webkit-scrollbar-thumb { border-radius: 8px; background: color-mix(in srgb, var(--mt-muted) 32%, transparent); }
 body[data-page="cpc"] .bloco[aria-label="Ocorrências"] table {
   width: 100%;
-  min-width: 650px;
+  min-width: 480px;
   border-collapse: separate;
   border-spacing: 0;
   font-size: 12px;
@@ -396,18 +396,16 @@ body[data-page="cpc"] .bloco[aria-label="Ocorrências"] td {
 }
 body[data-page="cpc"] .bloco[aria-label="Ocorrências"] tbody tr:last-child td { border-bottom: 0; }
 body[data-page="cpc"] .bloco[aria-label="Ocorrências"] tbody tr:hover td { background: color-mix(in srgb, #10a9d2 5%, var(--mt-surface)); }
-body[data-page="cpc"] .bloco[aria-label="Ocorrências"] th:nth-child(1),
-body[data-page="cpc"] .bloco[aria-label="Ocorrências"] td.cod { width: 62px; color: var(--mt-muted); font-variant-numeric: tabular-nums; }
-body[data-page="cpc"] .bloco[aria-label="Ocorrências"] th:nth-child(2) { min-width: 210px; }
-body[data-page="cpc"] .bloco[aria-label="Ocorrências"] td.d { color: var(--mt-text); font-weight: 620; }
-body[data-page="cpc"] .bloco[aria-label="Ocorrências"] th:nth-child(3) { width: 128px; }
-body[data-page="cpc"] .bloco[aria-label="Ocorrências"] th:nth-child(4),
-body[data-page="cpc"] .bloco[aria-label="Ocorrências"] th:nth-child(5) { width: 108px; text-align: right; }
+body[data-page="cpc"] .bloco[aria-label="Ocorrências"] th:nth-child(1) { width: auto; min-width: 200px; }
+body[data-page="cpc"] .bloco[aria-label="Ocorrências"] th:nth-child(2) { width: 72px; text-align: right; }
+body[data-page="cpc"] .bloco[aria-label="Ocorrências"] td.d { color: var(--mt-text); font-weight: 620; overflow-wrap: normal; word-break: normal; }
+body[data-page="cpc"] .bloco[aria-label="Ocorrências"] th:nth-child(3) { width: 180px; text-align: left; }
+body[data-page="cpc"] .bloco[aria-label="Ocorrências"] td.c { text-align: right; }
 body[data-page="cpc"] .bloco[aria-label="Ocorrências"] td.c,
 body[data-page="cpc"] .bloco[aria-label="Ocorrências"] td.num { font-variant-numeric: tabular-nums; }
 body[data-page="cpc"] .bloco[aria-label="Ocorrências"] td.c b { color: var(--mt-text); font-size: 13px; }
 body[data-page="cpc"] .bloco[aria-label="Ocorrências"] th.bar,
-body[data-page="cpc"] .bloco[aria-label="Ocorrências"] td.bar { width: 18%; min-width: 90px; }
+body[data-page="cpc"] .bloco[aria-label="Ocorrências"] td.bar { width: 180px; min-width: 140px; text-align: left; }
 body[data-page="cpc"] .bloco[aria-label="Ocorrências"] td.bar .band { height: 6px; background: var(--mt-track); }
 body[data-page="cpc"] .bloco[aria-label="Ocorrências"] .chip {
   padding: 3px 8px;
@@ -427,4 +425,12 @@ body[data-page="cpc"] .bloco[aria-label="Ocorrências"] .chip {
   body[data-page="cpc"] .tp { flex: 0 0 auto; }
   body[data-page="cpc"] .bloco[aria-label="Ocorrências"] .scroll { max-height: 400px; }
   body[data-page="cpc"] .bloco[aria-label="Ocorrências"] table { min-width: 610px; }
+}
+
+/* HOME: animações do hero continuam ativas mesmo com "reduzir movimento" ativo no sistema */
+@media (prefers-reduced-motion: reduce) {
+  body[data-page="home"] .hero::after { animation: ambient 7.5s ease-in-out infinite alternate !important; }
+  body[data-page="home"] .orbit { animation: orbit-breathe 4s ease-in-out infinite alternate !important; }
+  body[data-page="home"] .float-label.one { animation: drift 3.5s ease-in-out infinite alternate !important; }
+  body[data-page="home"] .float-label.two { animation: drift 4s 1s ease-in-out infinite alternate-reverse !important; }
 }

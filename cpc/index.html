@@ -357,7 +357,7 @@ function carteiras(){
   const lista = [...D.carteiras].sort(f);
   $("carts").innerHTML = lista.map(c => { const t = totalCarteira(c), s = (k,cl) => c[k] ? `<span class="seg ${cl}" style="width:${c[k]/t*100}%" title="${c[k]}"></span>` : "";
     return `<button class="cart" aria-pressed="${st.sel===c.nome}" data-c="${esc(c.nome)}">
-      <div class="top"><span class="nome">${esc(c.nome)}</span><span class="p">${pctPainel(c.a,t)}%</span></div>
+      <div class="top"><span class="nome">${esc(c.nome)}</span><span class="p">${t ? pctPainel(c.a,t)+"%" : ""}</span></div>
       <div class="band">${s("a","ok")}${s("w","wt")}${s("n","no")}</div>
       <div class="meta"><span><i class="dot" style="--c:var(--ok)"></i><b>${c.a}</b> acionados</span><span><i class="dot" style="--c:var(--wt)"></i><b>${c.w}</b> aguardando</span><span><i class="dot" style="--c:var(--no)"></i><b>${c.n}</b> não acionados</span></div>
       <div class="env">${t ? t+" CPCs enviados" : "Sem CPC neste relatório"}</div></button>`; }).join("") || '<p class="vazio">Nenhum CPC dentro da base neste relatório.</p>';
@@ -402,7 +402,7 @@ function ocorrencias(){
     : "Só os clientes acionados pelos operadores válidos de cada carteira.";
   $("thPct").textContent = u ? "% do operador" : "% dos acionados";
   const porTipo = {}; lista.forEach(o => porTipo[o.tipo] = (porTipo[o.tipo]||0)+o.q);
-  const tiposOrd = Object.entries(porTipo).sort((a,b) => b[1]-a[1]), soTipos = tiposOrd.reduce((s,[,q]) => s+q, 0);
+  const tiposOrd = Object.entries(porTipo).filter(([t]) => t !== "SEM CONTATO").sort((a,b) => b[1]-a[1]), soTipos = tiposOrd.reduce((s,[,q]) => s+q, 0);
   if(st.tipo && !(st.tipo in porTipo)) st.tipo = null;
   $("bTipos").innerHTML = tiposOrd.map(([t,q]) => `<span class="seg" style="width:${q/soTipos*100}%;background:${cor(t)}" title="${esc(cap(t))}: ${q}"></span>`).join("");
   $("tipos").innerHTML = tiposOrd.map(([t,q]) => `<button class="tp" style="--c:${cor(t)}" aria-pressed="${st.tipo===t}" data-t="${esc(t)}"><i></i>${esc(cap(t))} <b>${q}</b></button>`).join("");
