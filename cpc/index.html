@@ -484,8 +484,13 @@ function baseStatus(){
   const hora = geradoDate && !Number.isNaN(geradoDate.getTime())
     ? geradoDate.toLocaleDateString("pt-BR") + " às " + geradoDate.toLocaleTimeString("pt-BR", {hour:"2-digit",minute:"2-digit"})
     : "horário não informado";
-  chip.style.display = "inline-flex"; chip.className = "baseChip warn";
-  chip.innerHTML = "<i></i>Atualização não confirmada";
+  const atualizadaHoje = D.data === h.iso && dataBase === h.iso && gerado.slice(0,10) === h.iso
+    && geradoDate && !Number.isNaN(geradoDate.getTime());
+  chip.style.display = "inline-flex"; chip.className = "baseChip " + (atualizadaHoje ? "ok" : "warn");
+  const atualizadoEm = atualizadaHoje
+    ? geradoDate.toLocaleDateString("pt-BR") + " " + geradoDate.toLocaleTimeString("pt-BR", {hour:"2-digit",minute:"2-digit"})
+    : "";
+  chip.innerHTML = "<i></i>" + (atualizadaHoje ? "Atualizado em " + atualizadoEm : "Atualização não confirmada");
   const titulo = inconsistencias.length ? "Inconsistência nos totais da base" : atrasada ? "Base de acionamento desatualizada" : "Limite de atualização dos dados";
   const estado = inconsistencias.length
     ? "Não use os totais como confirmados: " + inconsistencias.join("; ") + "."
