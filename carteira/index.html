@@ -436,19 +436,43 @@ function kpis(){
 function tabela(){
   const c = st.comp, k = st.cart, {y,m} = parse(c);
   $("tTit").textContent = "Visão Carteira — " + MESES[m-1] + "/" + y;
+  
+  // Garante que a linha renderiza 3 colunas de dados após o Grupo: Indicador, Valor e Custo
   const row = (g, gc, rows) => rows.map((r,i) => '<tr'+(i===0?' class="grp"':'')+'>'+(i===0?'<td class="g" style="--c:'+gc+'" rowspan="'+rows.length+'">'+g+'</td>':'')
-    +'<td>'+r[0]+'</td><td>'+r[1]+'</td><td class="r">'+r[2]+'</td></tr>').join("");
-  const v = (ind, f, un) => { const x = val(c,k,ind); return x==null ? '<span class="na">—</span>' : f(x); };
-  const un = (ind, u) => val(c,k,ind)==null ? '<span class="na">—</span>' : u;
-  const chRows = CH.map(ch => { const x = cv(c,k,ch);
-    return [ch, x ? fI(x.q) : '<span class="na">—</span>', x ? "mensagens" : '<span class="na">—</span>', x ? fB(x.c) : '<span class="na">—</span>']; });
+      +'<td>'+r[0]+'</td><td>'+r[1]+'</td><td class="r">'+r[2]+'</td></tr>').join("");
+      
+  const v = (ind, f) => { const x = val(c,k,ind); return x==null ? '<span class="na">—</span>' : f(x); };
+  
+  // Canais: [Canal, Quantidade (Valor), Custo Total (Custo)]
+  const chRows = CH.map(ch => { 
+    const x = cv(c,k,ch);
+    return [ch, x ? fI(x.q) : '<span class="na">—</span>', x ? fB(x.c) : '<span class="na">—</span>']; 
+  });
+  
   const dash = '<span class="na">—</span>';
+  
+  // Atribuindo o traço (dash) na coluna de Custo para os indicadores gerais que não possuem custo direto
   $("tb").innerHTML =
-    row("Carteira","#13c9a0",[["Clientes",v("Clientes",fI),un("Clientes","clientes"),dash],["Saldo",v("Saldo",fB),un("Saldo","BRL"),dash]]) +
-    row("Ações","#2d6cff",[["Acionamentos",v("Acionamentos",fI),un("Acionamentos","ações"),dash],...chRows]) +
-    row("Negócio","#8b5cf6",[["Promessas",v("Promessas",fI),un("Promessas","promessas"),dash],["Pagamentos",v("Pagamentos",fI),un("Pagamentos","pagamentos"),dash]]) +
-    row("Conversão","#f6b73c",[["Índice de conversão",v(CONV,fP),un(CONV,"%"),dash]]) +
-    row("Financeiro","#19c3f0",[["Caixa",v("Caixa",fB),un("Caixa","BRL"),dash],["Comissão",v("Comissão",fB),un("Comissão","BRL"),dash]]);
+    row("Carteira","#13c9a0",[
+      ["Clientes", v("Clientes", fI), dash],
+      ["Saldo", v("Saldo", fB), dash]
+    ]) +
+    row("Ações","#2d6cff",[
+      ["Acionamentos", v("Acionamentos", fI), dash],
+      ...chRows
+    ]) +
+    row("Negócio","#8b5cf6",[
+      ["Promessas", v("Promessas", fI), dash],
+      ["Pagamentos", v("Pagamentos", fI), dash]
+    ]) +
+    row("Conversão","#f6b73c",[
+      ["Índice de conversão", v(CONV, fP), dash]
+    ]) +
+    row("Financeiro","#19c3f0",[
+      ["Caixa", v("Caixa", fB), dash],
+      ["Comissão", v("Comissão", fB), dash]
+    ]);
+
   const falta = [];
   if(val(c,k,"Clientes")==null) falta.push("carteira (clientes/saldo)");
   if(val(c,k,"Acionamentos")==null) falta.push("acionamentos");
