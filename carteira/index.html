@@ -289,7 +289,7 @@ footer{margin-top:16px;display:flex;justify-content:space-between;gap:12px;flex-
     <section class="panel blk" aria-label="Visão Carteira do período">
       <h2 id="tTit">Visão Carteira</h2>
       <div style="overflow:auto"><table>
-        <thead><tr><th>Grupo</th><th>Indicador</th><th>Valor</th><th>Unidade</th><th class="r">Custo</th></tr></thead>
+        <thead><tr><th>Grupo</th><th>Indicador</th><th>Valor</th><th class="r">Custo</th></tr></thead>
         <tbody id="tb"></tbody></table></div>
       <div class="note"><i>i</i><span id="tNote">Tabela resumida. Para mais detalhes, consulte os gráficos.</span></div>
     </section>
@@ -437,7 +437,7 @@ function tabela(){
   const c = st.comp, k = st.cart, {y,m} = parse(c);
   $("tTit").textContent = "Visão Carteira — " + MESES[m-1] + "/" + y;
   const row = (g, gc, rows) => rows.map((r,i) => '<tr'+(i===0?' class="grp"':'')+'>'+(i===0?'<td class="g" style="--c:'+gc+'" rowspan="'+rows.length+'">'+g+'</td>':'')
-      +'<td>'+r[0]+'</td><td>'+r[1]+'</td><td>'+r[2]+'</td><td class="r">'+r[3]+'</td></tr>').join("");
+    +'<td>'+r[0]+'</td><td>'+r[1]+'</td><td class="r">'+r[2]+'</td></tr>').join("");
   const v = (ind, f, un) => { const x = val(c,k,ind); return x==null ? '<span class="na">—</span>' : f(x); };
   const un = (ind, u) => val(c,k,ind)==null ? '<span class="na">—</span>' : u;
   const chRows = CH.map(ch => { const x = cv(c,k,ch);
