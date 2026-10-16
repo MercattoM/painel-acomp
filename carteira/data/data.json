@@ -1,7 +1,11 @@
 {
  "schema_version": "1.1.0",
- "generated_at": "2026-10-16T13:05:20-03:00",
+ "generated_at": "2026-10-16T16:53:24-03:00",
  "competencies": [
+  "2025-12",
+  "2026-01",
+  "2026-02",
+  "2026-03",
   "2026-04",
   "2026-05",
   "2026-06",
@@ -12,9 +16,39 @@
  ],
  "records": [
   {
+   "id": "2026-04|172|Promessas",
+   "competency": "2026-04",
+   "portfolio": "TABOR FIDC",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 1,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
    "id": "2026-05|172|Promessas",
    "competency": "2026-05",
    "portfolio": "TABOR FIDC",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 2,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-06|136|Promessas",
+   "competency": "2026-06",
+   "portfolio": "TABOR FUNDO DE INV. - DIGIMAIS",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 1,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-06|155|Promessas",
+   "competency": "2026-06",
+   "portfolio": "TABOR II",
    "group": "Negócio",
    "indicator": "Promessas",
    "value": 1,
@@ -27,7 +61,197 @@
    "portfolio": "TABOR FIDC",
    "group": "Negócio",
    "indicator": "Promessas",
+   "value": 2,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-07|3|Promessas",
+   "competency": "2026-07",
+   "portfolio": "BANCO DIGIMAIS - FASE III",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 307,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-07|24|Promessas",
+   "competency": "2026-07",
+   "portfolio": "BANCO DIGIMAIS - FASE IV",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 167,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-07|25|Promessas",
+   "competency": "2026-07",
+   "portfolio": "BANCO DIGIMAIS - FASE I",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 1824,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-07|26|Promessas",
+   "competency": "2026-07",
+   "portfolio": "BANCO DIGIMAIS-FASE V",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 337,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-07|35|Promessas",
+   "competency": "2026-07",
+   "portfolio": "BANCO DIGIMAIS-FASE VI",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 101,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-07|94|Promessas",
+   "competency": "2026-07",
+   "portfolio": "BANCO DIGIMAIS - FASE II",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 692,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-07|125|Promessas",
+   "competency": "2026-07",
+   "portfolio": "SIMPALA",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 769,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-07|135|Promessas",
+   "competency": "2026-07",
+   "portfolio": "INNOVA - VEICULOS",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 139,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-07|136|Promessas",
+   "competency": "2026-07",
+   "portfolio": "TABOR FUNDO DE INV. - DIGIMAIS",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 159,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-07|141|Promessas",
+   "competency": "2026-07",
+   "portfolio": "AREZZO",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 61,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-07|148|Promessas",
+   "competency": "2026-07",
+   "portfolio": "AREZZO PDD",
+   "group": "Negócio",
+   "indicator": "Promessas",
    "value": 1,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-07|150|Promessas",
+   "competency": "2026-07",
+   "portfolio": "YARDS - FACTA",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 3,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-07|155|Promessas",
+   "competency": "2026-07",
+   "portfolio": "TABOR II",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 312,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-07|156|Promessas",
+   "competency": "2026-07",
+   "portfolio": "TABOR JURIDICO II",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 2,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-07|158|Promessas",
+   "competency": "2026-07",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 438,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-07|159|Promessas",
+   "competency": "2026-07",
+   "portfolio": "FIDC SINAI - CONSIGNADO",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 19,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-07|162|Promessas",
+   "competency": "2026-07",
+   "portfolio": "GF PNEUS",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 20,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-07|163|Promessas",
+   "competency": "2026-07",
+   "portfolio": "HATIKVAH PARTICIPACOES LTDA",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 2666,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-07|164|Promessas",
+   "competency": "2026-07",
+   "portfolio": "HATIKVAH PARTICIPACOES LTDA JURIDIC",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 19,
    "unit": "promessas",
    "cost": null
   },
@@ -37,7 +261,17 @@
    "portfolio": "TABOR FIDC",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 1,
+   "value": 107,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-07|175|Promessas",
+   "competency": "2026-07",
+   "portfolio": "SINOSSERRA",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 18,
    "unit": "promessas",
    "cost": null
   },
@@ -57,7 +291,7 @@
    "portfolio": "BANCO DIGIMAIS - FASE III",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 250,
+   "value": 262,
    "unit": "promessas",
    "cost": null
   },
@@ -67,7 +301,7 @@
    "portfolio": "BANCO DIGIMAIS - FASE IV",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 168,
+   "value": 180,
    "unit": "promessas",
    "cost": null
   },
@@ -77,7 +311,7 @@
    "portfolio": "BANCO DIGIMAIS - FASE I",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 1597,
+   "value": 1606,
    "unit": "promessas",
    "cost": null
   },
@@ -87,7 +321,7 @@
    "portfolio": "BANCO DIGIMAIS-FASE V",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 286,
+   "value": 299,
    "unit": "promessas",
    "cost": null
   },
@@ -97,7 +331,7 @@
    "portfolio": "BANCO DIGIMAIS-FASE VI",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 70,
+   "value": 78,
    "unit": "promessas",
    "cost": null
   },
@@ -107,7 +341,7 @@
    "portfolio": "BANCO DIGIMAIS - FASE II",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 666,
+   "value": 669,
    "unit": "promessas",
    "cost": null
   },
@@ -117,7 +351,7 @@
    "portfolio": "SIMPALA",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 622,
+   "value": 700,
    "unit": "promessas",
    "cost": null
   },
@@ -127,7 +361,7 @@
    "portfolio": "INNOVA - VEICULOS",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 116,
+   "value": 207,
    "unit": "promessas",
    "cost": null
   },
@@ -137,7 +371,7 @@
    "portfolio": "AREZZO",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 18,
+   "value": 42,
    "unit": "promessas",
    "cost": null
   },
@@ -167,7 +401,7 @@
    "portfolio": "FIDC SINAI - CONSIGNADO",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 41,
+   "value": 48,
    "unit": "promessas",
    "cost": null
   },
@@ -177,7 +411,7 @@
    "portfolio": "GF PNEUS",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 4,
+   "value": 23,
    "unit": "promessas",
    "cost": null
   },
@@ -187,7 +421,7 @@
    "portfolio": "HATIKVAH PARTICIPACOES LTDA",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 1978,
+   "value": 2177,
    "unit": "promessas",
    "cost": null
   },
@@ -197,7 +431,7 @@
    "portfolio": "HATIKVAH PARTICIPACOES LTDA JURIDIC",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 20,
+   "value": 22,
    "unit": "promessas",
    "cost": null
   },
@@ -217,7 +451,7 @@
    "portfolio": "TABOR FIDC",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 108,
+   "value": 121,
    "unit": "promessas",
    "cost": null
   },
@@ -227,7 +461,7 @@
    "portfolio": "SINOSSERRA",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 21,
+   "value": 27,
    "unit": "promessas",
    "cost": null
   },
@@ -317,7 +551,7 @@
    "portfolio": "BANCO DIGIMAIS - FASE II",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 663,
+   "value": 664,
    "unit": "promessas",
    "cost": null
   },
@@ -337,7 +571,7 @@
    "portfolio": "INNOVA - VEICULOS",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 162,
+   "value": 246,
    "unit": "promessas",
    "cost": null
   },
@@ -347,7 +581,7 @@
    "portfolio": "AREZZO",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 26,
+   "value": 41,
    "unit": "promessas",
    "cost": null
   },
@@ -407,7 +641,7 @@
    "portfolio": "GF PNEUS",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 8,
+   "value": 17,
    "unit": "promessas",
    "cost": null
   },
@@ -427,7 +661,7 @@
    "portfolio": "HATIKVAH PARTICIPACOES LTDA JURIDIC",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 36,
+   "value": 37,
    "unit": "promessas",
    "cost": null
   },
@@ -447,7 +681,7 @@
    "portfolio": "TABOR FIDC",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 81,
+   "value": 90,
    "unit": "promessas",
    "cost": null
   },
@@ -457,7 +691,7 @@
    "portfolio": "SINOSSERRA",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 17,
+   "value": 36,
    "unit": "promessas",
    "cost": null
   },
@@ -487,7 +721,7 @@
    "portfolio": "BANCO DIGIMAIS - FASE III",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 44,
+   "value": 166,
    "unit": "promessas",
    "cost": null
   },
@@ -497,7 +731,7 @@
    "portfolio": "BANCO DIGIMAIS - FASE IV",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 38,
+   "value": 112,
    "unit": "promessas",
    "cost": null
   },
@@ -507,7 +741,7 @@
    "portfolio": "BANCO DIGIMAIS - FASE I",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 221,
+   "value": 917,
    "unit": "promessas",
    "cost": null
   },
@@ -517,7 +751,7 @@
    "portfolio": "BANCO DIGIMAIS-FASE V",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 48,
+   "value": 149,
    "unit": "promessas",
    "cost": null
   },
@@ -527,7 +761,7 @@
    "portfolio": "BANCO DIGIMAIS-FASE VI",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 18,
+   "value": 44,
    "unit": "promessas",
    "cost": null
   },
@@ -537,7 +771,7 @@
    "portfolio": "BANCO DIGIMAIS - FASE II",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 120,
+   "value": 370,
    "unit": "promessas",
    "cost": null
   },
@@ -547,7 +781,7 @@
    "portfolio": "SIMPALA",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 260,
+   "value": 649,
    "unit": "promessas",
    "cost": null
   },
@@ -557,7 +791,7 @@
    "portfolio": "INNOVA - VEICULOS",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 157,
+   "value": 256,
    "unit": "promessas",
    "cost": null
   },
@@ -567,7 +801,27 @@
    "portfolio": "AREZZO",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 13,
+   "value": 26,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-10|150|Promessas",
+   "competency": "2026-10",
+   "portfolio": "YARDS - FACTA",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 6,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-10|154|Promessas",
+   "competency": "2026-10",
+   "portfolio": "YARDS - REAG",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 1,
    "unit": "promessas",
    "cost": null
   },
@@ -577,7 +831,7 @@
    "portfolio": "FIDC SINAI - CONSIGNADO",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 3,
+   "value": 9,
    "unit": "promessas",
    "cost": null
   },
@@ -587,7 +841,7 @@
    "portfolio": "GF PNEUS",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 4,
+   "value": 11,
    "unit": "promessas",
    "cost": null
   },
@@ -597,7 +851,7 @@
    "portfolio": "HATIKVAH PARTICIPACOES LTDA",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 475,
+   "value": 1977,
    "unit": "promessas",
    "cost": null
   },
@@ -607,7 +861,7 @@
    "portfolio": "HATIKVAH PARTICIPACOES LTDA JURIDIC",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 7,
+   "value": 25,
    "unit": "promessas",
    "cost": null
   },
@@ -617,7 +871,7 @@
    "portfolio": "HATIKVAH APREENDIDOS/ENTREGA",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 1,
+   "value": 2,
    "unit": "promessas",
    "cost": null
   },
@@ -627,7 +881,7 @@
    "portfolio": "TABOR FIDC",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 40,
+   "value": 60,
    "unit": "promessas",
    "cost": null
   },
@@ -637,7 +891,7 @@
    "portfolio": "SINOSSERRA",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 10,
+   "value": 19,
    "unit": "promessas",
    "cost": null
   },
@@ -652,12 +906,22 @@
    "cost": null
   },
   {
+   "id": "2026-04|-1|Promessas",
+   "competency": "2026-04",
+   "portfolio": "Todas as carteiras",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 1,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
    "id": "2026-05|-1|Promessas",
    "competency": "2026-05",
    "portfolio": "Todas as carteiras",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 1,
+   "value": 2,
    "unit": "promessas",
    "cost": null
   },
@@ -667,7 +931,7 @@
    "portfolio": "Todas as carteiras",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 1,
+   "value": 4,
    "unit": "promessas",
    "cost": null
   },
@@ -677,7 +941,7 @@
    "portfolio": "Todas as carteiras",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 1,
+   "value": 8161,
    "unit": "promessas",
    "cost": null
   },
@@ -687,7 +951,7 @@
    "portfolio": "Todas as carteiras",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 6124,
+   "value": 6620,
    "unit": "promessas",
    "cost": null
   },
@@ -697,7 +961,7 @@
    "portfolio": "Todas as carteiras",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 7156,
+   "value": 7294,
    "unit": "promessas",
    "cost": null
   },
@@ -707,7 +971,7 @@
    "portfolio": "Todas as carteiras",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 1503,
+   "value": 4843,
    "unit": "promessas",
    "cost": null
   },
@@ -2127,7 +2391,7 @@
    "portfolio": "BANCO DIGIMAIS - FASE III",
    "group": "Negócio",
    "indicator": "Pagamentos",
-   "value": 7,
+   "value": 116,
    "unit": "pagamentos",
    "cost": null
   },
@@ -2137,7 +2401,7 @@
    "portfolio": "BANCO DIGIMAIS - FASE III",
    "group": "Financeiro",
    "indicator": "Caixa",
-   "value": 7549.43,
+   "value": 107108.74,
    "unit": "BRL",
    "cost": null
   },
@@ -2147,7 +2411,7 @@
    "portfolio": "BANCO DIGIMAIS - FASE III",
    "group": "Financeiro",
    "indicator": "Comissão",
-   "value": 897.55,
+   "value": 13713.54,
    "unit": "BRL",
    "cost": null
   },
@@ -2157,7 +2421,7 @@
    "portfolio": "BANCO DIGIMAIS - FASE IV",
    "group": "Negócio",
    "indicator": "Pagamentos",
-   "value": 6,
+   "value": 92,
    "unit": "pagamentos",
    "cost": null
   },
@@ -2167,7 +2431,7 @@
    "portfolio": "BANCO DIGIMAIS - FASE IV",
    "group": "Financeiro",
    "indicator": "Caixa",
-   "value": 4276.26,
+   "value": 55164.25,
    "unit": "BRL",
    "cost": null
   },
@@ -2177,7 +2441,7 @@
    "portfolio": "BANCO DIGIMAIS - FASE IV",
    "group": "Financeiro",
    "indicator": "Comissão",
-   "value": 557.77,
+   "value": 6861.7,
    "unit": "BRL",
    "cost": null
   },
@@ -2187,7 +2451,7 @@
    "portfolio": "BANCO DIGIMAIS - FASE I",
    "group": "Negócio",
    "indicator": "Pagamentos",
-   "value": 61,
+   "value": 594,
    "unit": "pagamentos",
    "cost": null
   },
@@ -2197,7 +2461,7 @@
    "portfolio": "BANCO DIGIMAIS - FASE I",
    "group": "Financeiro",
    "indicator": "Caixa",
-   "value": 68409.05,
+   "value": 679268.14,
    "unit": "BRL",
    "cost": null
   },
@@ -2207,7 +2471,7 @@
    "portfolio": "BANCO DIGIMAIS - FASE I",
    "group": "Financeiro",
    "indicator": "Comissão",
-   "value": 8305.38,
+   "value": 81712.76,
    "unit": "BRL",
    "cost": null
   },
@@ -2217,7 +2481,7 @@
    "portfolio": "BANCO DIGIMAIS-FASE V",
    "group": "Negócio",
    "indicator": "Pagamentos",
-   "value": 27,
+   "value": 113,
    "unit": "pagamentos",
    "cost": null
   },
@@ -2227,7 +2491,7 @@
    "portfolio": "BANCO DIGIMAIS-FASE V",
    "group": "Financeiro",
    "indicator": "Caixa",
-   "value": 8385.67,
+   "value": 50720.78,
    "unit": "BRL",
    "cost": null
   },
@@ -2237,7 +2501,7 @@
    "portfolio": "BANCO DIGIMAIS-FASE V",
    "group": "Financeiro",
    "indicator": "Comissão",
-   "value": 186.11,
+   "value": 6519.9,
    "unit": "BRL",
    "cost": null
   },
@@ -2247,7 +2511,7 @@
    "portfolio": "BANCO DIGIMAIS-FASE VI",
    "group": "Negócio",
    "indicator": "Pagamentos",
-   "value": 48,
+   "value": 107,
    "unit": "pagamentos",
    "cost": null
   },
@@ -2257,7 +2521,7 @@
    "portfolio": "BANCO DIGIMAIS-FASE VI",
    "group": "Financeiro",
    "indicator": "Caixa",
-   "value": 6442.86,
+   "value": 22413.2,
    "unit": "BRL",
    "cost": null
   },
@@ -2267,7 +2531,7 @@
    "portfolio": "BANCO DIGIMAIS-FASE VI",
    "group": "Financeiro",
    "indicator": "Comissão",
-   "value": 126.33,
+   "value": 2531.76,
    "unit": "BRL",
    "cost": null
   },
@@ -2277,7 +2541,7 @@
    "portfolio": "BANCO DIGIMAIS - FASE II",
    "group": "Negócio",
    "indicator": "Pagamentos",
-   "value": 36,
+   "value": 234,
    "unit": "pagamentos",
    "cost": null
   },
@@ -2287,7 +2551,7 @@
    "portfolio": "BANCO DIGIMAIS - FASE II",
    "group": "Financeiro",
    "indicator": "Caixa",
-   "value": 41994.43,
+   "value": 266684.38,
    "unit": "BRL",
    "cost": null
   },
@@ -2297,7 +2561,67 @@
    "portfolio": "BANCO DIGIMAIS - FASE II",
    "group": "Financeiro",
    "indicator": "Comissão",
-   "value": 5366.59,
+   "value": 32223.64,
+   "unit": "BRL",
+   "cost": null
+  },
+  {
+   "id": "2026-10|136|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "TABOR FUNDO DE INV. - DIGIMAIS",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 1,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-10|136|Caixa",
+   "competency": "2026-10",
+   "portfolio": "TABOR FUNDO DE INV. - DIGIMAIS",
+   "group": "Financeiro",
+   "indicator": "Caixa",
+   "value": 450.68,
+   "unit": "BRL",
+   "cost": null
+  },
+  {
+   "id": "2026-10|136|Comissão",
+   "competency": "2026-10",
+   "portfolio": "TABOR FUNDO DE INV. - DIGIMAIS",
+   "group": "Financeiro",
+   "indicator": "Comissão",
+   "value": 0.0,
+   "unit": "BRL",
+   "cost": null
+  },
+  {
+   "id": "2026-10|141|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "AREZZO",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 3,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-10|141|Caixa",
+   "competency": "2026-10",
+   "portfolio": "AREZZO",
+   "group": "Financeiro",
+   "indicator": "Caixa",
+   "value": 7561.61,
+   "unit": "BRL",
+   "cost": null
+  },
+  {
+   "id": "2026-10|141|Comissão",
+   "competency": "2026-10",
+   "portfolio": "AREZZO",
+   "group": "Financeiro",
+   "indicator": "Comissão",
+   "value": 1433.91,
    "unit": "BRL",
    "cost": null
   },
@@ -2337,7 +2661,7 @@
    "portfolio": "TABOR II",
    "group": "Negócio",
    "indicator": "Pagamentos",
-   "value": 2,
+   "value": 3,
    "unit": "pagamentos",
    "cost": null
   },
@@ -2347,7 +2671,7 @@
    "portfolio": "TABOR II",
    "group": "Financeiro",
    "indicator": "Caixa",
-   "value": 1568.73,
+   "value": 2511.24,
    "unit": "BRL",
    "cost": null
   },
@@ -2357,7 +2681,7 @@
    "portfolio": "TABOR II",
    "group": "Financeiro",
    "indicator": "Comissão",
-   "value": 39.22,
+   "value": 62.78,
    "unit": "BRL",
    "cost": null
   },
@@ -2397,7 +2721,7 @@
    "portfolio": "HATIKVAH PARTICIPACOES LTDA",
    "group": "Negócio",
    "indicator": "Pagamentos",
-   "value": 300,
+   "value": 1237,
    "unit": "pagamentos",
    "cost": null
   },
@@ -2407,7 +2731,7 @@
    "portfolio": "HATIKVAH PARTICIPACOES LTDA",
    "group": "Financeiro",
    "indicator": "Caixa",
-   "value": 326425.71,
+   "value": 1370267.43,
    "unit": "BRL",
    "cost": null
   },
@@ -2417,7 +2741,7 @@
    "portfolio": "HATIKVAH PARTICIPACOES LTDA",
    "group": "Financeiro",
    "indicator": "Comissão",
-   "value": 24447.46,
+   "value": 95397.37,
    "unit": "BRL",
    "cost": null
   },
@@ -2427,7 +2751,7 @@
    "portfolio": "HATIKVAH PARTICIPACOES LTDA JURIDIC",
    "group": "Negócio",
    "indicator": "Pagamentos",
-   "value": 4,
+   "value": 23,
    "unit": "pagamentos",
    "cost": null
   },
@@ -2437,7 +2761,7 @@
    "portfolio": "HATIKVAH PARTICIPACOES LTDA JURIDIC",
    "group": "Financeiro",
    "indicator": "Caixa",
-   "value": 16650.0,
+   "value": 84359.24,
    "unit": "BRL",
    "cost": null
   },
@@ -2447,7 +2771,7 @@
    "portfolio": "HATIKVAH PARTICIPACOES LTDA JURIDIC",
    "group": "Financeiro",
    "indicator": "Comissão",
-   "value": 3678.6,
+   "value": 16321.13,
    "unit": "BRL",
    "cost": null
   },
@@ -2457,7 +2781,7 @@
    "portfolio": "TABOR FIDC",
    "group": "Negócio",
    "indicator": "Pagamentos",
-   "value": 3,
+   "value": 17,
    "unit": "pagamentos",
    "cost": null
   },
@@ -2467,7 +2791,7 @@
    "portfolio": "TABOR FIDC",
    "group": "Financeiro",
    "indicator": "Caixa",
-   "value": 3237.71,
+   "value": 16403.29,
    "unit": "BRL",
    "cost": null
   },
@@ -2477,7 +2801,7 @@
    "portfolio": "TABOR FIDC",
    "group": "Financeiro",
    "indicator": "Comissão",
-   "value": 362.59,
+   "value": 2008.32,
    "unit": "BRL",
    "cost": null
   },
@@ -2577,7 +2901,7 @@
    "portfolio": "Todas as carteiras",
    "group": "Negócio",
    "indicator": "Pagamentos",
-   "value": 496,
+   "value": 2542,
    "unit": "pagamentos",
    "cost": null
   },
@@ -2587,7 +2911,7 @@
    "portfolio": "Todas as carteiras",
    "group": "Financeiro",
    "indicator": "Caixa",
-   "value": 485566.88,
+   "value": 2663540.01,
    "unit": "BRL",
    "cost": null
   },
@@ -2597,7 +2921,7 @@
    "portfolio": "Todas as carteiras",
    "group": "Financeiro",
    "indicator": "Comissão",
-   "value": 44036.6,
+   "value": 258855.81,
    "unit": "BRL",
    "cost": null
   },
@@ -3300,7 +3624,7 @@
    "portfolio": "HATIKVAH PARTICIPACOES LTDA",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 58.5,
+   "value": 58.6,
    "unit": "%",
    "cost": null,
    "base": 2267
@@ -3333,7 +3657,7 @@
    "portfolio": "TABOR FIDC",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 25.6,
+   "value": 26.7,
    "unit": "%",
    "cost": null,
    "base": 90
@@ -3377,10 +3701,10 @@
    "portfolio": "BANCO DIGIMAIS - FASE III",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 5.5,
+   "value": 60.7,
    "unit": "%",
    "cost": null,
-   "base": 110
+   "base": 112
   },
   {
    "id": "2026-10|24|Índice de conversão",
@@ -3388,10 +3712,10 @@
    "portfolio": "BANCO DIGIMAIS - FASE IV",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 2.7,
+   "value": 47.4,
    "unit": "%",
    "cost": null,
-   "base": 73
+   "base": 76
   },
   {
    "id": "2026-10|25|Índice de conversão",
@@ -3399,10 +3723,10 @@
    "portfolio": "BANCO DIGIMAIS - FASE I",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 9.7,
+   "value": 72.1,
    "unit": "%",
    "cost": null,
-   "base": 558
+   "base": 585
   },
   {
    "id": "2026-10|26|Índice de conversão",
@@ -3410,10 +3734,10 @@
    "portfolio": "BANCO DIGIMAIS-FASE V",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 1.1,
+   "value": 25.0,
    "unit": "%",
    "cost": null,
-   "base": 91
+   "base": 92
   },
   {
    "id": "2026-10|35|Índice de conversão",
@@ -3421,10 +3745,10 @@
    "portfolio": "BANCO DIGIMAIS-FASE VI",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 6.7,
+   "value": 32.3,
    "unit": "%",
    "cost": null,
-   "base": 30
+   "base": 31
   },
   {
    "id": "2026-10|94|Índice de conversão",
@@ -3432,10 +3756,10 @@
    "portfolio": "BANCO DIGIMAIS - FASE II",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 11.4,
+   "value": 69.5,
    "unit": "%",
    "cost": null,
-   "base": 263
+   "base": 272
   },
   {
    "id": "2026-10|125|Índice de conversão",
@@ -3446,7 +3770,7 @@
    "value": 0.0,
    "unit": "%",
    "cost": null,
-   "base": 351
+   "base": 371
   },
   {
    "id": "2026-10|135|Índice de conversão",
@@ -3520,10 +3844,10 @@
    "portfolio": "HATIKVAH PARTICIPACOES LTDA",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 10.4,
+   "value": 60.2,
    "unit": "%",
    "cost": null,
-   "base": 961
+   "base": 978
   },
   {
    "id": "2026-10|164|Índice de conversão",
@@ -3531,10 +3855,10 @@
    "portfolio": "HATIKVAH PARTICIPACOES LTDA JURIDIC",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 8.3,
+   "value": 64.3,
    "unit": "%",
    "cost": null,
-   "base": 12
+   "base": 14
   },
   {
    "id": "2026-10|166|Índice de conversão",
@@ -3553,7 +3877,7 @@
    "portfolio": "TABOR FIDC",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 3.1,
+   "value": 18.8,
    "unit": "%",
    "cost": null,
    "base": 32
@@ -3652,10 +3976,10 @@
    "portfolio": "Todas as carteiras",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 7.4,
+   "value": 49.3,
    "unit": "%",
    "cost": null,
-   "base": 2661
+   "base": 2743
   },
   {
    "id": "2026-10|3|Clientes",
@@ -4129,6 +4453,519 @@
   }
  ],
  "channels": [
+  {
+   "id": "2025-12|0|SMS simples",
+   "competency": "2025-12",
+   "portfolio": "Geral",
+   "channel": "SMS simples",
+   "quantity": 1332,
+   "unit": "mensagens",
+   "cost_total": 53.28
+  },
+  {
+   "id": "2025-12|3|E-mail",
+   "competency": "2025-12",
+   "portfolio": "BANCO DIGIMAIS - FASE III",
+   "channel": "E-mail",
+   "quantity": 45,
+   "unit": "mensagens",
+   "cost_total": 0.45
+  },
+  {
+   "id": "2025-12|24|E-mail",
+   "competency": "2025-12",
+   "portfolio": "BANCO DIGIMAIS - FASE IV",
+   "channel": "E-mail",
+   "quantity": 290,
+   "unit": "mensagens",
+   "cost_total": 2.9
+  },
+  {
+   "id": "2025-12|25|E-mail",
+   "competency": "2025-12",
+   "portfolio": "BANCO DIGIMAIS - FASE I",
+   "channel": "E-mail",
+   "quantity": 477,
+   "unit": "mensagens",
+   "cost_total": 4.77
+  },
+  {
+   "id": "2025-12|35|SMS simples",
+   "competency": "2025-12",
+   "portfolio": "BANCO DIGIMAIS-FASE VI",
+   "channel": "SMS simples",
+   "quantity": 5959,
+   "unit": "mensagens",
+   "cost_total": 238.36
+  },
+  {
+   "id": "2025-12|94|E-mail",
+   "competency": "2025-12",
+   "portfolio": "BANCO DIGIMAIS - FASE II",
+   "channel": "E-mail",
+   "quantity": 161,
+   "unit": "mensagens",
+   "cost_total": 1.61
+  },
+  {
+   "id": "2025-12|163|SMS simples",
+   "competency": "2025-12",
+   "portfolio": "HATIKVAH PARTICIPACOES LTDA",
+   "channel": "SMS simples",
+   "quantity": 875,
+   "unit": "mensagens",
+   "cost_total": 35.0
+  },
+  {
+   "id": "2025-12|172|SMS simples",
+   "competency": "2025-12",
+   "portfolio": "TABOR FIDC",
+   "channel": "SMS simples",
+   "quantity": 2504,
+   "unit": "mensagens",
+   "cost_total": 100.16
+  },
+  {
+   "id": "2026-01|0|E-mail",
+   "competency": "2026-01",
+   "portfolio": "Geral",
+   "channel": "E-mail",
+   "quantity": 4098,
+   "unit": "mensagens",
+   "cost_total": 40.98
+  },
+  {
+   "id": "2026-01|0|SMS simples",
+   "competency": "2026-01",
+   "portfolio": "Geral",
+   "channel": "SMS simples",
+   "quantity": 6239,
+   "unit": "mensagens",
+   "cost_total": 249.56
+  },
+  {
+   "id": "2026-01|3|E-mail",
+   "competency": "2026-01",
+   "portfolio": "BANCO DIGIMAIS - FASE III",
+   "channel": "E-mail",
+   "quantity": 10,
+   "unit": "mensagens",
+   "cost_total": 0.1
+  },
+  {
+   "id": "2026-01|3|SMS simples",
+   "competency": "2026-01",
+   "portfolio": "BANCO DIGIMAIS - FASE III",
+   "channel": "SMS simples",
+   "quantity": 163,
+   "unit": "mensagens",
+   "cost_total": 6.52
+  },
+  {
+   "id": "2026-01|24|E-mail",
+   "competency": "2026-01",
+   "portfolio": "BANCO DIGIMAIS - FASE IV",
+   "channel": "E-mail",
+   "quantity": 5,
+   "unit": "mensagens",
+   "cost_total": 0.05
+  },
+  {
+   "id": "2026-01|24|SMS simples",
+   "competency": "2026-01",
+   "portfolio": "BANCO DIGIMAIS - FASE IV",
+   "channel": "SMS simples",
+   "quantity": 79,
+   "unit": "mensagens",
+   "cost_total": 3.16
+  },
+  {
+   "id": "2026-01|25|E-mail",
+   "competency": "2026-01",
+   "portfolio": "BANCO DIGIMAIS - FASE I",
+   "channel": "E-mail",
+   "quantity": 564,
+   "unit": "mensagens",
+   "cost_total": 5.64
+  },
+  {
+   "id": "2026-01|25|SMS simples",
+   "competency": "2026-01",
+   "portfolio": "BANCO DIGIMAIS - FASE I",
+   "channel": "SMS simples",
+   "quantity": 1244,
+   "unit": "mensagens",
+   "cost_total": 49.76
+  },
+  {
+   "id": "2026-01|26|E-mail",
+   "competency": "2026-01",
+   "portfolio": "BANCO DIGIMAIS-FASE V",
+   "channel": "E-mail",
+   "quantity": 715,
+   "unit": "mensagens",
+   "cost_total": 7.15
+  },
+  {
+   "id": "2026-01|26|SMS simples",
+   "competency": "2026-01",
+   "portfolio": "BANCO DIGIMAIS-FASE V",
+   "channel": "SMS simples",
+   "quantity": 1812,
+   "unit": "mensagens",
+   "cost_total": 72.48
+  },
+  {
+   "id": "2026-01|35|E-mail",
+   "competency": "2026-01",
+   "portfolio": "BANCO DIGIMAIS-FASE VI",
+   "channel": "E-mail",
+   "quantity": 2123,
+   "unit": "mensagens",
+   "cost_total": 21.23
+  },
+  {
+   "id": "2026-01|94|E-mail",
+   "competency": "2026-01",
+   "portfolio": "BANCO DIGIMAIS - FASE II",
+   "channel": "E-mail",
+   "quantity": 72,
+   "unit": "mensagens",
+   "cost_total": 0.72
+  },
+  {
+   "id": "2026-01|94|SMS simples",
+   "competency": "2026-01",
+   "portfolio": "BANCO DIGIMAIS - FASE II",
+   "channel": "SMS simples",
+   "quantity": 1365,
+   "unit": "mensagens",
+   "cost_total": 54.6
+  },
+  {
+   "id": "2026-01|125|E-mail",
+   "competency": "2026-01",
+   "portfolio": "SIMPALA",
+   "channel": "E-mail",
+   "quantity": 875,
+   "unit": "mensagens",
+   "cost_total": 8.75
+  },
+  {
+   "id": "2026-01|135|E-mail",
+   "competency": "2026-01",
+   "portfolio": "INNOVA - VEICULOS",
+   "channel": "E-mail",
+   "quantity": 7145,
+   "unit": "mensagens",
+   "cost_total": 71.45
+  },
+  {
+   "id": "2026-01|136|E-mail",
+   "competency": "2026-01",
+   "portfolio": "TABOR FUNDO DE INV. - DIGIMAIS",
+   "channel": "E-mail",
+   "quantity": 7334,
+   "unit": "mensagens",
+   "cost_total": 73.34
+  },
+  {
+   "id": "2026-01|141|E-mail",
+   "competency": "2026-01",
+   "portfolio": "AREZZO",
+   "channel": "E-mail",
+   "quantity": 250,
+   "unit": "mensagens",
+   "cost_total": 2.5
+  },
+  {
+   "id": "2026-01|141|SMS simples",
+   "competency": "2026-01",
+   "portfolio": "AREZZO",
+   "channel": "SMS simples",
+   "quantity": 296,
+   "unit": "mensagens",
+   "cost_total": 11.84
+  },
+  {
+   "id": "2026-01|148|E-mail",
+   "competency": "2026-01",
+   "portfolio": "AREZZO PDD",
+   "channel": "E-mail",
+   "quantity": 297,
+   "unit": "mensagens",
+   "cost_total": 8.91
+  },
+  {
+   "id": "2026-01|148|SMS simples",
+   "competency": "2026-01",
+   "portfolio": "AREZZO PDD",
+   "channel": "SMS simples",
+   "quantity": 300,
+   "unit": "mensagens",
+   "cost_total": 12.0
+  },
+  {
+   "id": "2026-01|155|SMS simples",
+   "competency": "2026-01",
+   "portfolio": "TABOR II",
+   "channel": "SMS simples",
+   "quantity": 1356,
+   "unit": "mensagens",
+   "cost_total": 54.24
+  },
+  {
+   "id": "2026-01|158|E-mail",
+   "competency": "2026-01",
+   "portfolio": "BRK AMBIENTAL",
+   "channel": "E-mail",
+   "quantity": 15007,
+   "unit": "mensagens",
+   "cost_total": 150.07
+  },
+  {
+   "id": "2026-01|158|SMS simples",
+   "competency": "2026-01",
+   "portfolio": "BRK AMBIENTAL",
+   "channel": "SMS simples",
+   "quantity": 6460,
+   "unit": "mensagens",
+   "cost_total": 258.4
+  },
+  {
+   "id": "2026-01|162|E-mail",
+   "competency": "2026-01",
+   "portfolio": "GF PNEUS",
+   "channel": "E-mail",
+   "quantity": 153,
+   "unit": "mensagens",
+   "cost_total": 1.53
+  },
+  {
+   "id": "2026-01|162|SMS simples",
+   "competency": "2026-01",
+   "portfolio": "GF PNEUS",
+   "channel": "SMS simples",
+   "quantity": 181,
+   "unit": "mensagens",
+   "cost_total": 7.24
+  },
+  {
+   "id": "2026-01|163|E-mail",
+   "competency": "2026-01",
+   "portfolio": "HATIKVAH PARTICIPACOES LTDA",
+   "channel": "E-mail",
+   "quantity": 20494,
+   "unit": "mensagens",
+   "cost_total": 204.94
+  },
+  {
+   "id": "2026-01|163|SMS simples",
+   "competency": "2026-01",
+   "portfolio": "HATIKVAH PARTICIPACOES LTDA",
+   "channel": "SMS simples",
+   "quantity": 990,
+   "unit": "mensagens",
+   "cost_total": 39.6
+  },
+  {
+   "id": "2026-02|0|E-mail",
+   "competency": "2026-02",
+   "portfolio": "Geral",
+   "channel": "E-mail",
+   "quantity": 10372,
+   "unit": "mensagens",
+   "cost_total": 103.72
+  },
+  {
+   "id": "2026-02|0|SMS simples",
+   "competency": "2026-02",
+   "portfolio": "Geral",
+   "channel": "SMS simples",
+   "quantity": 14663,
+   "unit": "mensagens",
+   "cost_total": 586.52
+  },
+  {
+   "id": "2026-02|3|E-mail",
+   "competency": "2026-02",
+   "portfolio": "BANCO DIGIMAIS - FASE III",
+   "channel": "E-mail",
+   "quantity": 11,
+   "unit": "mensagens",
+   "cost_total": 0.11
+  },
+  {
+   "id": "2026-02|24|E-mail",
+   "competency": "2026-02",
+   "portfolio": "BANCO DIGIMAIS - FASE IV",
+   "channel": "E-mail",
+   "quantity": 6,
+   "unit": "mensagens",
+   "cost_total": 0.06
+  },
+  {
+   "id": "2026-02|25|E-mail",
+   "competency": "2026-02",
+   "portfolio": "BANCO DIGIMAIS - FASE I",
+   "channel": "E-mail",
+   "quantity": 360,
+   "unit": "mensagens",
+   "cost_total": 3.6
+  },
+  {
+   "id": "2026-02|94|E-mail",
+   "competency": "2026-02",
+   "portfolio": "BANCO DIGIMAIS - FASE II",
+   "channel": "E-mail",
+   "quantity": 104,
+   "unit": "mensagens",
+   "cost_total": 1.04
+  },
+  {
+   "id": "2026-02|125|E-mail",
+   "competency": "2026-02",
+   "portfolio": "SIMPALA",
+   "channel": "E-mail",
+   "quantity": 752,
+   "unit": "mensagens",
+   "cost_total": 7.52
+  },
+  {
+   "id": "2026-02|125|SMS simples",
+   "competency": "2026-02",
+   "portfolio": "SIMPALA",
+   "channel": "SMS simples",
+   "quantity": 917,
+   "unit": "mensagens",
+   "cost_total": 36.68
+  },
+  {
+   "id": "2026-02|141|E-mail",
+   "competency": "2026-02",
+   "portfolio": "AREZZO",
+   "channel": "E-mail",
+   "quantity": 245,
+   "unit": "mensagens",
+   "cost_total": 2.45
+  },
+  {
+   "id": "2026-02|141|SMS simples",
+   "competency": "2026-02",
+   "portfolio": "AREZZO",
+   "channel": "SMS simples",
+   "quantity": 292,
+   "unit": "mensagens",
+   "cost_total": 11.68
+  },
+  {
+   "id": "2026-02|155|SMS simples",
+   "competency": "2026-02",
+   "portfolio": "TABOR II",
+   "channel": "SMS simples",
+   "quantity": 4000,
+   "unit": "mensagens",
+   "cost_total": 160.0
+  },
+  {
+   "id": "2026-02|158|E-mail",
+   "competency": "2026-02",
+   "portfolio": "BRK AMBIENTAL",
+   "channel": "E-mail",
+   "quantity": 13562,
+   "unit": "mensagens",
+   "cost_total": 135.62
+  },
+  {
+   "id": "2026-02|158|SMS simples",
+   "competency": "2026-02",
+   "portfolio": "BRK AMBIENTAL",
+   "channel": "SMS simples",
+   "quantity": 1001,
+   "unit": "mensagens",
+   "cost_total": 40.04
+  },
+  {
+   "id": "2026-02|162|E-mail",
+   "competency": "2026-02",
+   "portfolio": "GF PNEUS",
+   "channel": "E-mail",
+   "quantity": 145,
+   "unit": "mensagens",
+   "cost_total": 1.45
+  },
+  {
+   "id": "2026-02|163|E-mail",
+   "competency": "2026-02",
+   "portfolio": "HATIKVAH PARTICIPACOES LTDA",
+   "channel": "E-mail",
+   "quantity": 13299,
+   "unit": "mensagens",
+   "cost_total": 334.32
+  },
+  {
+   "id": "2026-02|163|SMS simples",
+   "competency": "2026-02",
+   "portfolio": "HATIKVAH PARTICIPACOES LTDA",
+   "channel": "SMS simples",
+   "quantity": 5956,
+   "unit": "mensagens",
+   "cost_total": 238.24
+  },
+  {
+   "id": "2026-03|0|SMS simples",
+   "competency": "2026-03",
+   "portfolio": "Geral",
+   "channel": "SMS simples",
+   "quantity": 1690,
+   "unit": "mensagens",
+   "cost_total": 67.6
+  },
+  {
+   "id": "2026-03|26|E-mail",
+   "competency": "2026-03",
+   "portfolio": "BANCO DIGIMAIS-FASE V",
+   "channel": "E-mail",
+   "quantity": 255,
+   "unit": "mensagens",
+   "cost_total": 2.55
+  },
+  {
+   "id": "2026-03|26|SMS simples",
+   "competency": "2026-03",
+   "portfolio": "BANCO DIGIMAIS-FASE V",
+   "channel": "SMS simples",
+   "quantity": 848,
+   "unit": "mensagens",
+   "cost_total": 33.92
+  },
+  {
+   "id": "2026-03|135|E-mail",
+   "competency": "2026-03",
+   "portfolio": "INNOVA - VEICULOS",
+   "channel": "E-mail",
+   "quantity": 524,
+   "unit": "mensagens",
+   "cost_total": 5.24
+  },
+  {
+   "id": "2026-03|135|SMS simples",
+   "competency": "2026-03",
+   "portfolio": "INNOVA - VEICULOS",
+   "channel": "SMS simples",
+   "quantity": 2933,
+   "unit": "mensagens",
+   "cost_total": 117.32
+  },
+  {
+   "id": "2026-03|164|E-mail",
+   "competency": "2026-03",
+   "portfolio": "HATIKVAH PARTICIPACOES LTDA JURIDIC",
+   "channel": "E-mail",
+   "quantity": 2704,
+   "unit": "mensagens",
+   "cost_total": 27.04
+  },
   {
    "id": "2026-04|0|E-mail",
    "competency": "2026-04",
@@ -4805,6 +5642,15 @@
    "cost_total": 28.38
   },
   {
+   "id": "2026-10|0|E-mail",
+   "competency": "2026-10",
+   "portfolio": "Geral",
+   "channel": "E-mail",
+   "quantity": 10,
+   "unit": "mensagens",
+   "cost_total": 0.1
+  },
+  {
    "id": "2026-10|1|E-mail",
    "competency": "2026-10",
    "portfolio": "BANRISUL",
@@ -4812,15 +5658,6 @@
    "quantity": 61948,
    "unit": "mensagens",
    "cost_total": 619.48
-  },
-  {
-   "id": "2026-10|3|E-mail",
-   "competency": "2026-10",
-   "portfolio": "BANCO DIGIMAIS - FASE III",
-   "channel": "E-mail",
-   "quantity": 10,
-   "unit": "mensagens",
-   "cost_total": 0.1
   },
   {
    "id": "2026-10|25|E-mail",
@@ -4866,6 +5703,78 @@
    "quantity": 597,
    "unit": "mensagens",
    "cost_total": 5.97
+  },
+  {
+   "id": "2025-12|-1|E-mail",
+   "competency": "2025-12",
+   "portfolio": "Todas as carteiras",
+   "channel": "E-mail",
+   "quantity": 973,
+   "unit": "mensagens",
+   "cost_total": 9.73
+  },
+  {
+   "id": "2025-12|-1|SMS simples",
+   "competency": "2025-12",
+   "portfolio": "Todas as carteiras",
+   "channel": "SMS simples",
+   "quantity": 10670,
+   "unit": "mensagens",
+   "cost_total": 426.8
+  },
+  {
+   "id": "2026-01|-1|E-mail",
+   "competency": "2026-01",
+   "portfolio": "Todas as carteiras",
+   "channel": "E-mail",
+   "quantity": 59142,
+   "unit": "mensagens",
+   "cost_total": 597.36
+  },
+  {
+   "id": "2026-01|-1|SMS simples",
+   "competency": "2026-01",
+   "portfolio": "Todas as carteiras",
+   "channel": "SMS simples",
+   "quantity": 20485,
+   "unit": "mensagens",
+   "cost_total": 819.4
+  },
+  {
+   "id": "2026-02|-1|E-mail",
+   "competency": "2026-02",
+   "portfolio": "Todas as carteiras",
+   "channel": "E-mail",
+   "quantity": 38856,
+   "unit": "mensagens",
+   "cost_total": 589.89
+  },
+  {
+   "id": "2026-02|-1|SMS simples",
+   "competency": "2026-02",
+   "portfolio": "Todas as carteiras",
+   "channel": "SMS simples",
+   "quantity": 26829,
+   "unit": "mensagens",
+   "cost_total": 1073.16
+  },
+  {
+   "id": "2026-03|-1|E-mail",
+   "competency": "2026-03",
+   "portfolio": "Todas as carteiras",
+   "channel": "E-mail",
+   "quantity": 3483,
+   "unit": "mensagens",
+   "cost_total": 34.83
+  },
+  {
+   "id": "2026-03|-1|SMS simples",
+   "competency": "2026-03",
+   "portfolio": "Todas as carteiras",
+   "channel": "SMS simples",
+   "quantity": 5471,
+   "unit": "mensagens",
+   "cost_total": 218.84
   },
   {
    "id": "2026-04|-1|E-mail",
