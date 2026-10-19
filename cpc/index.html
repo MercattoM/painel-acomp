@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Acompanhamento CPCs</title>
 <meta name="gerado" content="15/10/2026 às 13:26">
-<meta name="gerado-iso" content="2026-10-19T09:48:46.214078">
+<meta name="gerado-iso" content="2026-10-19T09:54:38.075618">
 <script>(()=>{try{const saved=localStorage.getItem('mercatto-theme');document.documentElement.dataset.theme=saved==='dark'||saved==='light'?saved:(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(_){document.documentElement.dataset.theme='light'}})()</script>
 <link rel="stylesheet" href="../assets/mercatto-ui.css">
 <style>
@@ -250,7 +250,7 @@ footer span:first-child{font-weight:700;color:var(--navy)}
         <circle id="g-wt" cx="60" cy="60" r="50" stroke="var(--wt)"/>
         <circle id="g-ok" cx="60" cy="60" r="50" stroke="var(--ok)"/>
       </svg>
-      <div><div class="pct" id="pct">-</div></div>
+      <div><div class="pct" id="pct">-</div><div class="cap" id="capSel">dos CPCs enviados já foram acionados</div></div>
     </div>
     <div class="card kpi k-env"><span><i class="dot"></i>Enviados à operação</span><b id="k-env">0</b><small>CPCs na base</small></div>
     <div class="card kpi k-ok"><span><i class="dot"></i>Acionados</span><b id="k-ok">0</b><small id="s-ok"></small></div>
@@ -280,7 +280,6 @@ footer span:first-child{font-weight:700;color:var(--navy)}
         <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><button class="chipf" id="limpaOp" hidden>Ver todas</button>
         <input type="search" id="qOc" placeholder="Buscar ocorrência..." aria-label="Buscar ocorrência"></div>
       </div>
-      <p id="sOc" hidden></p>
       
       
       <div class="band" id="bTipos" style="height:14px;margin-top:14px"></div>
@@ -343,6 +342,7 @@ function cronograma(){
 function kpis(){
   const a = soma("a"), w = soma("w"), n = soma("n"), t = totalPainel(a,w,n), C = 2*Math.PI*50;
   $("pct").textContent = t ? pctPainel(a,t)+"%" : "-";
+  $("capSel").textContent = st.sel ? (t ? "de "+st.sel+" já foram acionados" : st.sel+": nenhum CPC neste relatório") : "dos CPCs enviados já foram acionados";
   const seg = (id,ini,q) => { const l = t ? q/t*C : 0; const e = $(id);
     e.style.strokeDasharray = l+" "+(C-l); e.style.strokeDashoffset = -ini; };
   seg("g-no",0,a+w+n); seg("g-wt",0,a+w); seg("g-ok",0,a);
@@ -397,9 +397,7 @@ function ocorrencias(){
   else (st.sel ? [st.sel] : Object.keys(D.oc)).forEach(c => (D.oc[c]||[]).forEach(add));
   let lista = Object.values(ag).sort((a,b) => b.q-a.q);
   $("tOc").textContent = "Ocorrências dos CPCs" + (u ? " · "+u : "");
-  $("limpaOp").hidden = !u; $("sOc").hidden = false;
-  $("sOc").textContent = u ? "Ocorrências tabuladas para "+u+(st.sel ? " em "+st.sel : "")+". Percentuais sobre os registros de ocorrência desse operador; não representam taxa de conversão nem clientes únicos."
-    : "Ocorrências tabuladas dos operadores válidos. Percentuais representam a participação nos registros de ocorrência, não taxa de conversão nem clientes únicos.";
+  $("limpaOp").hidden = !u;
   $("thPct").textContent = "% das ocorrências";
   const porTipo = {}; lista.forEach(o => porTipo[o.tipo] = (porTipo[o.tipo]||0)+o.q);
   const tiposOrd = Object.entries(porTipo).filter(([t]) => t !== "SEM CONTATO").sort((a,b) => b[1]-a[1]), soTipos = tiposOrd.reduce((s,[,q]) => s+q, 0);
