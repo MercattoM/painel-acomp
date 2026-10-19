@@ -1,6 +1,6 @@
 {
  "schema_version": "1.1.0",
- "generated_at": "2026-10-16T16:53:24-03:00",
+ "generated_at": "2026-10-19T17:16:31-03:00",
  "competencies": [
   "2025-12",
   "2026-01",
@@ -976,12 +976,962 @@
    "cost": null
   },
   {
-   "id": "2026-07|0|Pagamentos",
+   "id": "2026-04|172|Pagamentos",
+   "competency": "2026-04",
+   "portfolio": "TABOR FIDC",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-05|172|Pagamentos",
+   "competency": "2026-05",
+   "portfolio": "TABOR FIDC",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-06|136|Pagamentos",
+   "competency": "2026-06",
+   "portfolio": "TABOR FUNDO DE INV. - DIGIMAIS",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 1,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-06|155|Pagamentos",
+   "competency": "2026-06",
+   "portfolio": "TABOR II",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 1,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-06|172|Pagamentos",
+   "competency": "2026-06",
+   "portfolio": "TABOR FIDC",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-07|3|Pagamentos",
    "competency": "2026-07",
-   "portfolio": "Geral",
+   "portfolio": "BANCO DIGIMAIS - FASE III",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 162,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-07|24|Pagamentos",
+   "competency": "2026-07",
+   "portfolio": "BANCO DIGIMAIS - FASE IV",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 83,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-07|25|Pagamentos",
+   "competency": "2026-07",
+   "portfolio": "BANCO DIGIMAIS - FASE I",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 1336,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-07|26|Pagamentos",
+   "competency": "2026-07",
+   "portfolio": "BANCO DIGIMAIS-FASE V",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 132,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-07|35|Pagamentos",
+   "competency": "2026-07",
+   "portfolio": "BANCO DIGIMAIS-FASE VI",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 47,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-07|94|Pagamentos",
+   "competency": "2026-07",
+   "portfolio": "BANCO DIGIMAIS - FASE II",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 429,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-07|125|Pagamentos",
+   "competency": "2026-07",
+   "portfolio": "SIMPALA",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-07|135|Pagamentos",
+   "competency": "2026-07",
+   "portfolio": "INNOVA - VEICULOS",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-07|136|Pagamentos",
+   "competency": "2026-07",
+   "portfolio": "TABOR FUNDO DE INV. - DIGIMAIS",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 94,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-07|141|Pagamentos",
+   "competency": "2026-07",
+   "portfolio": "AREZZO",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 30,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-07|148|Pagamentos",
+   "competency": "2026-07",
+   "portfolio": "AREZZO PDD",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 1,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-07|150|Pagamentos",
+   "competency": "2026-07",
+   "portfolio": "YARDS - FACTA",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-07|155|Pagamentos",
+   "competency": "2026-07",
+   "portfolio": "TABOR II",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 208,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-07|156|Pagamentos",
+   "competency": "2026-07",
+   "portfolio": "TABOR JURIDICO II",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 1,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-07|158|Pagamentos",
+   "competency": "2026-07",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-07|159|Pagamentos",
+   "competency": "2026-07",
+   "portfolio": "FIDC SINAI - CONSIGNADO",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-07|162|Pagamentos",
+   "competency": "2026-07",
+   "portfolio": "GF PNEUS",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 5,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-07|163|Pagamentos",
+   "competency": "2026-07",
+   "portfolio": "HATIKVAH PARTICIPACOES LTDA",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 1626,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-07|164|Pagamentos",
+   "competency": "2026-07",
+   "portfolio": "HATIKVAH PARTICIPACOES LTDA JURIDIC",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 15,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-07|172|Pagamentos",
+   "competency": "2026-07",
+   "portfolio": "TABOR FIDC",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 35,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-07|175|Pagamentos",
+   "competency": "2026-07",
+   "portfolio": "SINOSSERRA",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-08|1|Pagamentos",
+   "competency": "2026-08",
+   "portfolio": "BANRISUL",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-08|3|Pagamentos",
+   "competency": "2026-08",
+   "portfolio": "BANCO DIGIMAIS - FASE III",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 170,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-08|24|Pagamentos",
+   "competency": "2026-08",
+   "portfolio": "BANCO DIGIMAIS - FASE IV",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 73,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-08|25|Pagamentos",
+   "competency": "2026-08",
+   "portfolio": "BANCO DIGIMAIS - FASE I",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 1124,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-08|26|Pagamentos",
+   "competency": "2026-08",
+   "portfolio": "BANCO DIGIMAIS-FASE V",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 111,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-08|35|Pagamentos",
+   "competency": "2026-08",
+   "portfolio": "BANCO DIGIMAIS-FASE VI",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 33,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-08|94|Pagamentos",
+   "competency": "2026-08",
+   "portfolio": "BANCO DIGIMAIS - FASE II",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 417,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-08|125|Pagamentos",
+   "competency": "2026-08",
+   "portfolio": "SIMPALA",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-08|135|Pagamentos",
+   "competency": "2026-08",
+   "portfolio": "INNOVA - VEICULOS",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-08|141|Pagamentos",
+   "competency": "2026-08",
+   "portfolio": "AREZZO",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 15,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-08|148|Pagamentos",
+   "competency": "2026-08",
+   "portfolio": "AREZZO PDD",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-08|150|Pagamentos",
+   "competency": "2026-08",
+   "portfolio": "YARDS - FACTA",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-08|159|Pagamentos",
+   "competency": "2026-08",
+   "portfolio": "FIDC SINAI - CONSIGNADO",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-08|162|Pagamentos",
+   "competency": "2026-08",
+   "portfolio": "GF PNEUS",
    "group": "Negócio",
    "indicator": "Pagamentos",
    "value": 4,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-08|163|Pagamentos",
+   "competency": "2026-08",
+   "portfolio": "HATIKVAH PARTICIPACOES LTDA",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 1420,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-08|164|Pagamentos",
+   "competency": "2026-08",
+   "portfolio": "HATIKVAH PARTICIPACOES LTDA JURIDIC",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 18,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-08|166|Pagamentos",
+   "competency": "2026-08",
+   "portfolio": "HATIKVAH APREENDIDOS/ENTREGA",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-08|172|Pagamentos",
+   "competency": "2026-08",
+   "portfolio": "TABOR FIDC",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 50,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-08|175|Pagamentos",
+   "competency": "2026-08",
+   "portfolio": "SINOSSERRA",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-08|177|Pagamentos",
+   "competency": "2026-08",
+   "portfolio": "DRACMA",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|1|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "BANRISUL",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|3|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "BANCO DIGIMAIS - FASE III",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 153,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|23|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "SESC",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|24|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "BANCO DIGIMAIS - FASE IV",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 82,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|25|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "BANCO DIGIMAIS - FASE I",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 1126,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|26|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "BANCO DIGIMAIS-FASE V",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 110,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|35|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "BANCO DIGIMAIS-FASE VI",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 34,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|94|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "BANCO DIGIMAIS - FASE II",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 374,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|125|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "SIMPALA",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|135|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "INNOVA - VEICULOS",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|141|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "AREZZO",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 5,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|147|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "SIMPALA CONSIGNADO",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|148|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "AREZZO PDD",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 2,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|150|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "YARDS - FACTA",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|154|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "YARDS - REAG",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|159|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "FIDC SINAI - CONSIGNADO",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|162|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "GF PNEUS",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 2,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|163|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "HATIKVAH PARTICIPACOES LTDA",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 1328,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|164|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "HATIKVAH PARTICIPACOES LTDA JURIDIC",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 27,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|166|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "HATIKVAH APREENDIDOS/ENTREGA",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|172|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "TABOR FIDC",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 24,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|175|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "SINOSSERRA",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|177|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "DRACMA",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-10|1|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "BANRISUL",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-10|3|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "BANCO DIGIMAIS - FASE III",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 88,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-10|24|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "BANCO DIGIMAIS - FASE IV",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 43,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-10|25|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "BANCO DIGIMAIS - FASE I",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 588,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-10|26|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "BANCO DIGIMAIS-FASE V",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 29,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-10|35|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "BANCO DIGIMAIS-FASE VI",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 10,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-10|94|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "BANCO DIGIMAIS - FASE II",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 232,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-10|125|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "SIMPALA",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-10|135|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "INNOVA - VEICULOS",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-10|141|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "AREZZO",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 1,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-10|150|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "YARDS - FACTA",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-10|154|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "YARDS - REAG",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-10|159|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "FIDC SINAI - CONSIGNADO",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-10|162|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "GF PNEUS",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-10|163|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "HATIKVAH PARTICIPACOES LTDA",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 756,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-10|164|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "HATIKVAH PARTICIPACOES LTDA JURIDIC",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 15,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-10|166|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "HATIKVAH APREENDIDOS/ENTREGA",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-10|172|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "TABOR FIDC",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 8,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-10|175|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "SINOSSERRA",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-10|177|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "DRACMA",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-04|-1|Pagamentos",
+   "competency": "2026-04",
+   "portfolio": "Todas as carteiras",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-05|-1|Pagamentos",
+   "competency": "2026-05",
+   "portfolio": "Todas as carteiras",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 0,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-06|-1|Pagamentos",
+   "competency": "2026-06",
+   "portfolio": "Todas as carteiras",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 2,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-07|-1|Pagamentos",
+   "competency": "2026-07",
+   "portfolio": "Todas as carteiras",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 4204,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-08|-1|Pagamentos",
+   "competency": "2026-08",
+   "portfolio": "Todas as carteiras",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 3435,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|-1|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "Todas as carteiras",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 3267,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-10|-1|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "Todas as carteiras",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 1770,
    "unit": "pagamentos",
    "cost": null
   },
@@ -1006,16 +1956,6 @@
    "cost": null
   },
   {
-   "id": "2026-07|3|Pagamentos",
-   "competency": "2026-07",
-   "portfolio": "BANCO DIGIMAIS - FASE III",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 222,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-07|3|Caixa",
    "competency": "2026-07",
    "portfolio": "BANCO DIGIMAIS - FASE III",
@@ -1033,16 +1973,6 @@
    "indicator": "Comissão",
    "value": 22453.95,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-07|24|Pagamentos",
-   "competency": "2026-07",
-   "portfolio": "BANCO DIGIMAIS - FASE IV",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 241,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -1066,16 +1996,6 @@
    "cost": null
   },
   {
-   "id": "2026-07|25|Pagamentos",
-   "competency": "2026-07",
-   "portfolio": "BANCO DIGIMAIS - FASE I",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 1248,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-07|25|Caixa",
    "competency": "2026-07",
    "portfolio": "BANCO DIGIMAIS - FASE I",
@@ -1093,16 +2013,6 @@
    "indicator": "Comissão",
    "value": 173495.02,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-07|26|Pagamentos",
-   "competency": "2026-07",
-   "portfolio": "BANCO DIGIMAIS-FASE V",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 514,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -1126,16 +2036,6 @@
    "cost": null
   },
   {
-   "id": "2026-07|35|Pagamentos",
-   "competency": "2026-07",
-   "portfolio": "BANCO DIGIMAIS-FASE VI",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 914,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-07|35|Caixa",
    "competency": "2026-07",
    "portfolio": "BANCO DIGIMAIS-FASE VI",
@@ -1153,16 +2053,6 @@
    "indicator": "Comissão",
    "value": 3851.01,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-07|94|Pagamentos",
-   "competency": "2026-07",
-   "portfolio": "BANCO DIGIMAIS - FASE II",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 406,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -1186,16 +2076,6 @@
    "cost": null
   },
   {
-   "id": "2026-07|136|Pagamentos",
-   "competency": "2026-07",
-   "portfolio": "TABOR FUNDO DE INV. - DIGIMAIS",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 134,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-07|136|Caixa",
    "competency": "2026-07",
    "portfolio": "TABOR FUNDO DE INV. - DIGIMAIS",
@@ -1213,16 +2093,6 @@
    "indicator": "Comissão",
    "value": 19291.1,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-07|141|Pagamentos",
-   "competency": "2026-07",
-   "portfolio": "AREZZO",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 39,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -1246,16 +2116,6 @@
    "cost": null
   },
   {
-   "id": "2026-07|148|Pagamentos",
-   "competency": "2026-07",
-   "portfolio": "AREZZO PDD",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 1,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-07|148|Caixa",
    "competency": "2026-07",
    "portfolio": "AREZZO PDD",
@@ -1273,16 +2133,6 @@
    "indicator": "Comissão",
    "value": 69.42,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-07|155|Pagamentos",
-   "competency": "2026-07",
-   "portfolio": "TABOR II",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 316,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -1306,16 +2156,6 @@
    "cost": null
   },
   {
-   "id": "2026-07|156|Pagamentos",
-   "competency": "2026-07",
-   "portfolio": "TABOR JURIDICO II",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 7,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-07|156|Caixa",
    "competency": "2026-07",
    "portfolio": "TABOR JURIDICO II",
@@ -1333,16 +2173,6 @@
    "indicator": "Comissão",
    "value": 55.86,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-07|162|Pagamentos",
-   "competency": "2026-07",
-   "portfolio": "GF PNEUS",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 5,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -1366,16 +2196,6 @@
    "cost": null
   },
   {
-   "id": "2026-07|163|Pagamentos",
-   "competency": "2026-07",
-   "portfolio": "HATIKVAH PARTICIPACOES LTDA",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 3184,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-07|163|Caixa",
    "competency": "2026-07",
    "portfolio": "HATIKVAH PARTICIPACOES LTDA",
@@ -1393,16 +2213,6 @@
    "indicator": "Comissão",
    "value": 202585.5,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-07|164|Pagamentos",
-   "competency": "2026-07",
-   "portfolio": "HATIKVAH PARTICIPACOES LTDA JURIDIC",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 35,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -1426,16 +2236,6 @@
    "cost": null
   },
   {
-   "id": "2026-07|172|Pagamentos",
-   "competency": "2026-07",
-   "portfolio": "TABOR FIDC",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 65,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-07|172|Caixa",
    "competency": "2026-07",
    "portfolio": "TABOR FIDC",
@@ -1453,16 +2253,6 @@
    "indicator": "Comissão",
    "value": 7729.94,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-08|0|Pagamentos",
-   "competency": "2026-08",
-   "portfolio": "Geral",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 2,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -1486,16 +2276,6 @@
    "cost": null
   },
   {
-   "id": "2026-08|3|Pagamentos",
-   "competency": "2026-08",
-   "portfolio": "BANCO DIGIMAIS - FASE III",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 227,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-08|3|Caixa",
    "competency": "2026-08",
    "portfolio": "BANCO DIGIMAIS - FASE III",
@@ -1513,16 +2293,6 @@
    "indicator": "Comissão",
    "value": 25311.86,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-08|24|Pagamentos",
-   "competency": "2026-08",
-   "portfolio": "BANCO DIGIMAIS - FASE IV",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 188,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -1546,16 +2316,6 @@
    "cost": null
   },
   {
-   "id": "2026-08|25|Pagamentos",
-   "competency": "2026-08",
-   "portfolio": "BANCO DIGIMAIS - FASE I",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 1068,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-08|25|Caixa",
    "competency": "2026-08",
    "portfolio": "BANCO DIGIMAIS - FASE I",
@@ -1573,16 +2333,6 @@
    "indicator": "Comissão",
    "value": 145185.02,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-08|26|Pagamentos",
-   "competency": "2026-08",
-   "portfolio": "BANCO DIGIMAIS-FASE V",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 436,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -1606,16 +2356,6 @@
    "cost": null
   },
   {
-   "id": "2026-08|35|Pagamentos",
-   "competency": "2026-08",
-   "portfolio": "BANCO DIGIMAIS-FASE VI",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 1236,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-08|35|Caixa",
    "competency": "2026-08",
    "portfolio": "BANCO DIGIMAIS-FASE VI",
@@ -1633,16 +2373,6 @@
    "indicator": "Comissão",
    "value": 7453.56,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-08|94|Pagamentos",
-   "competency": "2026-08",
-   "portfolio": "BANCO DIGIMAIS - FASE II",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 434,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -1666,16 +2396,6 @@
    "cost": null
   },
   {
-   "id": "2026-08|136|Pagamentos",
-   "competency": "2026-08",
-   "portfolio": "TABOR FUNDO DE INV. - DIGIMAIS",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 1,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-08|136|Caixa",
    "competency": "2026-08",
    "portfolio": "TABOR FUNDO DE INV. - DIGIMAIS",
@@ -1693,16 +2413,6 @@
    "indicator": "Comissão",
    "value": 0.0,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-08|141|Pagamentos",
-   "competency": "2026-08",
-   "portfolio": "AREZZO",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 20,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -1726,16 +2436,6 @@
    "cost": null
   },
   {
-   "id": "2026-08|155|Pagamentos",
-   "competency": "2026-08",
-   "portfolio": "TABOR II",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 2,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-08|155|Caixa",
    "competency": "2026-08",
    "portfolio": "TABOR II",
@@ -1753,16 +2453,6 @@
    "indicator": "Comissão",
    "value": 43.64,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-08|156|Pagamentos",
-   "competency": "2026-08",
-   "portfolio": "TABOR JURIDICO II",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 3,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -1786,16 +2476,6 @@
    "cost": null
   },
   {
-   "id": "2026-08|162|Pagamentos",
-   "competency": "2026-08",
-   "portfolio": "GF PNEUS",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 5,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-08|162|Caixa",
    "competency": "2026-08",
    "portfolio": "GF PNEUS",
@@ -1813,16 +2493,6 @@
    "indicator": "Comissão",
    "value": 2113.18,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-08|163|Pagamentos",
-   "competency": "2026-08",
-   "portfolio": "HATIKVAH PARTICIPACOES LTDA",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 2190,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -1846,16 +2516,6 @@
    "cost": null
   },
   {
-   "id": "2026-08|164|Pagamentos",
-   "competency": "2026-08",
-   "portfolio": "HATIKVAH PARTICIPACOES LTDA JURIDIC",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 35,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-08|164|Caixa",
    "competency": "2026-08",
    "portfolio": "HATIKVAH PARTICIPACOES LTDA JURIDIC",
@@ -1873,16 +2533,6 @@
    "indicator": "Comissão",
    "value": 18481.08,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-08|172|Pagamentos",
-   "competency": "2026-08",
-   "portfolio": "TABOR FIDC",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 57,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -1906,16 +2556,6 @@
    "cost": null
   },
   {
-   "id": "2026-09|0|Pagamentos",
-   "competency": "2026-09",
-   "portfolio": "Geral",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 1,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-09|0|Caixa",
    "competency": "2026-09",
    "portfolio": "Geral",
@@ -1933,16 +2573,6 @@
    "indicator": "Comissão",
    "value": 0.0,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-09|3|Pagamentos",
-   "competency": "2026-09",
-   "portfolio": "BANCO DIGIMAIS - FASE III",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 211,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -1966,16 +2596,6 @@
    "cost": null
   },
   {
-   "id": "2026-09|24|Pagamentos",
-   "competency": "2026-09",
-   "portfolio": "BANCO DIGIMAIS - FASE IV",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 204,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-09|24|Caixa",
    "competency": "2026-09",
    "portfolio": "BANCO DIGIMAIS - FASE IV",
@@ -1993,16 +2613,6 @@
    "indicator": "Comissão",
    "value": 15429.14,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-09|25|Pagamentos",
-   "competency": "2026-09",
-   "portfolio": "BANCO DIGIMAIS - FASE I",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 1054,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -2026,16 +2636,6 @@
    "cost": null
   },
   {
-   "id": "2026-09|26|Pagamentos",
-   "competency": "2026-09",
-   "portfolio": "BANCO DIGIMAIS-FASE V",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 641,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-09|26|Caixa",
    "competency": "2026-09",
    "portfolio": "BANCO DIGIMAIS-FASE V",
@@ -2053,16 +2653,6 @@
    "indicator": "Comissão",
    "value": 5559.01,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-09|35|Pagamentos",
-   "competency": "2026-09",
-   "portfolio": "BANCO DIGIMAIS-FASE VI",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 813,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -2086,16 +2676,6 @@
    "cost": null
   },
   {
-   "id": "2026-09|94|Pagamentos",
-   "competency": "2026-09",
-   "portfolio": "BANCO DIGIMAIS - FASE II",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 389,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-09|94|Caixa",
    "competency": "2026-09",
    "portfolio": "BANCO DIGIMAIS - FASE II",
@@ -2113,16 +2693,6 @@
    "indicator": "Comissão",
    "value": 49812.87,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-09|136|Pagamentos",
-   "competency": "2026-09",
-   "portfolio": "TABOR FUNDO DE INV. - DIGIMAIS",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 1,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -2146,16 +2716,6 @@
    "cost": null
   },
   {
-   "id": "2026-09|141|Pagamentos",
-   "competency": "2026-09",
-   "portfolio": "AREZZO",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 17,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-09|141|Caixa",
    "competency": "2026-09",
    "portfolio": "AREZZO",
@@ -2173,16 +2733,6 @@
    "indicator": "Comissão",
    "value": 7766.56,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-09|148|Pagamentos",
-   "competency": "2026-09",
-   "portfolio": "AREZZO PDD",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 1,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -2206,16 +2756,6 @@
    "cost": null
   },
   {
-   "id": "2026-09|155|Pagamentos",
-   "competency": "2026-09",
-   "portfolio": "TABOR II",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 3,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-09|155|Caixa",
    "competency": "2026-09",
    "portfolio": "TABOR II",
@@ -2233,16 +2773,6 @@
    "indicator": "Comissão",
    "value": 58.08,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-09|156|Pagamentos",
-   "competency": "2026-09",
-   "portfolio": "TABOR JURIDICO II",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 2,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -2266,16 +2796,6 @@
    "cost": null
   },
   {
-   "id": "2026-09|162|Pagamentos",
-   "competency": "2026-09",
-   "portfolio": "GF PNEUS",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 2,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-09|162|Caixa",
    "competency": "2026-09",
    "portfolio": "GF PNEUS",
@@ -2293,16 +2813,6 @@
    "indicator": "Comissão",
    "value": 242.06,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-09|163|Pagamentos",
-   "competency": "2026-09",
-   "portfolio": "HATIKVAH PARTICIPACOES LTDA",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 1857,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -2326,16 +2836,6 @@
    "cost": null
   },
   {
-   "id": "2026-09|164|Pagamentos",
-   "competency": "2026-09",
-   "portfolio": "HATIKVAH PARTICIPACOES LTDA JURIDIC",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 40,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-09|164|Caixa",
    "competency": "2026-09",
    "portfolio": "HATIKVAH PARTICIPACOES LTDA JURIDIC",
@@ -2353,16 +2853,6 @@
    "indicator": "Comissão",
    "value": 25856.29,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-09|172|Pagamentos",
-   "competency": "2026-09",
-   "portfolio": "TABOR FIDC",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 34,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -2386,16 +2876,6 @@
    "cost": null
   },
   {
-   "id": "2026-10|3|Pagamentos",
-   "competency": "2026-10",
-   "portfolio": "BANCO DIGIMAIS - FASE III",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 116,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-10|3|Caixa",
    "competency": "2026-10",
    "portfolio": "BANCO DIGIMAIS - FASE III",
@@ -2413,16 +2893,6 @@
    "indicator": "Comissão",
    "value": 13713.54,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-10|24|Pagamentos",
-   "competency": "2026-10",
-   "portfolio": "BANCO DIGIMAIS - FASE IV",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 92,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -2446,16 +2916,6 @@
    "cost": null
   },
   {
-   "id": "2026-10|25|Pagamentos",
-   "competency": "2026-10",
-   "portfolio": "BANCO DIGIMAIS - FASE I",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 594,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-10|25|Caixa",
    "competency": "2026-10",
    "portfolio": "BANCO DIGIMAIS - FASE I",
@@ -2473,16 +2933,6 @@
    "indicator": "Comissão",
    "value": 81712.76,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-10|26|Pagamentos",
-   "competency": "2026-10",
-   "portfolio": "BANCO DIGIMAIS-FASE V",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 113,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -2506,16 +2956,6 @@
    "cost": null
   },
   {
-   "id": "2026-10|35|Pagamentos",
-   "competency": "2026-10",
-   "portfolio": "BANCO DIGIMAIS-FASE VI",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 107,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-10|35|Caixa",
    "competency": "2026-10",
    "portfolio": "BANCO DIGIMAIS-FASE VI",
@@ -2533,16 +2973,6 @@
    "indicator": "Comissão",
    "value": 2531.76,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-10|94|Pagamentos",
-   "competency": "2026-10",
-   "portfolio": "BANCO DIGIMAIS - FASE II",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 234,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -2566,16 +2996,6 @@
    "cost": null
   },
   {
-   "id": "2026-10|136|Pagamentos",
-   "competency": "2026-10",
-   "portfolio": "TABOR FUNDO DE INV. - DIGIMAIS",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 1,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-10|136|Caixa",
    "competency": "2026-10",
    "portfolio": "TABOR FUNDO DE INV. - DIGIMAIS",
@@ -2593,16 +3013,6 @@
    "indicator": "Comissão",
    "value": 0.0,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-10|141|Pagamentos",
-   "competency": "2026-10",
-   "portfolio": "AREZZO",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 3,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -2626,16 +3036,6 @@
    "cost": null
   },
   {
-   "id": "2026-10|148|Pagamentos",
-   "competency": "2026-10",
-   "portfolio": "AREZZO PDD",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 1,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-10|148|Caixa",
    "competency": "2026-10",
    "portfolio": "AREZZO PDD",
@@ -2653,16 +3053,6 @@
    "indicator": "Comissão",
    "value": 69.0,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-10|155|Pagamentos",
-   "competency": "2026-10",
-   "portfolio": "TABOR II",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 3,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -2686,16 +3076,6 @@
    "cost": null
   },
   {
-   "id": "2026-10|156|Pagamentos",
-   "competency": "2026-10",
-   "portfolio": "TABOR JURIDICO II",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 1,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-10|156|Caixa",
    "competency": "2026-10",
    "portfolio": "TABOR JURIDICO II",
@@ -2713,16 +3093,6 @@
    "indicator": "Comissão",
    "value": 0.0,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-10|163|Pagamentos",
-   "competency": "2026-10",
-   "portfolio": "HATIKVAH PARTICIPACOES LTDA",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 1237,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -2746,16 +3116,6 @@
    "cost": null
   },
   {
-   "id": "2026-10|164|Pagamentos",
-   "competency": "2026-10",
-   "portfolio": "HATIKVAH PARTICIPACOES LTDA JURIDIC",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 23,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-10|164|Caixa",
    "competency": "2026-10",
    "portfolio": "HATIKVAH PARTICIPACOES LTDA JURIDIC",
@@ -2773,16 +3133,6 @@
    "indicator": "Comissão",
    "value": 16321.13,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-10|172|Pagamentos",
-   "competency": "2026-10",
-   "portfolio": "TABOR FIDC",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 17,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -2806,16 +3156,6 @@
    "cost": null
   },
   {
-   "id": "2026-07|-1|Pagamentos",
-   "competency": "2026-07",
-   "portfolio": "Todas as carteiras",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 7335,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-07|-1|Caixa",
    "competency": "2026-07",
    "portfolio": "Todas as carteiras",
@@ -2833,16 +3173,6 @@
    "indicator": "Comissão",
    "value": 563834.19,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-08|-1|Pagamentos",
-   "competency": "2026-08",
-   "portfolio": "Todas as carteiras",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 5904,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -2866,16 +3196,6 @@
    "cost": null
   },
   {
-   "id": "2026-09|-1|Pagamentos",
-   "competency": "2026-09",
-   "portfolio": "Todas as carteiras",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 5270,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
    "id": "2026-09|-1|Caixa",
    "competency": "2026-09",
    "portfolio": "Todas as carteiras",
@@ -2893,16 +3213,6 @@
    "indicator": "Comissão",
    "value": 471916.25,
    "unit": "BRL",
-   "cost": null
-  },
-  {
-   "id": "2026-10|-1|Pagamentos",
-   "competency": "2026-10",
-   "portfolio": "Todas as carteiras",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 2542,
-   "unit": "pagamentos",
    "cost": null
   },
   {
@@ -3701,10 +4011,10 @@
    "portfolio": "BANCO DIGIMAIS - FASE III",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 60.7,
+   "value": 53.0,
    "unit": "%",
    "cost": null,
-   "base": 112
+   "base": 166
   },
   {
    "id": "2026-10|24|Índice de conversão",
@@ -3712,10 +4022,10 @@
    "portfolio": "BANCO DIGIMAIS - FASE IV",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 47.4,
+   "value": 38.4,
    "unit": "%",
    "cost": null,
-   "base": 76
+   "base": 112
   },
   {
    "id": "2026-10|25|Índice de conversão",
@@ -3723,10 +4033,10 @@
    "portfolio": "BANCO DIGIMAIS - FASE I",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 72.1,
+   "value": 64.1,
    "unit": "%",
    "cost": null,
-   "base": 585
+   "base": 917
   },
   {
    "id": "2026-10|26|Índice de conversão",
@@ -3734,10 +4044,10 @@
    "portfolio": "BANCO DIGIMAIS-FASE V",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 25.0,
+   "value": 19.5,
    "unit": "%",
    "cost": null,
-   "base": 92
+   "base": 149
   },
   {
    "id": "2026-10|35|Índice de conversão",
@@ -3745,10 +4055,10 @@
    "portfolio": "BANCO DIGIMAIS-FASE VI",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 32.3,
+   "value": 22.7,
    "unit": "%",
    "cost": null,
-   "base": 31
+   "base": 44
   },
   {
    "id": "2026-10|94|Índice de conversão",
@@ -3756,10 +4066,10 @@
    "portfolio": "BANCO DIGIMAIS - FASE II",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 69.5,
+   "value": 62.7,
    "unit": "%",
    "cost": null,
-   "base": 272
+   "base": 370
   },
   {
    "id": "2026-10|125|Índice de conversão",
@@ -3770,7 +4080,7 @@
    "value": 0.0,
    "unit": "%",
    "cost": null,
-   "base": 371
+   "base": 649
   },
   {
    "id": "2026-10|135|Índice de conversão",
@@ -3781,7 +4091,7 @@
    "value": 0.0,
    "unit": "%",
    "cost": null,
-   "base": 110
+   "base": 256
   },
   {
    "id": "2026-10|141|Índice de conversão",
@@ -3789,10 +4099,10 @@
    "portfolio": "AREZZO",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 0.0,
+   "value": 3.8,
    "unit": "%",
    "cost": null,
-   "base": 9
+   "base": 26
   },
   {
    "id": "2026-10|150|Índice de conversão",
@@ -3803,7 +4113,7 @@
    "value": 0.0,
    "unit": "%",
    "cost": null,
-   "base": 1
+   "base": 6
   },
   {
    "id": "2026-10|154|Índice de conversão",
@@ -3825,7 +4135,7 @@
    "value": 0.0,
    "unit": "%",
    "cost": null,
-   "base": 5
+   "base": 9
   },
   {
    "id": "2026-10|162|Índice de conversão",
@@ -3836,7 +4146,7 @@
    "value": 0.0,
    "unit": "%",
    "cost": null,
-   "base": 4
+   "base": 11
   },
   {
    "id": "2026-10|163|Índice de conversão",
@@ -3844,10 +4154,10 @@
    "portfolio": "HATIKVAH PARTICIPACOES LTDA",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 60.2,
+   "value": 38.2,
    "unit": "%",
    "cost": null,
-   "base": 978
+   "base": 1977
   },
   {
    "id": "2026-10|164|Índice de conversão",
@@ -3855,10 +4165,10 @@
    "portfolio": "HATIKVAH PARTICIPACOES LTDA JURIDIC",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 64.3,
+   "value": 60.0,
    "unit": "%",
    "cost": null,
-   "base": 14
+   "base": 25
   },
   {
    "id": "2026-10|166|Índice de conversão",
@@ -3869,7 +4179,7 @@
    "value": 0.0,
    "unit": "%",
    "cost": null,
-   "base": 1
+   "base": 2
   },
   {
    "id": "2026-10|172|Índice de conversão",
@@ -3877,10 +4187,10 @@
    "portfolio": "TABOR FIDC",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 18.8,
+   "value": 13.3,
    "unit": "%",
    "cost": null,
-   "base": 32
+   "base": 60
   },
   {
    "id": "2026-10|175|Índice de conversão",
@@ -3891,7 +4201,7 @@
    "value": 0.0,
    "unit": "%",
    "cost": null,
-   "base": 12
+   "base": 19
   },
   {
    "id": "2026-10|177|Índice de conversão",
@@ -3902,7 +4212,7 @@
    "value": 0.0,
    "unit": "%",
    "cost": null,
-   "base": 2
+   "base": 9
   },
   {
    "id": "2026-04|-1|Índice de conversão",
@@ -3976,10 +4286,10 @@
    "portfolio": "Todas as carteiras",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 49.3,
+   "value": 36.5,
    "unit": "%",
    "cost": null,
-   "base": 2743
+   "base": 4843
   },
   {
    "id": "2026-10|3|Clientes",
