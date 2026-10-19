@@ -78,7 +78,7 @@ h1{margin:12px 0 0;font-size:clamp(36px,5vw,56px);line-height:1;font-weight:800;
 .alert b{color:#fff}
 
 /* periodo */
-.period{display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:18px;padding:12px 18px;margin-bottom:12px}
+.period{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:18px;padding:12px 18px;margin-bottom:12px;z-index:3}
 .pl{display:flex;align-items:center;gap:12px;font-weight:600}
 .ic{width:36px;height:36px;border-radius:10px;border:1px solid var(--line);display:grid;place-items:center;color:var(--cy);background:rgba(25,195,240,.08);flex:none}
 .ic svg{width:20px;height:20px}
@@ -86,27 +86,49 @@ h1{margin:12px 0 0;font-size:clamp(36px,5vw,56px);line-height:1;font-weight:800;
 .arrow{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:rgba(25,195,240,.06);color:var(--cy);display:grid;place-items:center}
 .arrow:hover:not(:disabled){background:rgba(25,195,240,.2)}
 .arrow:disabled{opacity:.3;cursor:default}
-.pc{text-align:center}
-.pc b{font-size:19px;display:block}
-.pc small{color:var(--mut);font-size:12px}
-.tag{display:inline-block;margin-left:8px;padding:1px 9px;border-radius:999px;border:1px solid #f5c46b;color:#ffd88a;font-size:11px;font-weight:600;vertical-align:middle}
-.pbtn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:rgba(25,195,240,.06);border-radius:10px;padding:9px 16px;font-size:13px}
-.pbtn:hover:not(:disabled){background:rgba(25,195,240,.2)}
-.pbtn:disabled{opacity:.35;cursor:default}
+.pc{text-align:center;position:relative}
+.pcb{display:flex;flex-direction:column;align-items:center;gap:1px;border:1px solid transparent;border-radius:12px;background:transparent;padding:4px 16px;min-width:300px}
+.pcb:hover,.pcb[aria-expanded=true]{border-color:var(--line);background:rgba(25,195,240,.08)}
+.pcb b{font-size:19px;display:inline-flex;align-items:center;gap:8px}
+.pcb b svg{width:13px;height:13px;color:var(--cy);transition:transform .2s}
+.pcb[aria-expanded=true] b svg{transform:rotate(180deg)}
+.pcb small{color:var(--mut);font-size:12px}
+.tag{display:inline-block;font-weight:600;padding:1px 9px;border-radius:999px;border:1px solid #f5c46b;color:#ffd88a;font-size:11px;font-weight:600;vertical-align:middle}
+.pop{position:absolute;z-index:30;top:calc(100% + 8px);min-width:100%;max-height:320px;overflow:auto;padding:6px;border:1px solid var(--line);border-radius:14px;background:#06174a;box-shadow:0 18px 50px rgba(0,8,35,.7),0 0 0 1px rgba(25,195,240,.08) inset;text-align:left}
+.pop[hidden]{display:none}
+.pc .pop{left:50%;transform:translateX(-50%);min-width:240px}
+.opt{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;border:0;background:transparent;border-radius:9px;padding:8px 12px;font-size:13.5px;color:#dcebff;text-align:left}
+.opt:hover,.opt.act{background:rgba(25,195,240,.14)}
+.opt[aria-selected=true]{background:linear-gradient(135deg,rgba(39,196,255,.30),rgba(26,131,240,.30));color:#fff;font-weight:700}
+.opt .ck{color:var(--cy);font-weight:800;visibility:hidden}
+.opt[aria-selected=true] .ck{visibility:visible}
+.opt small{color:var(--mut);font-size:11.5px}
+.nores{padding:14px 12px;color:var(--mut2);font-size:12.5px;text-align:center}
 .upd{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:12px;padding:8px 16px;background:rgba(7,22,64,.6)}
 .upd small{display:block;color:var(--mut);font-size:11.5px}
 .upd b{font-size:13px}
 
 /* filtro carteira */
-.filt{display:flex;align-items:center;gap:16px;padding:10px 18px;margin-bottom:12px;flex-wrap:wrap}
-.sel{display:flex;flex-direction:column;gap:2px;min-width:200px}
-.sel small{color:var(--mut);font-size:11.5px}
-select{appearance:none;background:rgba(5,18,56,.9) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23cfe0ff' stroke-width='2'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E") no-repeat right 12px center;border:1px solid var(--line);border-radius:10px;padding:7px 34px 7px 12px;font-size:13.5px;width:100%}
-.chips{display:flex;gap:6px;flex-wrap:wrap;flex:1;padding:6px 10px;border:1px solid var(--line2);border-radius:999px;background:rgba(5,18,56,.45)}
-.chip{border:1px solid var(--line);background:transparent;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:#cfe0ff;white-space:nowrap}
+.filt{display:grid;grid-template-columns:auto minmax(260px,420px) 1fr auto;grid-template-areas:"ic combo . cmp" "chips chips chips chips";align-items:center;column-gap:16px;row-gap:12px;padding:12px 18px 14px;margin-bottom:12px;z-index:2}
+.filt>.ic{grid-area:ic}
+.combo{grid-area:combo;position:relative;min-width:0}
+.combo>small{display:block;color:var(--mut);font-size:11.5px;margin:0 2px 3px}
+.cbtn{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;border:1px solid var(--line);border-radius:12px;background:rgba(5,18,56,.9);padding:9px 14px;font-size:14px;font-weight:600;text-align:left}
+.cbtn:hover,.cbtn[aria-expanded=true]{border-color:var(--cy);box-shadow:0 0 0 3px rgba(25,195,240,.12)}
+.cbtn span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cbtn svg{width:14px;height:14px;flex:none;color:var(--cy);transition:transform .2s}
+.cbtn[aria-expanded=true] svg{transform:rotate(180deg)}
+.combo .pop{left:0;right:0;padding:8px}
+.psearch{display:block;width:100%;margin:0 0 6px;border:1px solid var(--line);border-radius:10px;background:rgba(5,18,56,.9);color:var(--ink);padding:8px 12px;font:inherit;font-size:13px}
+.psearch:focus{outline:none;border-color:var(--cy)}
+.plist{max-height:260px;overflow:auto}
+.chipsw{grid-area:chips;display:flex;align-items:center;gap:12px;padding-top:12px;border-top:1px solid var(--line2);min-width:0}
+.chipsw>small{color:var(--mut);font-size:11.5px;white-space:nowrap}
+.chips{display:flex;gap:8px;flex-wrap:wrap;flex:1;min-width:0}
+.chip{border:1px solid var(--line);background:transparent;border-radius:999px;padding:6px 14px;font-size:12px;font-weight:600;color:#cfe0ff;white-space:nowrap}
 .chip:hover{border-color:var(--cy)}
 .chip[aria-pressed=true]{background:linear-gradient(135deg,#27c4ff,#1a83f0);border-color:transparent;color:#021233;box-shadow:0 0 16px rgba(39,196,255,.45)}
-.cmp{display:flex;align-items:center;gap:10px;font-size:13px;color:#cfe0ff}
+.cmp{grid-area:cmp;display:flex;align-items:center;gap:10px;font-size:13px;color:#cfe0ff;justify-self:end}
 .sw{width:42px;height:22px;border-radius:999px;border:1px solid var(--line);background:rgba(5,18,56,.9);position:relative;padding:0}
 .sw::after{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#9fc4ff;transition:.2s}
 .sw[aria-checked=true]{background:rgba(25,195,240,.35);border-color:var(--cy)}
@@ -122,7 +144,14 @@ select{appearance:none;background:rgba(5,18,56,.9) url("data:image/svg+xml,%3Csv
 .kpi .kv.sm{font-size:16px}
 .kd{font-size:12px;color:var(--mut);line-height:1.3}
 .kd .up{color:var(--ok);font-weight:700}.kd .dn{color:var(--no);font-weight:700}
-.kd .pv{display:block;color:var(--mut2);font-size:11.5px}
+.kd .pv{display:block;color:var(--mut2);font-size:11.5px;margin-top:2px}
+.kd .vs{display:block;color:var(--mut2);font-size:11.5px}
+.kpi.cmpon{border-color:rgba(25,195,240,.45)}
+.cmpnote{display:none;margin:-4px 2px 12px;color:var(--mut);font-size:12px}
+.cmpnote.on{display:block}
+.cmpnote b{color:#cfe0ff}
+.totd{display:block;font:600 12px "Segoe UI",sans-serif;color:var(--mut);text-align:right;margin-top:1px}
+.totd .up{color:var(--ok);font-weight:700}.totd .dn{color:var(--no);font-weight:700}
 
 /* meio */
 .mid{display:grid;grid-template-columns:minmax(0,1.38fr) minmax(0,1fr);gap:14px;margin-bottom:14px}
@@ -180,14 +209,16 @@ footer{margin-top:16px;display:flex;justify-content:space-between;gap:12px;flex-
   .kpis{grid-template-columns:repeat(4,minmax(0,1fr))}
   .mid{grid-template-columns:minmax(0,1fr)}
   .cgrid{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .period{grid-template-columns:1fr 1fr}.pmid{grid-column:1/3;order:3}
+  .period{grid-template-columns:auto 1fr}.upd{grid-column:1/3}.filt{grid-template-columns:auto minmax(0,1fr) auto;grid-template-areas:"ic combo cmp" "chips chips chips"}
 }
 @media(max-width:720px){
   .in,.wrap{padding-left:14px;padding-right:14px}
   .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
   .cgrid{grid-template-columns:1fr 1fr}
   .costtop{grid-template-columns:1fr;justify-items:center}
-  .period{grid-template-columns:1fr}.pmid{grid-column:auto}
+  .period{grid-template-columns:1fr;gap:12px}.upd{grid-column:auto}.pmid{gap:10px}.pcb{min-width:0;padding:4px 8px}
+  .filt{grid-template-columns:auto minmax(0,1fr);grid-template-areas:"ic combo" "cmp cmp" "chips chips"}.cmp{justify-self:start}
+  .chipsw{flex-direction:column;align-items:flex-start;gap:8px}.chips{flex-wrap:nowrap;overflow-x:auto;width:100%;padding-bottom:4px}
   .tabs{width:100%}
 }
 @media(max-width:480px){.cgrid{grid-template-columns:1fr}}
@@ -266,24 +297,31 @@ footer{margin-top:16px;display:flex;justify-content:space-between;gap:12px;flex-
     <div class="pl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>Período de análise</div>
     <div class="pmid">
       <button class="arrow" id="prev" aria-label="Mês anterior"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 5l-7 7 7 7"/></svg></button>
-      <div class="pc"><b class="num" id="pLabel">—</b><small id="pRange"></small></div>
+      <div class="pc">
+        <button class="pcb" id="pBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Escolher mês"><b class="num"><span id="pLabel">—</span><span id="pTag"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 9l7 7 7-7"/></svg></b><small id="pRange"></small></button>
+        <div class="pop" id="pPop" role="listbox" aria-label="Meses disponíveis" hidden></div>
+      </div>
       <button class="arrow" id="next" aria-label="Próximo mês"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg></button>
-    </div>
-    <div style="display:flex;gap:10px">
-      <button class="pbtn" id="prevB">‹ Mês anterior</button>
-      <button class="pbtn" id="nextB">Próximo mês ›</button>
     </div>
     <div class="upd"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12a9 9 0 1 1-3-6.7M21 4v5h-5"/></svg></span><div><small>Última atualização</small><b id="updTxt">—</b></div></div>
   </section>
 
   <section class="panel filt" aria-label="Carteira">
     <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l9 5-9 5-9-5 9-5zM3 13l9 5 9-5M3 17.5l9 5 9-5"/></svg></span>
-    <label class="sel"><small>Carteira</small><select id="cart"></select></label>
-    <div class="chips" id="chips"></div>
+    <div class="combo">
+      <small id="cartLbl">Carteira</small>
+      <button class="cbtn" id="cartBtn" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="cartLbl cartTxt"><span id="cartTxt">Todas as carteiras</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 9l7 7 7-7"/></svg></button>
+      <div class="pop" id="cartPop" hidden>
+        <input class="psearch" id="cartQ" type="search" placeholder="Buscar carteira…" aria-label="Buscar carteira" autocomplete="off">
+        <div class="plist" id="cartList" role="listbox" aria-label="Carteiras"></div>
+      </div>
+    </div>
+    <div class="chipsw"><small>Maiores do mês</small><div class="chips" id="chips"></div></div>
     <div class="cmp"><span>Comparar períodos</span><button class="sw" id="cmp" role="switch" aria-checked="false" aria-label="Comparar períodos"></button></div>
   </section>
 
   <section class="kpis" id="kpis" aria-label="Resumo do período"></section>
+  <p class="cmpnote" id="cmpNote"></p>
 
   <div class="mid">
     <section class="panel blk" aria-label="Visão Carteira do período">
@@ -301,7 +339,7 @@ footer{margin-top:16px;display:flex;justify-content:space-between;gap:12px;flex-
       </div>
       <h3>Detalhamento dos custos</h3>
       <div style="overflow:auto"><table><thead><tr><th>Canal</th><th class="r">Quantidade</th><th class="r">Custo total</th><th class="r">Custo unitário</th><th class="r">Participação</th></tr></thead><tbody id="cb"></tbody></table></div>
-      <div class="total"><span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#19c3f0" stroke-width="1.8"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 10h18M16 15h2"/></svg>CUSTO TOTAL NO PERÍODO</span><b class="num" id="cTot">R$ 0,00</b></div>
+      <div class="total"><span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#19c3f0" stroke-width="1.8"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 10h18M16 15h2"/></svg>CUSTO TOTAL NO PERÍODO</span><div style="text-align:right"><b class="num" id="cTot">R$ 0,00</b><span class="totd" id="cTotD"></span></div></div>
     </section>
   </div>
 
@@ -421,16 +459,27 @@ function kpis(){
     {l:"Conversão", i:"pct", g:c=>val(c,cart,CONV), f:fP, pp:true},
     {l:"Comissão", i:"up", g:c=>val(c,cart,"Comissão"), f:fB, sm:true}
   ];
+  const on = st.cmp;
+  const pLab = pc ? MABR[parse(pc).m-1]+"/"+parse(pc).y : "";
   $("kpis").innerHTML = defs.map(d => {
-    const v = d.g(st.comp), p = pc ? d.g(pc) : null;
-    let delta;
-    if(v==null || p==null) delta = '<span>sem mês anterior para comparar</span>';
-    else if(d.pp){ const x = Math.round((v-p)*10)/10; delta = '<span class="'+(x>=0?"up":"dn")+'">'+(x>=0?"↑ +":"↓ ")+nD.format(x).replace(/,00$/,",0")+" p.p.</span> "+vsTxt; }
-    else if(p===0){ delta = '<span>mês anterior sem base</span>'; }
-    else { const x = (v-p)/Math.abs(p)*100; delta = '<span class="'+(x>=0?"up":"dn")+'">'+(x>=0?"↑ +":"↓ ")+nD.format(x)+"%</span> "+vsTxt; }
-    const prev = st.cmp && p!=null ? '<span class="pv">Anterior: '+d.f(p)+'</span>' : "";
-    return '<div class="panel kpi">'+ico(d.i)+'<div class="kb"><div class="kl">'+d.l+'</div><div class="kv'+(d.sm?" sm":"")+'">'+d.f(v)+'</div><div class="kd">'+delta+prev+'</div></div></div>';
+    const v = d.g(st.comp);
+    let extra = "";
+    if(on){
+      const p = pc ? d.g(pc) : null;
+      if(v==null || p==null) extra = '<div class="kd"><span>sem mês anterior para comparar</span></div>';
+      else {
+        let delta;
+        if(d.pp){ const x = Math.round((v-p)*10)/10; delta = '<span class="'+(x>=0?"up":"dn")+'">'+(x>=0?"↑ +":"↓ ")+nD.format(x).replace(/,00$/,",0")+" p.p.</span>"; }
+        else if(p===0) delta = '<span>sem base anterior</span>';
+        else { const x = (v-p)/Math.abs(p)*100; delta = '<span class="'+(x>=0?"up":"dn")+'">'+(x>=0?"↑ +":"↓ ")+nD.format(x)+"%</span>"; }
+        extra = '<div class="kd">'+delta+'<span class="pv">'+pLab+": "+d.f(p)+'</span></div>';
+      }
+    }
+    return '<div class="panel kpi'+(on?" cmpon":"")+'">'+ico(d.i)+'<div class="kb"><div class="kl">'+d.l+'</div><div class="kv'+(d.sm?" sm":"")+'">'+d.f(v)+'</div>'+extra+'</div></div>';
   }).join("");
+  const nt = $("cmpNote");
+  nt.className = "cmpnote"+(on?" on":"");
+  nt.innerHTML = on ? (pc ? "Comparando <b>"+rotulo(st.comp)+"</b> com <b>"+rotulo(pc)+"</b>."+(emAndamento(st.comp)?" O mês atual está em andamento, então as variações podem aparecer menores que o fechamento real.":"") : "Não há mês anterior para comparar.") : "";
 }
 
 function tabela(){
@@ -485,6 +534,10 @@ function custos(){
   const rows = CH.map(ch => ({ch, x:cv(c,k,ch)}));
   const tot = rows.reduce((s,r)=>s+(r.x?r.x.c:0),0);
   $("dTot").textContent = fB(tot); $("cTot").textContent = fB(tot);
+  const pcx = prevComp(c); let td = "";
+  if(st.cmp){ const pt = pcx ? custo(pcx,k) : null;
+    td = pt==null ? "sem mês anterior" : (pt===0 ? "mês anterior: R$ 0,00" : (()=>{ const x=(tot-pt)/pt*100; return '<span class="'+(x<=0?"up":"dn")+'">'+(x>=0?"↑ +":"↓ ")+nD.format(x)+"%</span> · "+MABR[parse(pcx).m-1]+": "+fB(pt); })()); }
+  $("cTotD").innerHTML = td;
   // donut
   const Cc = 2*Math.PI*45; let off = 0, h = '<circle cx="60" cy="60" r="45" stroke="rgba(120,170,255,.14)" fill="none" stroke-width="22"/>';
   if(tot>0) for(const r of rows){ if(!r.x || r.x.c<=0) continue; const l = r.x.c/tot*Cc;
@@ -574,17 +627,51 @@ function graficos(){
 /* ---------- controles ---------- */
 function controles(){
   const c = st.comp, {y,m} = parse(c), i = comps.indexOf(c);
-  $("pLabel").innerHTML = MESES[m-1]+" / "+y + (emAndamento(c)?'<span class="tag">em andamento</span>':"");
+  $("pLabel").textContent = MESES[m-1]+" / "+y;
+  $("pTag").innerHTML = emAndamento(c) ? '<span class="tag">em andamento</span>' : "";
   $("pRange").textContent = "01/"+pad(m)+"/"+y+" — "+lastDay(c)+"/"+pad(m)+"/"+y;
-  for(const id of ["prev","prevB"]) $(id).disabled = i<=0;
-  for(const id of ["next","nextB"]) $(id).disabled = i>=comps.length-1;
-  const todas = [...new Set(comps.flatMap(cc=>carteirasDe(cc)))].sort((a,b)=>nome(a).localeCompare(nome(b)));
-  $("cart").innerHTML = '<option value="'+ALL+'">Todas as carteiras</option>' + todas.map(p=>'<option value="'+esc(p)+'" title="'+esc(p)+'">'+esc(nome(p))+'</option>').join("");
-  $("cart").value = todas.includes(st.cart) || st.cart===ALL ? st.cart : ALL;
-  const top = ranking(c).slice(0,6);
+  $("prev").disabled = i<=0; $("next").disabled = i>=comps.length-1;
+  $("pPop").innerHTML = [...comps].reverse().map(x=>'<button class="opt" role="option" data-c="'+x+'" aria-selected="'+(x===c)+'"><span>'+rotulo(x)+(emAndamento(x)?' <small>em andamento</small>':'')+'</span><span class="ck">✓</span></button>').join("");
+  $("pPop").querySelectorAll("button").forEach(b=>b.onclick=()=>{ st.comp=b.dataset.c; fechar(); render(); });
+  $("cartTxt").textContent = nome(st.cart);
+  listaCarteiras();
+  const top = ranking(c).slice(0,7);
   $("chips").innerHTML = [ALL,...top].map(p=>'<button class="chip" data-p="'+esc(p)+'" aria-pressed="'+(st.cart===p)+'">'+esc(p===ALL?"Todas":nome(p))+'</button>').join("");
   $("chips").querySelectorAll("button").forEach(b=>b.onclick=()=>{ st.cart=b.dataset.p; render(); });
 }
+function listaCarteiras(){
+  const q = $("cartQ").value.trim().toLocaleLowerCase("pt-BR");
+  const todas = [...new Set(comps.flatMap(cc=>carteirasDe(cc)))].sort((a,b)=>nome(a).localeCompare(nome(b)));
+  const itens = [ALL,...todas].filter(p=>!q || nome(p).toLocaleLowerCase("pt-BR").includes(q));
+  $("cartList").innerHTML = itens.length ? itens.map(p=>'<button class="opt" role="option" data-p="'+esc(p)+'" aria-selected="'+(st.cart===p)+'"><span>'+esc(nome(p))+'</span><span class="ck">✓</span></button>').join("") : '<div class="nores">Nenhuma carteira encontrada.</div>';
+  $("cartList").querySelectorAll("button").forEach(b=>b.onclick=()=>{ st.cart=b.dataset.p; fechar(); render(); });
+}
+/* popovers (mês e carteira) */
+const POPS = [["pBtn","pPop"],["cartBtn","cartPop"]];
+function fechar(except){ for(const [b,p] of POPS){ if(b===except) continue; $(p).hidden = true; $(b).setAttribute("aria-expanded","false"); } }
+function alternar(b,p){
+  const abrir = $(p).hidden; fechar(abrir?b:null);
+  $(p).hidden = !abrir; $(b).setAttribute("aria-expanded", String(abrir));
+  if(abrir){
+    if(p==="cartPop"){ $("cartQ").value=""; listaCarteiras(); setTimeout(()=>$("cartQ").focus(),0); }
+    const sel = $(p).querySelector('[aria-selected="true"]'); if(sel) sel.scrollIntoView({block:"nearest"});
+  }
+}
+for(const [b,p] of POPS) $(b).onclick = e => { e.stopPropagation(); alternar(b,p); };
+for(const [b,p] of POPS) $(p).onclick = e => e.stopPropagation();
+document.addEventListener("click", () => fechar());
+document.addEventListener("keydown", e => {
+  if(e.key==="Escape"){ const aberto = POPS.find(([b,p])=>!$(p).hidden); fechar(); if(aberto) $(aberto[0]).focus(); return; }
+  if(e.key!=="ArrowDown" && e.key!=="ArrowUp") return;
+  const aberto = POPS.find(([b,p])=>!$(p).hidden); if(!aberto) return;
+  const ops = [...$(aberto[1]).querySelectorAll(".opt")]; if(!ops.length) return;
+  e.preventDefault();
+  let i = ops.indexOf(document.activeElement);
+  i = e.key==="ArrowDown" ? Math.min(ops.length-1,i+1) : (i<=0 ? 0 : i-1);
+  ops[i].focus();
+});
+$("cartQ").addEventListener("input", listaCarteiras);
+$("cartQ").addEventListener("keydown", e => { if(e.key==="Enter"){ const o = $("cartList").querySelector(".opt"); if(o) o.click(); } });
 function carimbo(){
   const g = new Date(D.generated_at), ok = !isNaN(g);
   const txt = ok ? g.toLocaleDateString("pt-BR")+" "+g.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"}) : "não informada";
@@ -612,10 +699,9 @@ $("tabs").innerHTML = TABS.map(([t,n])=>'<button class="tab" data-t="'+t+'" aria
 $("tabs").querySelectorAll("button").forEach(b=>b.onclick=()=>{ st.tab = st.tab===b.dataset.t ? null : b.dataset.t; render();
   if(st.tab){ const p = document.querySelector('.cp[data-t="'+st.tab+'"]'); if(p) p.scrollIntoView({behavior:"smooth",block:"nearest"}); } });
 const go = d => { const i = comps.indexOf(st.comp)+d; if(i>=0 && i<comps.length){ st.comp = comps[i]; render(); } };
-for(const id of ["prev","prevB"]) $(id).onclick = ()=>go(-1);
-for(const id of ["next","nextB"]) $(id).onclick = ()=>go(1);
-$("cart").onchange = e => { st.cart = e.target.value; render(); };
-$("cmp").onclick = () => { st.cmp = !st.cmp; $("cmp").setAttribute("aria-checked", String(st.cmp)); kpis(); };
+$("prev").onclick = ()=>go(-1);
+$("next").onclick = ()=>go(1);
+$("cmp").onclick = () => { st.cmp = !st.cmp; $("cmp").setAttribute("aria-checked", String(st.cmp)); kpis(); custos(); };
 
 function erro(msg){ const al = $("alert"); al.className = "alert err"; al.style.display = "block"; al.innerHTML = "<b>Não foi possível carregar a base.</b> "+esc(msg); }
 async function carregar(primeira){
