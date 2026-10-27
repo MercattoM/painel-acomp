@@ -383,7 +383,7 @@ const r2 = v => Math.round(v*100)/100;
 
 const st = {comp:null, cart:ALL, cmp:false, dig:false, tab:null};
 const DIG_RE = /^BANCO DIGIMAIS/i, DIG = "DIGIMAIS (todas as fases)";   // fases I–VI; o fundo "TABOR FUNDO DE INV. - DIGIMAIS" fica de fora
-let D=null, R={}, C={}, R0={}, C0={}, comps=[];
+let D=null, R={}, C={}, R0={}, C0={}, comps=[], BASE=new Set();   // BASE = carteiras das abas Poscart/BRK/Banrisul (as que têm Clientes)
 
 /* ---------- dados ---------- */
 function indexar(d){
@@ -391,8 +391,12 @@ function indexar(d){
   for(const r of d.records||[]){ ((R0[r.competency] ??= {})[r.portfolio] ??= {})[r.indicator] = r; }
   for(const c of d.channels||[]){ ((C0[c.competency] ??= {})[c.portfolio] ??= {})[c.channel] = c; }
   comps = [...new Set([...(d.competencies||[]), ...Object.keys(R0), ...Object.keys(C0)])].sort();
+  BASE = new Set();
+  for(const c in R0) for(const p in R0[c]) if(p!==TOD && R0[c][p].Clientes) BASE.add(p);
   aplicarDig();
 }
+/* só as carteiras da base aparecem no filtro, nos chips e nos gráficos por carteira (se o JSON não trouxer Clientes, não filtra) */
+const naBase = p => !BASE.size || BASE.has(p) || p===DIG;
 /* Digimais: separado (cada fase) ou consolidado (uma carteira só). Soma o que é aditivo; a conversão é recalculada pela base. */
 function juntaR(m){
   const out = {}, ac = {};
@@ -463,7 +467,7 @@ function nome(p){
 }
 function carteirasDe(comp){
   const s = new Set(); for(const p in (R[comp]||{})) s.add(p); for(const p in (C[comp]||{})) s.add(p);
-  s.delete(TOD); return [...s];
+  s.delete(TOD); return [...s].filter(naBase);
 }
 function ranking(comp){
   return carteirasDe(comp).filter(p=>p!=="Geral").map(p => ({p, s:(val(comp,p,"Promessas")||0)+(val(comp,p,"Pagamentos")||0)+(msgs(comp,p)||0)/1000}))
@@ -568,7 +572,7 @@ function tabela(){
   if(val(c,k,"Clientes")==null) falta.push("carteira (clientes/saldo)");
   if(val(c,k,"Acionamentos")==null) falta.push("acionamentos");
   if(val(c,k,CONV)==null) falta.push("conversão");
-  $("tNote").textContent = "“—” = dado não informado neste período"+(falta.length?" ("+falta.join(", ")+")":"")+". Tabela resumida; veja os gráficos para a evolução.";
+  $("tNote").textContent = "“—” = dado não informado neste período"+(falta.length?" ("+falta.join(", ")+")":"")+". Tabela resumida; veja os gráficos para a evolução."+(k===ALL?" “Todas as carteiras” soma também o que está fora da base (ex.: Tabor, Yards, SESC, Sinai e envios sem carteira).":"");
 }
 
 function custos(){
