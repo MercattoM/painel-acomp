@@ -128,7 +128,8 @@ h1{margin:12px 0 0;font-size:clamp(36px,5vw,56px);line-height:1;font-weight:800;
 .chip{border:1px solid var(--line);background:transparent;border-radius:999px;padding:6px 14px;font-size:12px;font-weight:600;color:#cfe0ff;white-space:nowrap}
 .chip:hover{border-color:var(--cy)}
 .chip[aria-pressed=true]{background:linear-gradient(135deg,#27c4ff,#1a83f0);border-color:transparent;color:#021233;box-shadow:0 0 16px rgba(39,196,255,.45)}
-.cmp{grid-area:cmp;display:flex;align-items:center;gap:10px;font-size:13px;color:#cfe0ff;justify-self:end}
+.sws{grid-area:cmp;display:flex;align-items:center;gap:22px;flex-wrap:wrap;justify-self:end}
+.cmp{display:flex;align-items:center;gap:10px;font-size:13px;color:#cfe0ff}
 .sw{width:42px;height:22px;border-radius:999px;border:1px solid var(--line);background:rgba(5,18,56,.9);position:relative;padding:0}
 .sw::after{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#9fc4ff;transition:.2s}
 .sw[aria-checked=true]{background:rgba(25,195,240,.35);border-color:var(--cy)}
@@ -217,7 +218,7 @@ footer{margin-top:16px;display:flex;justify-content:space-between;gap:12px;flex-
   .cgrid{grid-template-columns:1fr 1fr}
   .costtop{grid-template-columns:1fr;justify-items:center}
   .period{grid-template-columns:1fr;gap:12px}.upd{grid-column:auto}.pmid{gap:10px}.pcb{min-width:0;padding:4px 8px}
-  .filt{grid-template-columns:auto minmax(0,1fr);grid-template-areas:"ic combo" "cmp cmp" "chips chips"}.cmp{justify-self:start}
+  .filt{grid-template-columns:auto minmax(0,1fr);grid-template-areas:"ic combo" "cmp cmp" "chips chips"}.sws{justify-self:start}
   .chipsw{flex-direction:column;align-items:flex-start;gap:8px}.chips{flex-wrap:nowrap;overflow-x:auto;width:100%;padding-bottom:4px}
   .tabs{width:100%}
 }
@@ -284,7 +285,7 @@ footer{margin-top:16px;display:flex;justify-content:space-between;gap:12px;flex-
         </g>
       </svg>
       <span class="dot"></span><span class="dot d2"></span><span class="dot d3"></span>
-      <div class="fchip c1"><i></i><small>Carteiras com movimento</small><b id="fcCar">—</b></div>
+      <div class="fchip c1"><i></i><small>Carteiras na base</small><b id="fcCar">—</b></div>
       <div class="fchip c2"><small id="fcLbl">Caixa no período</small><b id="fcCx">—</b></div>
     </div>
   </div>
@@ -317,7 +318,10 @@ footer{margin-top:16px;display:flex;justify-content:space-between;gap:12px;flex-
       </div>
     </div>
     <div class="chipsw"><small>Maiores do mês</small><div class="chips" id="chips"></div></div>
-    <div class="cmp"><span>Comparar períodos</span><button class="sw" id="cmp" role="switch" aria-checked="false" aria-label="Comparar períodos"></button></div>
+    <div class="sws">
+      <div class="cmp"><span>Consolidar Digimais</span><button class="sw" id="dig" role="switch" aria-checked="false" aria-label="Consolidar as fases do Banco Digimais em uma única carteira"></button></div>
+      <div class="cmp"><span>Comparar períodos</span><button class="sw" id="cmp" role="switch" aria-checked="false" aria-label="Comparar períodos"></button></div>
+    </div>
   </section>
 
   <section class="kpis" id="kpis" aria-label="Resumo do período"></section>
@@ -377,15 +381,53 @@ const fB = v => v==null ? "—" : "R$ " + nD.format(v);
 const fP = v => v==null ? "—" : nD.format(v).replace(/,00$/,",0").replace(/(,\d)0$/,"$1") + "%";
 const r2 = v => Math.round(v*100)/100;
 
-const st = {comp:null, cart:ALL, cmp:false, tab:null};
-let D=null, R={}, C={}, comps=[];
+const st = {comp:null, cart:ALL, cmp:false, dig:false, tab:null};
+const DIG_RE = /^BANCO DIGIMAIS/i, DIG = "DIGIMAIS (todas as fases)";   // fases I–VI; o fundo "TABOR FUNDO DE INV. - DIGIMAIS" fica de fora
+let D=null, R={}, C={}, R0={}, C0={}, comps=[];
 
 /* ---------- dados ---------- */
 function indexar(d){
-  R={}; C={};
-  for(const r of d.records||[]){ ((R[r.competency] ??= {})[r.portfolio] ??= {})[r.indicator] = r; }
-  for(const c of d.channels||[]){ ((C[c.competency] ??= {})[c.portfolio] ??= {})[c.channel] = c; }
-  comps = [...new Set([...(d.competencies||[]), ...Object.keys(R), ...Object.keys(C)])].sort();
+  R0={}; C0={};
+  for(const r of d.records||[]){ ((R0[r.competency] ??= {})[r.portfolio] ??= {})[r.indicator] = r; }
+  for(const c of d.channels||[]){ ((C0[c.competency] ??= {})[c.portfolio] ??= {})[c.channel] = c; }
+  comps = [...new Set([...(d.competencies||[]), ...Object.keys(R0), ...Object.keys(C0)])].sort();
+  aplicarDig();
+}
+/* Digimais: separado (cada fase) ou consolidado (uma carteira só). Soma o que é aditivo; a conversão é recalculada pela base. */
+function juntaR(m){
+  const out = {}, ac = {};
+  for(const p in m){
+    if(!DIG_RE.test(p)){ out[p] = m[p]; continue; }
+    for(const ind in m[p]){
+      const r = m[p][ind], a = ac[ind] ??= {...r, portfolio:DIG, value:0, base:ind===CONV?0:r.base, _pg:0, _ok:true};
+      if(ind===CONV){ if(r.base==null) a._ok = false; else { a._pg += r.value*r.base/100; a.base += r.base; } }
+      else a.value += r.value;
+    }
+  }
+  const inds = Object.keys(ac); if(!inds.length) return out;
+  out[DIG] = {};
+  for(const ind of inds){
+    const a = ac[ind];
+    if(ind===CONV){ if(!a._ok || !a.base) continue; a.value = Math.round(1000*a._pg/a.base)/10; } else a.value = r2(a.value);
+    delete a._pg; delete a._ok; out[DIG][ind] = a;
+  }
+  return out;
+}
+function juntaC(m){
+  const out = {}, ac = {};
+  for(const p in m){
+    if(!DIG_RE.test(p)){ out[p] = m[p]; continue; }
+    for(const ch in m[p]){ const c = m[p][ch], a = ac[ch] ??= {...c, portfolio:DIG, quantity:0, cost_total:0}; a.quantity += c.quantity; a.cost_total += c.cost_total; }
+  }
+  const chs = Object.keys(ac); if(!chs.length) return out;
+  out[DIG] = {}; for(const ch of chs){ ac[ch].cost_total = r2(ac[ch].cost_total); out[DIG][ch] = ac[ch]; }
+  return out;
+}
+function aplicarDig(){
+  if(!st.dig){ R = R0; C = C0; return; }
+  R = {}; C = {};
+  for(const c in R0) R[c] = juntaR(R0[c]);
+  for(const c in C0) C[c] = juntaC(C0[c]);
 }
 function rv(comp, cart, ind){
   const m = R[comp]; if(!m) return null;
@@ -606,7 +648,7 @@ function graficos(){
   const top = ranking(c).slice(0,4);
   const e2 = [["Promessas","#13c9a0"],["Pagamentos","#2d6cff"]];
   legend("lg2", e2);
-  barChart("c2", top.map(nome).map(n=>n.replace("DIGIMAIS FASE","DIG."))   , e2.map(([n,col])=>({name:n,color:col,values:top.map(p=>val(c,p,n))})), t=>nC.format(t), t=>nI.format(t));
+  barChart("c2", top.map(nome).map(n=>n.replace("DIGIMAIS FASE","DIG.").replace(DIG,"DIGIMAIS"))   , e2.map(([n,col])=>({name:n,color:col,values:top.map(p=>val(c,p,n))})), t=>nC.format(t), t=>nI.format(t));
   // 3 volume por canal
   const q = CH.map(ch=>({ch, x:cv(c,k,ch)})).filter(r=>r.ch!=="URA"||r.x);
   const mx = Math.max(0,...q.map(r=>r.x?r.x.q:0));
@@ -684,8 +726,8 @@ function carimbo(){
   if(velho) al.innerHTML = "<b>Dados de "+g.toLocaleDateString("pt-BR")+"</b> — ainda não há atualização de hoje.";
 }
 function orbita(){
-  const c = st.comp, n = ranking(c).length, cx = val(c, st.cart, "Caixa");
-  $("fcCar").textContent = nI.format(n);
+  const c = st.comp, cx = val(c, st.cart, "Caixa"), nb = carteirasDe(c).filter(p=>p!=="Geral" && val(c,p,"Clientes")>0).length;   // carteiras da base (Poscart + BRK + Banrisul)
+  $("fcCar").textContent = nb ? nI.format(nb) : "—";
   $("fcLbl").textContent = "Caixa · " + (st.cart===ALL ? "todas" : nome(st.cart).toLowerCase());
   $("fcCx").textContent = cx==null ? "—" : "R$ " + nC.format(cx);
 }
@@ -701,6 +743,11 @@ $("tabs").querySelectorAll("button").forEach(b=>b.onclick=()=>{ st.tab = st.tab=
 const go = d => { const i = comps.indexOf(st.comp)+d; if(i>=0 && i<comps.length){ st.comp = comps[i]; render(); } };
 $("prev").onclick = ()=>go(-1);
 $("next").onclick = ()=>go(1);
+$("dig").onclick = () => {
+  st.dig = !st.dig; $("dig").setAttribute("aria-checked", String(st.dig));
+  if(st.dig && DIG_RE.test(st.cart)) st.cart = DIG; else if(!st.dig && st.cart===DIG) st.cart = ALL;
+  aplicarDig(); render();
+};
 $("cmp").onclick = () => { st.cmp = !st.cmp; $("cmp").setAttribute("aria-checked", String(st.cmp)); kpis(); custos(); };
 
 function erro(msg){ const al = $("alert"); al.className = "alert err"; al.style.display = "block"; al.innerHTML = "<b>Não foi possível carregar a base.</b> "+esc(msg); }
