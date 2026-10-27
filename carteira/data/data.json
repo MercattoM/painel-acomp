@@ -1,6 +1,6 @@
 {
  "schema_version": "1.1.0",
- "generated_at": "2026-10-19T17:51:55-03:00",
+ "generated_at": "2026-10-27T15:42:24-03:00",
  "competencies": [
   "2025-12",
   "2026-01",
@@ -4292,6 +4292,26 @@
    "base": 4843
   },
   {
+   "id": "2026-10|1|Clientes",
+   "competency": "2026-10",
+   "portfolio": "BANRISUL",
+   "group": "Carteira",
+   "indicator": "Clientes",
+   "value": 100487,
+   "unit": "clientes",
+   "cost": null
+  },
+  {
+   "id": "2026-10|1|Saldo",
+   "competency": "2026-10",
+   "portfolio": "BANRISUL",
+   "group": "Carteira",
+   "indicator": "Saldo",
+   "value": 1290673074.43,
+   "unit": "BRL",
+   "cost": null
+  },
+  {
    "id": "2026-10|3|Clientes",
    "competency": "2026-10",
    "portfolio": "BANCO DIGIMAIS - FASE III",
@@ -4452,6 +4472,26 @@
    "cost": null
   },
   {
+   "id": "2026-10|158|Clientes",
+   "competency": "2026-10",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Carteira",
+   "indicator": "Clientes",
+   "value": 111640,
+   "unit": "clientes",
+   "cost": null
+  },
+  {
+   "id": "2026-10|158|Saldo",
+   "competency": "2026-10",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Carteira",
+   "indicator": "Saldo",
+   "value": 382738469.51,
+   "unit": "BRL",
+   "cost": null
+  },
+  {
    "id": "2026-10|163|Clientes",
    "competency": "2026-10",
    "portfolio": "HATIKVAH PARTICIPACOES LTDA",
@@ -4497,7 +4537,7 @@
    "portfolio": "Todas as carteiras",
    "group": "Carteira",
    "indicator": "Clientes",
-   "value": 24411,
+   "value": 236538,
    "unit": "clientes",
    "cost": null
   },
@@ -4507,7 +4547,7 @@
    "portfolio": "Todas as carteiras",
    "group": "Carteira",
    "indicator": "Saldo",
-   "value": 682508226.91,
+   "value": 2355919770.85,
    "unit": "BRL",
    "cost": null
   },
