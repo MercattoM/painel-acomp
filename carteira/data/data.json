@@ -1,6 +1,6 @@
 {
  "schema_version": "1.1.0",
- "generated_at": "2026-10-29T10:51:29-03:00",
+ "generated_at": "2026-10-29T15:16:03-03:00",
  "competencies": [
   "2025-12",
   "2026-01",
@@ -916,52 +916,52 @@
    "cost": null
   },
   {
-   "id": "2026-05|-1|Promessas",
+   "id": "2026-05|Todas as carteiras|Promessas",
    "competency": "2026-05",
    "portfolio": "Todas as carteiras",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 2,
+   "value": 1325,
    "unit": "promessas",
    "cost": null
   },
   {
-   "id": "2026-06|-1|Promessas",
+   "id": "2026-06|Todas as carteiras|Promessas",
    "competency": "2026-06",
    "portfolio": "Todas as carteiras",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 4,
+   "value": 1140,
    "unit": "promessas",
    "cost": null
   },
   {
-   "id": "2026-07|-1|Promessas",
+   "id": "2026-07|Todas as carteiras|Promessas",
    "competency": "2026-07",
    "portfolio": "Todas as carteiras",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 7723,
+   "value": 8855,
    "unit": "promessas",
    "cost": null
   },
   {
-   "id": "2026-08|-1|Promessas",
+   "id": "2026-08|Todas as carteiras|Promessas",
    "competency": "2026-08",
    "portfolio": "Todas as carteiras",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 6620,
+   "value": 7958,
    "unit": "promessas",
    "cost": null
   },
   {
-   "id": "2026-09|-1|Promessas",
+   "id": "2026-09|Todas as carteiras|Promessas",
    "competency": "2026-09",
    "portfolio": "Todas as carteiras",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 7294,
+   "value": 8342,
    "unit": "promessas",
    "cost": null
   },
@@ -1876,52 +1876,52 @@
    "cost": null
   },
   {
-   "id": "2026-05|-1|Pagamentos",
+   "id": "2026-05|Todas as carteiras|Pagamentos",
    "competency": "2026-05",
    "portfolio": "Todas as carteiras",
    "group": "Negócio",
    "indicator": "Pagamentos",
-   "value": 0,
+   "value": 475,
    "unit": "pagamentos",
    "cost": null
   },
   {
-   "id": "2026-06|-1|Pagamentos",
+   "id": "2026-06|Todas as carteiras|Pagamentos",
    "competency": "2026-06",
    "portfolio": "Todas as carteiras",
    "group": "Negócio",
    "indicator": "Pagamentos",
-   "value": 2,
+   "value": 373,
    "unit": "pagamentos",
    "cost": null
   },
   {
-   "id": "2026-07|-1|Pagamentos",
+   "id": "2026-07|Todas as carteiras|Pagamentos",
    "competency": "2026-07",
    "portfolio": "Todas as carteiras",
    "group": "Negócio",
    "indicator": "Pagamentos",
-   "value": 4204,
+   "value": 4677,
    "unit": "pagamentos",
    "cost": null
   },
   {
-   "id": "2026-08|-1|Pagamentos",
+   "id": "2026-08|Todas as carteiras|Pagamentos",
    "competency": "2026-08",
    "portfolio": "Todas as carteiras",
    "group": "Negócio",
    "indicator": "Pagamentos",
-   "value": 3435,
+   "value": 3944,
    "unit": "pagamentos",
    "cost": null
   },
   {
-   "id": "2026-09|-1|Pagamentos",
+   "id": "2026-09|Todas as carteiras|Pagamentos",
    "competency": "2026-09",
    "portfolio": "Todas as carteiras",
    "group": "Negócio",
    "indicator": "Pagamentos",
-   "value": 3267,
+   "value": 3680,
    "unit": "pagamentos",
    "cost": null
   },
@@ -3176,12 +3176,12 @@
    "cost": null
   },
   {
-   "id": "2026-07|-1|Caixa",
+   "id": "2026-07|Todas as carteiras|Caixa",
    "competency": "2026-07",
    "portfolio": "Todas as carteiras",
    "group": "Financeiro",
    "indicator": "Caixa",
-   "value": 7099089.23,
+   "value": 12161373.48,
    "unit": "BRL",
    "cost": null
   },
@@ -3196,12 +3196,12 @@
    "cost": null
   },
   {
-   "id": "2026-08|-1|Caixa",
+   "id": "2026-08|Todas as carteiras|Caixa",
    "competency": "2026-08",
    "portfolio": "Todas as carteiras",
    "group": "Financeiro",
    "indicator": "Caixa",
-   "value": 5275610.09,
+   "value": 11205158.47,
    "unit": "BRL",
    "cost": null
   },
@@ -3216,12 +3216,12 @@
    "cost": null
   },
   {
-   "id": "2026-09|-1|Caixa",
+   "id": "2026-09|Todas as carteiras|Caixa",
    "competency": "2026-09",
    "portfolio": "Todas as carteiras",
    "group": "Financeiro",
    "indicator": "Caixa",
-   "value": 4832451.47,
+   "value": 10632100.44,
    "unit": "BRL",
    "cost": null
   },
@@ -4246,59 +4246,59 @@
    "base": 1
   },
   {
-   "id": "2026-05|-1|Índice de conversão",
+   "id": "2026-05|Todas as carteiras|Índice de conversão",
    "competency": "2026-05",
    "portfolio": "Todas as carteiras",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 0.0,
+   "value": 35.8,
    "unit": "%",
    "cost": null,
-   "base": 2
+   "base": 1325
   },
   {
-   "id": "2026-06|-1|Índice de conversão",
+   "id": "2026-06|Todas as carteiras|Índice de conversão",
    "competency": "2026-06",
    "portfolio": "Todas as carteiras",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 50.0,
+   "value": 32.7,
    "unit": "%",
    "cost": null,
-   "base": 4
+   "base": 1140
   },
   {
-   "id": "2026-07|-1|Índice de conversão",
+   "id": "2026-07|Todas as carteiras|Índice de conversão",
    "competency": "2026-07",
    "portfolio": "Todas as carteiras",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 54.4,
+   "value": 52.8,
    "unit": "%",
    "cost": null,
-   "base": 7723
+   "base": 8855
   },
   {
-   "id": "2026-08|-1|Índice de conversão",
+   "id": "2026-08|Todas as carteiras|Índice de conversão",
    "competency": "2026-08",
    "portfolio": "Todas as carteiras",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 51.9,
+   "value": 49.6,
    "unit": "%",
    "cost": null,
-   "base": 6620
+   "base": 7958
   },
   {
-   "id": "2026-09|-1|Índice de conversão",
+   "id": "2026-09|Todas as carteiras|Índice de conversão",
    "competency": "2026-09",
    "portfolio": "Todas as carteiras",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 44.8,
+   "value": 44.1,
    "unit": "%",
    "cost": null,
-   "base": 7294
+   "base": 8342
   },
   {
    "id": "2026-10|-1|Índice de conversão",
@@ -4820,6 +4820,231 @@
    "value": 44644,
    "unit": "ações",
    "cost": null
+  },
+  {
+   "id": "2026-05|BRK AMBIENTAL|Promessas",
+   "competency": "2026-05",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 1323,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-05|BRK AMBIENTAL|Pagamentos",
+   "competency": "2026-05",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 475,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-05|BRK AMBIENTAL|Caixa",
+   "competency": "2026-05",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Financeiro",
+   "indicator": "Caixa",
+   "value": 5704827.27,
+   "unit": "BRL",
+   "cost": null
+  },
+  {
+   "id": "2026-05|BRK AMBIENTAL|Índice de conversão",
+   "competency": "2026-05",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Conversão",
+   "indicator": "Índice de conversão",
+   "value": 35.9033,
+   "unit": "%",
+   "cost": null,
+   "base": 1323
+  },
+  {
+   "id": "2026-05|Todas as carteiras|Caixa",
+   "competency": "2026-05",
+   "portfolio": "Todas as carteiras",
+   "group": "Financeiro",
+   "indicator": "Caixa",
+   "value": 5704827.27,
+   "unit": "BRL",
+   "cost": null
+  },
+  {
+   "id": "2026-06|BRK AMBIENTAL|Promessas",
+   "competency": "2026-06",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 1136,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-06|BRK AMBIENTAL|Pagamentos",
+   "competency": "2026-06",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 371,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-06|BRK AMBIENTAL|Caixa",
+   "competency": "2026-06",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Financeiro",
+   "indicator": "Caixa",
+   "value": 5161851.92,
+   "unit": "BRL",
+   "cost": null
+  },
+  {
+   "id": "2026-06|BRK AMBIENTAL|Índice de conversão",
+   "competency": "2026-06",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Conversão",
+   "indicator": "Índice de conversão",
+   "value": 32.6585,
+   "unit": "%",
+   "cost": null,
+   "base": 1136
+  },
+  {
+   "id": "2026-06|Todas as carteiras|Caixa",
+   "competency": "2026-06",
+   "portfolio": "Todas as carteiras",
+   "group": "Financeiro",
+   "indicator": "Caixa",
+   "value": 5161851.92,
+   "unit": "BRL",
+   "cost": null
+  },
+  {
+   "id": "2026-07|BRK AMBIENTAL|Promessas",
+   "competency": "2026-07",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 1132,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-07|BRK AMBIENTAL|Pagamentos",
+   "competency": "2026-07",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 473,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-07|BRK AMBIENTAL|Caixa",
+   "competency": "2026-07",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Financeiro",
+   "indicator": "Caixa",
+   "value": 5062284.25,
+   "unit": "BRL",
+   "cost": null
+  },
+  {
+   "id": "2026-07|BRK AMBIENTAL|Índice de conversão",
+   "competency": "2026-07",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Conversão",
+   "indicator": "Índice de conversão",
+   "value": 41.7845,
+   "unit": "%",
+   "cost": null,
+   "base": 1132
+  },
+  {
+   "id": "2026-08|BRK AMBIENTAL|Promessas",
+   "competency": "2026-08",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 1338,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-08|BRK AMBIENTAL|Pagamentos",
+   "competency": "2026-08",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 509,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-08|BRK AMBIENTAL|Caixa",
+   "competency": "2026-08",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Financeiro",
+   "indicator": "Caixa",
+   "value": 5929548.38,
+   "unit": "BRL",
+   "cost": null
+  },
+  {
+   "id": "2026-08|BRK AMBIENTAL|Índice de conversão",
+   "competency": "2026-08",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Conversão",
+   "indicator": "Índice de conversão",
+   "value": 38.0419,
+   "unit": "%",
+   "cost": null,
+   "base": 1338
+  },
+  {
+   "id": "2026-09|BRK AMBIENTAL|Promessas",
+   "competency": "2026-09",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 1048,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
+   "id": "2026-09|BRK AMBIENTAL|Pagamentos",
+   "competency": "2026-09",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 413,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
+   "id": "2026-09|BRK AMBIENTAL|Caixa",
+   "competency": "2026-09",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Financeiro",
+   "indicator": "Caixa",
+   "value": 5799648.97,
+   "unit": "BRL",
+   "cost": null
+  },
+  {
+   "id": "2026-09|BRK AMBIENTAL|Índice de conversão",
+   "competency": "2026-09",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Conversão",
+   "indicator": "Índice de conversão",
+   "value": 39.4084,
+   "unit": "%",
+   "cost": null,
+   "base": 1048
   }
  ],
  "channels": [
@@ -6326,5 +6551,26 @@
    "unit": "mensagens",
    "cost_total": 900.02
   }
- ]
+ ],
+ "historico_brk_integracao": {
+  "carteira": "BRK AMBIENTAL",
+  "atualizado_em": "2026-10-29T15:19:00-03:00",
+  "competencia_atual_preservada": "2026-10",
+  "competencias_aplicadas": [
+   "2026-05",
+   "2026-06",
+   "2026-07",
+   "2026-08",
+   "2026-09"
+  ],
+  "competencias_ignoradas_por_serem_atual_ou_futura": [
+   "2026-10"
+  ],
+  "indicadores": [
+   "Promessas",
+   "Pagamentos",
+   "Índice de conversão",
+   "Caixa"
+  ]
+ }
 }

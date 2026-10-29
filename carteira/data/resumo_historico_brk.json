@@ -1,0 +1,76 @@
+{
+  "atualizado_em": "2026-10-29T15:15:55",
+  "origem": "C:\\Users\\mecc\\Documents\\BRK\\Batimentos",
+  "pastas_consultadas": [
+    "C:\\Users\\mecc\\Documents\\BRK\\Batimentos",
+    "C:\\Users\\mecc\\Documents\\BRK"
+  ],
+  "definicoes": {
+    "quantidade_promessas": "Contagem de todas as linhas com dev_codi preenchido na aba Promessas (2). Duplicidades são mantidas.",
+    "promessas_com_pagamento": "Contagem das linhas em que Validação CPF está como Pago. Não consulta Validação Nome nem Valor Pago.",
+    "conversao_promessas_pct": "(Promessas com pagamento / Quantidade de promessas) * 100.",
+    "valor_pago_no_mes": "Soma de todos os valores preenchidos na coluna N (valor_pago) da aba Pagamentos do fechamento mensal. Cada arquivo já contém os pagamentos do próprio mês; não se aplica filtro adicional por data."
+  },
+  "meses": [
+    {
+      "mes_referencia": "Maio/2026",
+      "ano": 2026,
+      "mes_numero": 5,
+      "arquivo_fechamento": "Recebido-Promessas BRK Maio 26 -.xlsx",
+      "quantidade_promessas": 1323,
+      "promessas_com_pagamento": 475,
+      "conversao_promessas_pct": 35.9033,
+      "valor_pago_no_mes": 5704827.27
+    },
+    {
+      "mes_referencia": "Junho/2026",
+      "ano": 2026,
+      "mes_numero": 6,
+      "arquivo_fechamento": "Recebido-Promessas BRK Junho 26.xlsx",
+      "quantidade_promessas": 1136,
+      "promessas_com_pagamento": 371,
+      "conversao_promessas_pct": 32.6585,
+      "valor_pago_no_mes": 5161851.92
+    },
+    {
+      "mes_referencia": "Julho/2026",
+      "ano": 2026,
+      "mes_numero": 7,
+      "arquivo_fechamento": "Recebido-Promessas BRK Julho 26.xlsx",
+      "quantidade_promessas": 1132,
+      "promessas_com_pagamento": 473,
+      "conversao_promessas_pct": 41.7845,
+      "valor_pago_no_mes": 5062284.25
+    },
+    {
+      "mes_referencia": "Agosto/2026",
+      "ano": 2026,
+      "mes_numero": 8,
+      "arquivo_fechamento": "Recebido-Promessas BRK Agosto 26.xlsx",
+      "quantidade_promessas": 1338,
+      "promessas_com_pagamento": 509,
+      "conversao_promessas_pct": 38.0419,
+      "valor_pago_no_mes": 5929548.38
+    },
+    {
+      "mes_referencia": "Setembro/2026",
+      "ano": 2026,
+      "mes_numero": 9,
+      "arquivo_fechamento": "Recebido-Promessas BRK Setembro 26.xlsx",
+      "quantidade_promessas": 1048,
+      "promessas_com_pagamento": 413,
+      "conversao_promessas_pct": 39.4084,
+      "valor_pago_no_mes": 5799648.97
+    },
+    {
+      "mes_referencia": "Outubro/2026",
+      "ano": 2026,
+      "mes_numero": 10,
+      "arquivo_fechamento": "Recebido-Promessas BRK Outubro 26.xlsx",
+      "quantidade_promessas": 900,
+      "promessas_com_pagamento": 367,
+      "conversao_promessas_pct": 40.7778,
+      "valor_pago_no_mes": 5068814.75
+    }
+  ]
+}
