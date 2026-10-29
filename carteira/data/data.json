@@ -1,6 +1,6 @@
 {
  "schema_version": "1.1.0",
- "generated_at": "2026-10-29T10:17:31-03:00",
+ "generated_at": "2026-10-29T10:51:29-03:00",
  "competencies": [
   "2025-12",
   "2026-01",
@@ -202,16 +202,6 @@
    "group": "Negócio",
    "indicator": "Promessas",
    "value": 2,
-   "unit": "promessas",
-   "cost": null
-  },
-  {
-   "id": "2026-07|158|Promessas",
-   "competency": "2026-07",
-   "portfolio": "BRK AMBIENTAL",
-   "group": "Negócio",
-   "indicator": "Promessas",
-   "value": 438,
    "unit": "promessas",
    "cost": null
   },
@@ -906,6 +896,16 @@
    "cost": null
   },
   {
+   "id": "2026-10|158|Promessas",
+   "competency": "2026-10",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Negócio",
+   "indicator": "Promessas",
+   "value": 900,
+   "unit": "promessas",
+   "cost": null
+  },
+  {
    "id": "2026-04|-1|Promessas",
    "competency": "2026-04",
    "portfolio": "Todas as carteiras",
@@ -941,7 +941,7 @@
    "portfolio": "Todas as carteiras",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 8161,
+   "value": 7723,
    "unit": "promessas",
    "cost": null
   },
@@ -971,7 +971,7 @@
    "portfolio": "Todas as carteiras",
    "group": "Negócio",
    "indicator": "Promessas",
-   "value": 4843,
+   "value": 5743,
    "unit": "promessas",
    "cost": null
   },
@@ -1162,16 +1162,6 @@
    "group": "Negócio",
    "indicator": "Pagamentos",
    "value": 1,
-   "unit": "pagamentos",
-   "cost": null
-  },
-  {
-   "id": "2026-07|158|Pagamentos",
-   "competency": "2026-07",
-   "portfolio": "BRK AMBIENTAL",
-   "group": "Negócio",
-   "indicator": "Pagamentos",
-   "value": 0,
    "unit": "pagamentos",
    "cost": null
   },
@@ -1866,6 +1856,16 @@
    "cost": null
   },
   {
+   "id": "2026-10|158|Pagamentos",
+   "competency": "2026-10",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Negócio",
+   "indicator": "Pagamentos",
+   "value": 367,
+   "unit": "pagamentos",
+   "cost": null
+  },
+  {
    "id": "2026-04|-1|Pagamentos",
    "competency": "2026-04",
    "portfolio": "Todas as carteiras",
@@ -1931,7 +1931,7 @@
    "portfolio": "Todas as carteiras",
    "group": "Negócio",
    "indicator": "Pagamentos",
-   "value": 1770,
+   "value": 2137,
    "unit": "pagamentos",
    "cost": null
   },
@@ -3465,17 +3465,6 @@
    "base": 2
   },
   {
-   "id": "2026-07|158|Índice de conversão",
-   "competency": "2026-07",
-   "portfolio": "BRK AMBIENTAL",
-   "group": "Conversão",
-   "indicator": "Índice de conversão",
-   "value": 0.0,
-   "unit": "%",
-   "cost": null,
-   "base": 438
-  },
-  {
    "id": "2026-07|159|Índice de conversão",
    "competency": "2026-07",
    "portfolio": "FIDC SINAI - CONSIGNADO",
@@ -4235,6 +4224,17 @@
    "base": 9
   },
   {
+   "id": "2026-10|158|Índice de conversão",
+   "competency": "2026-10",
+   "portfolio": "BRK AMBIENTAL",
+   "group": "Conversão",
+   "indicator": "Índice de conversão",
+   "value": 40.8,
+   "unit": "%",
+   "cost": null,
+   "base": 900
+  },
+  {
    "id": "2026-04|-1|Índice de conversão",
    "competency": "2026-04",
    "portfolio": "Todas as carteiras",
@@ -4273,10 +4273,10 @@
    "portfolio": "Todas as carteiras",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 51.5,
+   "value": 54.4,
    "unit": "%",
    "cost": null,
-   "base": 8161
+   "base": 7723
   },
   {
    "id": "2026-08|-1|Índice de conversão",
@@ -4306,10 +4306,10 @@
    "portfolio": "Todas as carteiras",
    "group": "Conversão",
    "indicator": "Índice de conversão",
-   "value": 36.5,
+   "value": 37.2,
    "unit": "%",
    "cost": null,
-   "base": 4843
+   "base": 5743
   },
   {
    "id": "2026-10|1|Clientes",
