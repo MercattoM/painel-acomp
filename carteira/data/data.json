@@ -1,6 +1,6 @@
 {
  "schema_version": "1.1.0",
- "generated_at": "2026-10-29T15:16:03-03:00",
+ "generated_at": "2026-10-30T08:10:01-03:00",
  "competencies": [
   "2025-12",
   "2026-01",
@@ -6554,7 +6554,7 @@
  ],
  "historico_brk_integracao": {
   "carteira": "BRK AMBIENTAL",
-  "atualizado_em": "2026-10-29T15:19:00-03:00",
+  "atualizado_em": "2026-10-30T08:13:53-03:00",
   "competencia_atual_preservada": "2026-10",
   "competencias_aplicadas": [
    "2026-05",
@@ -6572,5 +6572,4655 @@
    "Índice de conversão",
    "Caixa"
   ]
+ },
+ "period_comparison": {
+  "enabled": true,
+  "schema_version": "2.0.0",
+  "method": "portfolio_specific_cutoff_with_common_all_portfolios_cutoff",
+  "source": "Cada carteira usa as suas fontes; Todas as carteiras usa um corte comum conservador por grupo.",
+  "current_competency": "2026-10",
+  "previous_competency": "2026-09",
+  "generated_at": "2026-10-30T08:16:19-03:00",
+  "current_label": "Períodos equivalentes; corte por indicador/fonte",
+  "previous_label": "2026-09",
+  "cutoffs": {
+   "promessas": {
+    "label": "Promessas",
+    "current_label": "01/10/2026 a 24/10/2026",
+    "previous_label": "01/09/2026 a 24/09/2026",
+    "cutoff_date": "2026-10-24",
+    "previous_cutoff_date": "2026-09-24",
+    "cutoff_day": 24,
+    "previous_available": true,
+    "sources": [
+     {
+      "name": "Promessas.pagp_dchp",
+      "last_date": "2026-10-30"
+     },
+     {
+      "name": "Prom BRK.S",
+      "last_date": "2026-10-24"
+     }
+    ]
+   },
+   "conversao": {
+    "label": "Pagamentos e conversão",
+    "current_label": "01/10/2026 a 16/10/2026",
+    "previous_label": "01/09/2026 a 16/09/2026",
+    "cutoff_date": "2026-10-16",
+    "previous_cutoff_date": "2026-09-16",
+    "cutoff_day": 16,
+    "previous_available": true,
+    "sources": [
+     {
+      "name": "Conversão.DataVencimento",
+      "last_date": "2026-10-30"
+     },
+     {
+      "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+      "last_date": "2026-10-16"
+     },
+     {
+      "name": "Prom BRK.S",
+      "last_date": "2026-10-24"
+     },
+     {
+      "name": "Pag BRK.K (atualização dos pagamentos BRK)",
+      "last_date": "2026-10-24"
+     }
+    ]
+   },
+   "caixa": {
+    "label": "Caixa",
+    "current_label": "01/10/2026 a 16/10/2026",
+    "previous_label": "01/09/2026 a 16/09/2026",
+    "cutoff_date": "2026-10-16",
+    "previous_cutoff_date": "2026-09-16",
+    "cutoff_day": 16,
+    "previous_available": true,
+    "sources": [
+     {
+      "name": "Pagamentos.pag_dpag",
+      "last_date": "2026-10-16"
+     },
+     {
+      "name": "Pag BRK.K",
+      "last_date": "2026-10-24"
+     }
+    ]
+   },
+   "comissao": {
+    "label": "Comissão",
+    "current_label": "01/10/2026 a 16/10/2026",
+    "previous_label": "01/09/2026 a 16/09/2026",
+    "cutoff_date": "2026-10-16",
+    "previous_cutoff_date": "2026-09-16",
+    "cutoff_day": 16,
+    "previous_available": true,
+    "sources": [
+     {
+      "name": "Pagamentos.pag_dpag",
+      "last_date": "2026-10-16"
+     }
+    ]
+   },
+   "acionamentos": {
+    "label": "Acionamentos",
+    "current_label": "01/10/2026 a 14/10/2026",
+    "previous_label": "01/09/2026 a 14/09/2026",
+    "cutoff_date": "2026-10-14",
+    "previous_cutoff_date": "2026-09-14",
+    "cutoff_day": 14,
+    "previous_available": false,
+    "sources": [
+     {
+      "name": "Acionamentos.acie_dlan",
+      "last_date": "2026-10-14"
+     }
+    ]
+   },
+   "canais": {
+    "label": "Canais",
+    "current_label": "01/10/2026 a 13/10/2026",
+    "previous_label": "01/09/2026 a 13/09/2026",
+    "cutoff_date": "2026-10-13",
+    "previous_cutoff_date": "2026-09-13",
+    "cutoff_day": 13,
+    "previous_available": true,
+    "sources": [
+     {
+      "name": "Geral.DATA",
+      "last_date": "2026-10-13"
+     }
+    ]
+   }
+  },
+  "portfolio_cutoffs": {
+   "AREZZO": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "AREZZO PDD": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "BANCO DIGIMAIS - FASE I": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "BANCO DIGIMAIS - FASE II": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "BANCO DIGIMAIS - FASE III": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "BANCO DIGIMAIS - FASE IV": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "BANCO DIGIMAIS-FASE V": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "BANCO DIGIMAIS-FASE VI": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "BANRISUL": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "BRK AMBIENTAL": {
+    "promessas": {
+     "label": "Promessas BRK",
+     "current_label": "01/10/2026 a 24/10/2026",
+     "previous_label": "01/09/2026 a 24/09/2026",
+     "cutoff_date": "2026-10-24",
+     "previous_cutoff_date": "2026-09-24",
+     "cutoff_day": 24,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Prom BRK.S",
+       "last_date": "2026-10-24"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão BRK",
+     "current_label": "01/10/2026 a 24/10/2026",
+     "previous_label": "01/09/2026 a 24/09/2026",
+     "cutoff_date": "2026-10-24",
+     "previous_cutoff_date": "2026-09-24",
+     "cutoff_day": 24,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Prom BRK.S",
+       "last_date": "2026-10-24"
+      },
+      {
+       "name": "Pag BRK.K (atualização dos pagamentos BRK)",
+       "last_date": "2026-10-24"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa BRK",
+     "current_label": "01/10/2026 a 24/10/2026",
+     "previous_label": "01/09/2026 a 24/09/2026",
+     "cutoff_date": "2026-10-24",
+     "previous_cutoff_date": "2026-09-24",
+     "cutoff_day": 24,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pag BRK.K",
+       "last_date": "2026-10-24"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "DRACMA": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "FIDC SINAI - CONSIGNADO": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "GF PNEUS": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "Geral": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "HATIKVAH APREENDIDOS/ENTREGA": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "HATIKVAH PARTICIPACOES LTDA": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "HATIKVAH PARTICIPACOES LTDA JURIDIC": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "INNOVA - VEICULOS": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "SESC": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "SIMPALA": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "SIMPALA CONSIGNADO": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "SINOSSERRA": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "TABOR FIDC": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "TABOR FUNDO DE INV. - DIGIMAIS": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "TABOR II": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "TABOR JURIDICO II": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "YARDS - FACTA": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   },
+   "YARDS - REAG": {
+    "promessas": {
+     "label": "Promessas",
+     "current_label": "01/10/2026 a 30/10/2026",
+     "previous_label": "01/09/2026 a 30/09/2026",
+     "cutoff_date": "2026-10-30",
+     "previous_cutoff_date": "2026-09-30",
+     "cutoff_day": 30,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Promessas.pagp_dchp",
+       "last_date": "2026-10-30"
+      }
+     ]
+    },
+    "conversao": {
+     "label": "Pagamentos e conversão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Conversão.DataVencimento",
+       "last_date": "2026-10-30"
+      },
+      {
+       "name": "Pagamentos.pag_dpag (atualização dos pagamentos)",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "caixa": {
+     "label": "Caixa",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "comissao": {
+     "label": "Comissão",
+     "current_label": "01/10/2026 a 16/10/2026",
+     "previous_label": "01/09/2026 a 16/09/2026",
+     "cutoff_date": "2026-10-16",
+     "previous_cutoff_date": "2026-09-16",
+     "cutoff_day": 16,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Pagamentos.pag_dpag",
+       "last_date": "2026-10-16"
+      }
+     ]
+    },
+    "acionamentos": {
+     "label": "Acionamentos",
+     "current_label": "01/10/2026 a 14/10/2026",
+     "previous_label": "01/09/2026 a 14/09/2026",
+     "cutoff_date": "2026-10-14",
+     "previous_cutoff_date": "2026-09-14",
+     "cutoff_day": 14,
+     "previous_available": false,
+     "sources": [
+      {
+       "name": "Acionamentos.acie_dlan",
+       "last_date": "2026-10-14"
+      }
+     ]
+    },
+    "canais": {
+     "label": "Canais",
+     "current_label": "01/10/2026 a 13/10/2026",
+     "previous_label": "01/09/2026 a 13/09/2026",
+     "cutoff_date": "2026-10-13",
+     "previous_cutoff_date": "2026-09-13",
+     "cutoff_day": 13,
+     "previous_available": true,
+     "sources": [
+      {
+       "name": "Geral.DATA",
+       "last_date": "2026-10-13"
+      }
+     ]
+    }
+   }
+  },
+  "missing_optional_sources": [
+   "RCS.DATA/HORA DISPARO"
+  ],
+  "unavailable_metrics": {
+   "previous": {
+    "Acionamentos": "Sem histórico de 2026-09: a aba Acionamentos contém registros de 2026-10, mas nenhum registro datado de 2026-09. O valor anterior não será tratado como zero."
+   }
+  },
+  "explanation": "Cada carteira usa a data de corte das suas próprias fontes. A BRK usa Prom BRK e Pag BRK; não herda o corte da aba geral Pagamentos. Todas as carteiras usa, por indicador, o menor corte comum entre todas as fontes relevantes, para somar períodos equivalentes. O mês anterior usa o mesmo dia do calendário, limitado ao último dia do mês. Quando a fonte não contém histórico, o valor anterior fica indisponível (null), nunca é convertido em zero. Clientes e Saldo são posições.",
+  "portfolios": {
+   "AREZZO": {
+    "current": {
+     "metrics": {
+      "Promessas": 26,
+      "Pagamentos": 1,
+      "Índice de conversão": 7.1429,
+      "Caixa": 7561.61,
+      "Comissão": 1433.91,
+      "Acionamentos": 85
+     },
+     "bases": {
+      "Índice de conversão": 14
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 207.0,
+       "cost_total": 2.07
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 41,
+      "Pagamentos": 1,
+      "Índice de conversão": 4.7619,
+      "Caixa": 12003.98,
+      "Comissão": 2304.98,
+      "Acionamentos": null
+     },
+     "bases": {
+      "Índice de conversão": 21
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "AREZZO PDD": {
+    "current": {
+     "metrics": {
+      "Promessas": 0,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 266.14,
+      "Comissão": 69.0,
+      "Acionamentos": 2
+     },
+     "bases": {},
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 2,
+      "Pagamentos": 1,
+      "Índice de conversão": 100.0,
+      "Caixa": 240.57,
+      "Comissão": 21.87,
+      "Acionamentos": null
+     },
+     "bases": {
+      "Índice de conversão": 1
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "BANCO DIGIMAIS - FASE I": {
+    "current": {
+     "metrics": {
+      "Promessas": 917,
+      "Pagamentos": 588,
+      "Índice de conversão": 66.6667,
+      "Caixa": 679268.14,
+      "Comissão": 81712.76,
+      "Acionamentos": 10314
+     },
+     "bases": {
+      "Índice de conversão": 882
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 307.0,
+       "cost_total": 3.07
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 1609,
+      "Pagamentos": 621,
+      "Índice de conversão": 70.8904,
+      "Caixa": 667797.03,
+      "Comissão": 82148.04,
+      "Acionamentos": null
+     },
+     "bases": {
+      "Índice de conversão": 876
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "BANCO DIGIMAIS - FASE II": {
+    "current": {
+     "metrics": {
+      "Promessas": 370,
+      "Pagamentos": 232,
+      "Índice de conversão": 63.7363,
+      "Caixa": 266684.38,
+      "Comissão": 32223.64,
+      "Acionamentos": 5206
+     },
+     "bases": {
+      "Índice de conversão": 364
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 53.0,
+       "cost_total": 0.53
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 664,
+      "Pagamentos": 257,
+      "Índice de conversão": 62.3786,
+      "Caixa": 284230.4,
+      "Comissão": 34152.24,
+      "Acionamentos": null
+     },
+     "bases": {
+      "Índice de conversão": 412
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "BANCO DIGIMAIS - FASE III": {
+    "current": {
+     "metrics": {
+      "Promessas": 166,
+      "Pagamentos": 88,
+      "Índice de conversão": 55.0,
+      "Caixa": 107108.74,
+      "Comissão": 13713.54,
+      "Acionamentos": 2841
+     },
+     "bases": {
+      "Índice de conversão": 160
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 287,
+      "Pagamentos": 103,
+      "Índice de conversão": 55.0802,
+      "Caixa": 106100.82,
+      "Comissão": 13530.24,
+      "Acionamentos": null
+     },
+     "bases": {
+      "Índice de conversão": 187
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "BANCO DIGIMAIS - FASE IV": {
+    "current": {
+     "metrics": {
+      "Promessas": 112,
+      "Pagamentos": 43,
+      "Índice de conversão": 40.1869,
+      "Caixa": 55164.25,
+      "Comissão": 6861.7,
+      "Acionamentos": 2318
+     },
+     "bases": {
+      "Índice de conversão": 107
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 210,
+      "Pagamentos": 50,
+      "Índice de conversão": 36.4964,
+      "Caixa": 61913.35,
+      "Comissão": 8062.94,
+      "Acionamentos": null
+     },
+     "bases": {
+      "Índice de conversão": 137
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "BANCO DIGIMAIS-FASE V": {
+    "current": {
+     "metrics": {
+      "Promessas": 149,
+      "Pagamentos": 29,
+      "Índice de conversão": 20.8633,
+      "Caixa": 50720.78,
+      "Comissão": 6519.9,
+      "Acionamentos": 3044
+     },
+     "bases": {
+      "Índice de conversão": 139
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 302,
+      "Pagamentos": 48,
+      "Índice de conversão": 35.0365,
+      "Caixa": 82891.16,
+      "Comissão": 1973.13,
+      "Acionamentos": null
+     },
+     "bases": {
+      "Índice de conversão": 137
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 82.0,
+       "cost_total": 0.82
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "BANCO DIGIMAIS-FASE VI": {
+    "current": {
+     "metrics": {
+      "Promessas": 44,
+      "Pagamentos": 10,
+      "Índice de conversão": 26.3158,
+      "Caixa": 22413.2,
+      "Comissão": 2531.76,
+      "Acionamentos": 2670
+     },
+     "bases": {
+      "Índice de conversão": 38
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 80,
+      "Pagamentos": 7,
+      "Índice de conversão": 36.8421,
+      "Caixa": 15356.55,
+      "Comissão": 301.1,
+      "Acionamentos": null
+     },
+     "bases": {
+      "Índice de conversão": 19
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 1772.0,
+       "cost_total": 17.72
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "BANRISUL": {
+    "current": {
+     "metrics": {
+      "Promessas": 35,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": 0
+     },
+     "bases": {
+      "Índice de conversão": 35
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 61948.0,
+       "cost_total": 619.48
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 564,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": null
+     },
+     "bases": {
+      "Índice de conversão": 218
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 9002.0,
+       "cost_total": 360.08
+      },
+      "E-mail": {
+       "quantity": 2491.0,
+       "cost_total": 24.91
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "BRK AMBIENTAL": {
+    "current": {
+     "metrics": {
+      "Promessas": 900,
+      "Pagamentos": 367,
+      "Índice de conversão": 40.7778,
+      "Caixa": 5068814.75,
+      "Comissão": 0.0,
+      "Acionamentos": 1
+     },
+     "bases": {
+      "Índice de conversão": 900
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 807,
+      "Pagamentos": 318,
+      "Índice de conversão": 39.4052,
+      "Caixa": 4616206.04,
+      "Comissão": 0.0,
+      "Acionamentos": null
+     },
+     "bases": {
+      "Índice de conversão": 807
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "DRACMA": {
+    "current": {
+     "metrics": {
+      "Promessas": 9,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": 0
+     },
+     "bases": {
+      "Índice de conversão": 4
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 11,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": null
+     },
+     "bases": {
+      "Índice de conversão": 5
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "FIDC SINAI - CONSIGNADO": {
+    "current": {
+     "metrics": {
+      "Promessas": 9,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": 12
+     },
+     "bases": {
+      "Índice de conversão": 9
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 33,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": null
+     },
+     "bases": {
+      "Índice de conversão": 14
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "GF PNEUS": {
+    "current": {
+     "metrics": {
+      "Promessas": 10,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": 2
+     },
+     "bases": {
+      "Índice de conversão": 6
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 17,
+      "Pagamentos": 1,
+      "Índice de conversão": 11.1111,
+      "Caixa": 1279.74,
+      "Comissão": 100.26,
+      "Acionamentos": null
+     },
+     "bases": {
+      "Índice de conversão": 9
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "Geral": {
+    "current": {
+     "metrics": {
+      "Promessas": 0,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": 11
+     },
+     "bases": {},
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 10.0,
+       "cost_total": 0.1
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 0,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 382.0,
+      "Comissão": 0.0,
+      "Acionamentos": null
+     },
+     "bases": {},
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 2438.0,
+       "cost_total": 24.38
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "HATIKVAH APREENDIDOS/ENTREGA": {
+    "current": {
+     "metrics": {
+      "Promessas": 2,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": 6
+     },
+     "bases": {
+      "Índice de conversão": 2
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 2,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": null
+     },
+     "bases": {
+      "Índice de conversão": 2
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "HATIKVAH PARTICIPACOES LTDA": {
+    "current": {
+     "metrics": {
+      "Promessas": 1977,
+      "Pagamentos": 756,
+      "Índice de conversão": 53.579,
+      "Caixa": 1370267.43,
+      "Comissão": 95397.37,
+      "Acionamentos": 13909
+     },
+     "bases": {
+      "Índice de conversão": 1411
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 2267,
+      "Pagamentos": 803,
+      "Índice de conversão": 60.5581,
+      "Caixa": 1520570.55,
+      "Comissão": 112958.74,
+      "Acionamentos": null
+     },
+     "bases": {
+      "Índice de conversão": 1326
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 4738.0,
+       "cost_total": 47.38
+      },
+      "RCS": {
+       "quantity": 2093.0,
+       "cost_total": 230.23
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "HATIKVAH PARTICIPACOES LTDA JURIDIC": {
+    "current": {
+     "metrics": {
+      "Promessas": 25,
+      "Pagamentos": 15,
+      "Índice de conversão": 68.1818,
+      "Caixa": 84359.24,
+      "Comissão": 16321.13,
+      "Acionamentos": 314
+     },
+     "bases": {
+      "Índice de conversão": 22
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 37,
+      "Pagamentos": 12,
+      "Índice de conversão": 70.5882,
+      "Caixa": 72027.75,
+      "Comissão": 10464.79,
+      "Acionamentos": null
+     },
+     "bases": {
+      "Índice de conversão": 17
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "INNOVA - VEICULOS": {
+    "current": {
+     "metrics": {
+      "Promessas": 256,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": 532
+     },
+     "bases": {
+      "Índice de conversão": 150
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 502.0,
+       "cost_total": 20.08
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 246,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": null
+     },
+     "bases": {
+      "Índice de conversão": 137
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 1773.0,
+       "cost_total": 17.73
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "SESC": {
+    "current": {
+     "metrics": {
+      "Promessas": 0,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": 0
+     },
+     "bases": {},
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 1,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": null
+     },
+     "bases": {},
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "SIMPALA": {
+    "current": {
+     "metrics": {
+      "Promessas": 649,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": 2829
+     },
+     "bases": {
+      "Índice de conversão": 567
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 790,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": null
+     },
+     "bases": {
+      "Índice de conversão": 346
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "SIMPALA CONSIGNADO": {
+    "current": {
+     "metrics": {
+      "Promessas": 0,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": 10
+     },
+     "bases": {},
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 1,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": null
+     },
+     "bases": {},
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "SINOSSERRA": {
+    "current": {
+     "metrics": {
+      "Promessas": 19,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": 211
+     },
+     "bases": {
+      "Índice de conversão": 12
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 597.0,
+       "cost_total": 5.97
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 36,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": null
+     },
+     "bases": {
+      "Índice de conversão": 20
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "TABOR FIDC": {
+    "current": {
+     "metrics": {
+      "Promessas": 57,
+      "Pagamentos": 8,
+      "Índice de conversão": 17.7778,
+      "Caixa": 16403.29,
+      "Comissão": 2008.32,
+      "Acionamentos": 306
+     },
+     "bases": {
+      "Índice de conversão": 45
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 90,
+      "Pagamentos": 14,
+      "Índice de conversão": 27.451,
+      "Caixa": 21512.9,
+      "Comissão": 2682.8,
+      "Acionamentos": null
+     },
+     "bases": {
+      "Índice de conversão": 51
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "TABOR FUNDO DE INV. - DIGIMAIS": {
+    "current": {
+     "metrics": {
+      "Promessas": 0,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 450.68,
+      "Comissão": 0.0,
+      "Acionamentos": 6
+     },
+     "bases": {},
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 0,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 450.68,
+      "Comissão": 0.0,
+      "Acionamentos": null
+     },
+     "bases": {},
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "TABOR II": {
+    "current": {
+     "metrics": {
+      "Promessas": 0,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 2511.24,
+      "Comissão": 62.78,
+      "Acionamentos": 8
+     },
+     "bases": {},
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 0,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 2324.42,
+      "Comissão": 58.08,
+      "Acionamentos": null
+     },
+     "bases": {},
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "TABOR JURIDICO II": {
+    "current": {
+     "metrics": {
+      "Promessas": 0,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 360.89,
+      "Comissão": 0.0,
+      "Acionamentos": 2
+     },
+     "bases": {},
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 0,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 2751.29,
+      "Comissão": 0.0,
+      "Acionamentos": null
+     },
+     "bases": {},
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "YARDS - FACTA": {
+    "current": {
+     "metrics": {
+      "Promessas": 6,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": 5
+     },
+     "bases": {
+      "Índice de conversão": 6
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 2,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": null
+     },
+     "bases": {},
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "YARDS - REAG": {
+    "current": {
+     "metrics": {
+      "Promessas": 1,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": 0
+     },
+     "bases": {
+      "Índice de conversão": 1
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 2,
+      "Pagamentos": 0,
+      "Índice de conversão": 0.0,
+      "Caixa": 0.0,
+      "Comissão": 0.0,
+      "Acionamentos": null
+     },
+     "bases": {},
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   },
+   "Todas as carteiras": {
+    "current": {
+     "metrics": {
+      "Promessas": 5457,
+      "Pagamentos": 2034,
+      "Índice de conversão": 44.2462,
+      "Caixa": 6269774.13,
+      "Comissão": 258855.81,
+      "Acionamentos": 44644
+     },
+     "bases": {
+      "Índice de conversão": 4597.0
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "E-mail": {
+       "quantity": 63624.0,
+       "cost_total": 651.3
+      },
+      "RCS": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    },
+    "previous": {
+     "metrics": {
+      "Promessas": 6530,
+      "Pagamentos": 2099,
+      "Índice de conversão": 47.2429,
+      "Caixa": 5886487.28,
+      "Comissão": 268759.21,
+      "Acionamentos": null
+     },
+     "bases": {
+      "Índice de conversão": 4443.0
+     },
+     "channels": {
+      "SMS simples": {
+       "quantity": 9002.0,
+       "cost_total": 360.08
+      },
+      "E-mail": {
+       "quantity": 13294.0,
+       "cost_total": 132.94
+      },
+      "RCS": {
+       "quantity": 2093.0,
+       "cost_total": 230.23
+      },
+      "URA": {
+       "quantity": 0.0,
+       "cost_total": 0.0
+      }
+     }
+    }
+   }
+  }
  }
 }

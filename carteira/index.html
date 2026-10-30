@@ -433,6 +433,175 @@ function aplicarDig(){
   for(const c in R0) R[c] = juntaR(R0[c]);
   for(const c in C0) C[c] = juntaC(C0[c]);
 }
+function periodSide(comp){
+  const p = D && D.period_comparison;
+  if(!st.cmp || !p || !p.enabled || st.comp !== p.current_competency) return null;
+  if(comp === p.current_competency) return "current";
+  if(comp === p.previous_competency) return "previous";
+  return null;
+}
+// Resolve os cortes específicos da carteira sem depender de caixa, acentos ou espaços no nome.
+function normalizaChaveCorte(value){
+  return String(value == null ? "" : value).normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .toUpperCase().replace(/[^A-Z0-9]+/g, " ").trim();
+}
+function extrairCortesCarteira(value){
+  if(!value || typeof value !== "object") return null;
+  for(const key of ["cutoffs", "portfolio_cutoffs", "cutoff_plan", "period_cutoffs"]){
+    if(value[key] && typeof value[key] === "object") return value[key];
+  }
+  // O objeto de cortes por indicador tem chaves como promessas, conversao e caixa.
+  if(["promessas", "conversao", "caixa", "comissao", "acionamentos", "canais"].some(k => Object.prototype.hasOwnProperty.call(value, k))) return value;
+  return null;
+}
+function cortesDaCarteira(periodCfg, cart){
+  const comuns = periodCfg.cutoffs || {};
+  if(cart === ALL) return comuns;
+  const chaveAlvo = normalizaChaveCorte(cart);
+  const isBRK = chaveAlvo.includes("BRK");
+  const aliases = new Set([chaveAlvo, normalizaChaveCorte(nome(cart))]);
+  if(isBRK){
+    ["BRK", "BRK AMBIENTAL", "BRK AMBIENTAL 158", "158"].forEach(x => aliases.add(normalizaChaveCorte(x)));
+  }
+  const fontes = [
+    periodCfg.portfolio_cutoffs,
+    periodCfg.cutoffs_by_portfolio,
+    periodCfg.portfolios_cutoffs
+  ];
+  for(const fonte of fontes){
+    if(!fonte || typeof fonte !== "object") continue;
+    if(!Array.isArray(fonte)){
+      for(const alias of aliases){
+        for(const [key, value] of Object.entries(fonte)){
+          if(normalizaChaveCorte(key) === alias){
+            const result = extrairCortesCarteira(value);
+            if(result) return result;
+          }
+        }
+      }
+      // Algumas versões do gerador acrescentam o identificador ou descrição à chave da BRK.
+      if(isBRK){
+        for(const [key, value] of Object.entries(fonte)){
+          if(normalizaChaveCorte(key).includes("BRK")){
+            const result = extrairCortesCarteira(value);
+            if(result) return result;
+          }
+        }
+      }
+    } else {
+      for(const item of fonte){
+        if(!item || typeof item !== "object") continue;
+        const names = [item.portfolio, item.nome, item.name, item.carteira, item.id].map(normalizaChaveCorte);
+        if(names.some(key => aliases.has(key)) || (isBRK && names.some(key => key.includes("BRK")))){
+          const result = extrairCortesCarteira(item);
+          if(result) return result;
+        }
+      }
+    }
+  }
+  // Compatibilidade com JSONs que guardam os cortes junto aos dados de cada carteira.
+  const carteira = periodCfg.portfolios && periodCfg.portfolios[cart];
+  const embutidos = extrairCortesCarteira(carteira);
+  if(embutidos) return embutidos;
+  if(isBRK){
+    for(const [key, value] of Object.entries(periodCfg.portfolios || {})){
+      if(normalizaChaveCorte(key).includes("BRK")){
+        const result = extrairCortesCarteira(value);
+        if(result) return result;
+      }
+    }
+    // Não exibir os cortes gerais como se fossem os cortes próprios da BRK.
+    return null;
+  }
+  return comuns;
+}
+function periodEntry(comp, cart){
+  const side = periodSide(comp);
+  if(!side) return null;
+  const p = D.period_comparison;
+  const portfolio = cart === ALL ? TOD : cart;
+  if(st.dig && portfolio === DIG){
+    const phases = Object.entries(p.portfolios || {})
+      .filter(([name, value]) => /^BANCO DIGIMAIS/i.test(name) && value && value[side])
+      .map(([name, value]) => value[side]);
+    if(!phases.length) return null;
+    const metrics = {}, bases = {}, channels = {};
+    const indicadores = ["Promessas","Pagamentos","Caixa","Comissão","Acionamentos"];
+    for(const ind of indicadores){
+      const values = phases.map(row => (row.metrics || {})[ind]);
+      metrics[ind] = values.some(value => value == null)
+        ? null
+        : values.reduce((sum, value) => sum + Number(value || 0), 0);
+    }
+    bases["Índice de conversão"] = phases.reduce((sum, row) => sum + Number((row.bases || {})["Índice de conversão"] || 0), 0);
+    metrics["Índice de conversão"] = bases["Índice de conversão"]
+      ? 100 * metrics["Pagamentos"] / bases["Índice de conversão"] : 0;
+    for(const row of phases){
+      for(const [ch, val] of Object.entries(row.channels || {})){
+        if(!channels[ch]) channels[ch] = {quantity:0, cost_total:0};
+        channels[ch].quantity += Number(val.quantity || 0);
+        channels[ch].cost_total += Number(val.cost_total || 0);
+      }
+    }
+    return {metrics, bases, channels};
+  }
+  const item = p.portfolios && p.portfolios[portfolio];
+  return item && item[side] ? item[side] : null;
+}
+// -- Comparativo: valores de exibição separados dos valores equivalentes --
+function periodMetric(comp, cart, ind){
+  const entry = periodEntry(comp, cart);
+  if(!entry || !entry.metrics || !Object.prototype.hasOwnProperty.call(entry.metrics, ind)) return null;
+  const value = entry.metrics[ind];
+  return value == null ? null : Number(value);
+}
+function periodChannel(comp, cart, ch){
+  const entry = periodEntry(comp, cart);
+  if(!entry || !entry.channels || !Object.prototype.hasOwnProperty.call(entry.channels, ch)) return null;
+  const item = entry.channels[ch];
+  if(!item) return null;
+  return {
+    q: item.quantity == null ? null : Number(item.quantity),
+    c: item.cost_total == null ? null : Number(item.cost_total)
+  };
+}
+function periodMessages(comp, cart){
+  let total = 0, found = false;
+  for(const ch of CH){
+    const item = periodChannel(comp, cart, ch);
+    if(item && item.q != null && Number.isFinite(item.q)){
+      total += item.q;
+      found = true;
+    }
+  }
+  return found ? total : null;
+}
+function periodCost(comp, cart){
+  let total = 0, found = false;
+  for(const ch of CH){
+    const item = periodChannel(comp, cart, ch);
+    if(item && item.c != null && Number.isFinite(item.c)){
+      total += item.c;
+      found = true;
+    }
+  }
+  return found ? r2(total) : null;
+}
+function periodKpiValue(comp, cart, label, fallback){
+  // Clientes é uma fotografia da carteira; compara posições, não períodos MTD.
+  if(label === "Clientes") return fallback;
+  if(label === "Mensagens") return periodMessages(comp, cart);
+  const map = {
+    "Acionamentos":"Acionamentos",
+    "Promessas":"Promessas",
+    "Pagamentos":"Pagamentos",
+    "Conversão":CONV,
+    "Comissão":"Comissão"
+  };
+  if(!Object.prototype.hasOwnProperty.call(map, label)) return fallback;
+  return periodMetric(comp, cart, map[label]);
+}
+
 function rv(comp, cart, ind){
   const m = R[comp]; if(!m) return null;
   if(cart !== ALL){ const r = m[cart] && m[cart][ind]; return r ? {v:r.value, base:r.base} : null; }
@@ -511,41 +680,74 @@ function kpis(){
     const v = d.g(st.comp);
     let extra = "";
     if(on){
-      const p = pc ? d.g(pc) : null;
-      if(v==null || p==null) extra = '<div class="kd"><span>sem mês anterior para comparar</span></div>';
-      else {
+      const periodCfg = D && D.period_comparison;
+      const periodMode = !!(periodCfg && periodCfg.enabled && st.comp === periodCfg.current_competency);
+      const useEquivalentPeriod = periodMode && d.l !== "Clientes";
+      // v is always the full current-month value shown in the KPI.
+      // Separate values are used only to calculate the comparison delta.
+      const compareCurrent = useEquivalentPeriod ? periodKpiValue(st.comp, cart, d.l, v) : v;
+      const p = pc ? (useEquivalentPeriod ? periodKpiValue(pc, cart, d.l, d.g(pc)) : d.g(pc)) : null;
+      if(compareCurrent==null || p==null) {
+        extra = '<div class="kd"><span>'+(periodMode ? "sem histórico comparável" : "sem mês anterior para comparar")+'</span></div>';
+      } else {
         let delta;
-        if(d.pp){ const x = Math.round((v-p)*10)/10; delta = '<span class="'+(x>=0?"up":"dn")+'">'+(x>=0?"↑ +":"↓ ")+nD.format(x).replace(/,00$/,",0")+" p.p.</span>"; }
+        if(d.pp){ const x = Math.round((compareCurrent-p)*10)/10; delta = '<span class="'+(x>=0?"up":"dn")+'">'+(x>=0?"↑ +":"↓ ")+nD.format(x).replace(/,00$/,",0")+" p.p.</span>"; }
         else if(p===0) delta = '<span>sem base anterior</span>';
-        else { const x = (v-p)/Math.abs(p)*100; delta = '<span class="'+(x>=0?"up":"dn")+'">'+(x>=0?"↑ +":"↓ ")+nD.format(x)+"%</span>"; }
-        extra = '<div class="kd">'+delta+'<span class="pv">'+pLab+": "+d.f(p)+'</span></div>';
+        else { const x = (compareCurrent-p)/Math.abs(p)*100; delta = '<span class="'+(x>=0?"up":"dn")+'">'+(x>=0?"↑ +":"↓ ")+nD.format(x)+"%</span>"; }
+        const baseline = useEquivalentPeriod
+          ? 'Período equivalente: atual '+d.f(compareCurrent)+' · '+pLab+': '+d.f(p)
+          : pLab+": "+d.f(p);
+        extra = '<div class="kd">'+delta+'<span class="pv">'+baseline+'</span></div>';
       }
     }
     return '<div class="panel kpi'+(on?" cmpon":"")+'">'+ico(d.i)+'<div class="kb"><div class="kl">'+d.l+'</div><div class="kv'+(d.sm?" sm":"")+'">'+d.f(v)+'</div>'+extra+'</div></div>';
   }).join("");
   const nt = $("cmpNote");
   nt.className = "cmpnote"+(on?" on":"");
-  nt.innerHTML = on ? (pc ? "Comparando <b>"+rotulo(st.comp)+"</b> com <b>"+rotulo(pc)+"</b>."+(emAndamento(st.comp)?" O mês atual está em andamento, então as variações podem aparecer menores que o fechamento real.":"") : "Não há mês anterior para comparar.") : "";
+  const periodCfg = D && D.period_comparison;
+  const periodMode = !!(on && periodCfg && periodCfg.enabled && st.comp === periodCfg.current_competency);
+  if(!on){
+    nt.innerHTML = "";
+  } else if(!pc){
+    nt.innerHTML = "Não há mês anterior para comparar.";
+  } else if(periodMode){
+    const ordem = [["promessas","Promessas"],["conversao","Pagamentos e conversão"],["caixa","Caixa"],["comissao","Comissão"],["acionamentos","Acionamentos"],["canais","Canais"]];
+    const walletCuts = cortesDaCarteira(periodCfg, st.cart);
+    const detalhes = walletCuts ? ordem.map(([chave,nome])=>{
+      const w = walletCuts[chave];
+      if(!w) return "";
+      if(w.previous_available === false) return "<b>"+esc(nome)+"</b>: "+esc(w.current_label)+" · sem histórico comparável";
+      return "<b>"+esc(nome)+"</b>: "+esc(w.current_label)+" vs. "+esc(w.previous_label);
+    }).filter(Boolean).join(" · ") : "";
+    const semHistorico = Object.entries(((periodCfg.unavailable_metrics || {}).previous) || {}).map(([nome,motivo])=>"<br><b>Sem comparação — "+esc(nome)+":</b> "+esc(motivo)).join("");
+    const avisoCortes = !walletCuts
+      ? "<br><b>Atenção:</b> o JSON de comparação não contém cortes específicos localizáveis para "+esc(nome(st.cart))+". Os cortes gerais não serão apresentados como se fossem os desta carteira."
+      : "";
+    nt.innerHTML = "Os valores principais continuam mostrando o total disponível do mês. As variações e os gráficos desta comparação usam períodos equivalentes por indicador para <b>"+esc(nome(st.cart))+"</b>:<br>"+(detalhes || (walletCuts ? "Os cortes não estão definidos para todos os indicadores." : ""))+avisoCortes+semHistorico+"<br>Clientes e Saldo são fotografias da carteira e continuam comparados como posições.";
+  } else {
+    nt.innerHTML = "Comparando <b>"+rotulo(st.comp)+"</b> com <b>"+rotulo(pc)+"</b>."+(emAndamento(st.comp)?" O mês atual está em andamento.":"");
+  }
+
 }
 
 function tabela(){
   const c = st.comp, k = st.cart, {y,m} = parse(c);
   $("tTit").textContent = "Visão Carteira — " + MESES[m-1] + "/" + y;
-  
+
   // Garante que a linha renderiza 3 colunas de dados após o Grupo: Indicador, Valor e Custo
   const row = (g, gc, rows) => rows.map((r,i) => '<tr'+(i===0?' class="grp"':'')+'>'+(i===0?'<td class="g" style="--c:'+gc+'" rowspan="'+rows.length+'">'+g+'</td>':'')
       +'<td>'+r[0]+'</td><td>'+r[1]+'</td><td class="r">'+r[2]+'</td></tr>').join("");
-      
+
   const v = (ind, f) => { const x = val(c,k,ind); return x==null ? '<span class="na">—</span>' : f(x); };
-  
+
   // Canais: [Canal, Quantidade (Valor), Custo Total (Custo)]
-  const chRows = CH.map(ch => { 
+  const chRows = CH.map(ch => {
     const x = cv(c,k,ch);
-    return [ch, x ? fI(x.q) : '<span class="na">—</span>', x ? fB(x.c) : '<span class="na">—</span>']; 
+    return [ch, x ? fI(x.q) : '<span class="na">—</span>', x ? fB(x.c) : '<span class="na">—</span>'];
   });
-  
+
   const dash = '<span class="na">—</span>';
-  
+
   // Atribuindo o traço (dash) na coluna de Custo para os indicadores gerais que não possuem custo direto
   $("tb").innerHTML =
     row("Carteira","#13c9a0",[
@@ -581,8 +783,23 @@ function custos(){
   const tot = rows.reduce((s,r)=>s+(r.x?r.x.c:0),0);
   $("dTot").textContent = fB(tot); $("cTot").textContent = fB(tot);
   const pcx = prevComp(c); let td = "";
-  if(st.cmp){ const pt = pcx ? custo(pcx,k) : null;
-    td = pt==null ? "sem mês anterior" : (pt===0 ? "mês anterior: R$ 0,00" : (()=>{ const x=(tot-pt)/pt*100; return '<span class="'+(x<=0?"up":"dn")+'">'+(x>=0?"↑ +":"↓ ")+nD.format(x)+"%</span> · "+MABR[parse(pcx).m-1]+": "+fB(pt); })()); }
+  const periodCfg = D && D.period_comparison;
+  const periodMode = !!(st.cmp && periodCfg && periodCfg.enabled && c === periodCfg.current_competency);
+  if(st.cmp){
+    const currentCompared = periodMode ? periodCost(c,k) : tot;
+    const pt = pcx ? (periodMode ? periodCost(pcx,k) : custo(pcx,k)) : null;
+    if(currentCompared==null || pt==null){
+      td = periodMode ? "sem histórico comparável" : "sem mês anterior";
+    } else if(pt===0){
+      td = periodMode ? "período equivalente anterior: R$ 0,00" : "mês anterior: R$ 0,00";
+    } else {
+      const x=(currentCompared-pt)/Math.abs(pt)*100;
+      const delta = '<span class="'+(x<=0?"up":"dn")+'">'+(x>=0?"↑ +":"↓ ")+nD.format(x)+"%</span>";
+      td = periodMode
+        ? delta+' · equivalente: atual '+fB(currentCompared)+' vs. '+MABR[parse(pcx).m-1]+': '+fB(pt)
+        : delta+' · '+MABR[parse(pcx).m-1]+': '+fB(pt);
+    }
+  }
   $("cTotD").innerHTML = td;
   // donut
   const Cc = 2*Math.PI*45; let off = 0, h = '<circle cx="60" cy="60" r="45" stroke="rgba(120,170,255,.14)" fill="none" stroke-width="22"/>';
@@ -642,32 +859,44 @@ function barChart(id, cats, series, fmt, tip){
 }
 
 function graficos(){
-  const c = st.comp, k = st.cart, i = comps.indexOf(c), win = comps.slice(Math.max(0,i-5), i+1), lab = win.map(x=>MABR[parse(x).m-1]);
+  const c = st.comp, k = st.cart, i = comps.indexOf(c);
+  const periodCfg = D && D.period_comparison;
+  const periodMode = !!(st.cmp && periodCfg && periodCfg.enabled && c === periodCfg.current_competency);
+  const win = periodMode ? [periodCfg.previous_competency, periodCfg.current_competency] : comps.slice(Math.max(0,i-5), i+1);
+  const lab = win.map(x=>MABR[parse(x).m-1]);
   // 1 evolução
   const e1 = [["Promessas","#8b5cf6"],["Pagamentos","#f6b73c"]];
   legend("lg1", e1);
-  lineChart("c1", lab, e1.map(([n,col])=>({name:n,color:col,values:win.map(x=>val(x,k,n))})));
+  lineChart("c1", lab, e1.map(([n,col])=>({name:n,color:col,values:win.map(x=>periodMode?periodMetric(x,k,n):val(x,k,n))})));
   $("n1").textContent = win.some(x=>x<"2026-08") ? "Promessas antes de ago/2026 podem estar incompletas." : "";
   // 2 comparativo por carteira (top 4 do mês)
-  const top = ranking(c).slice(0,4);
+  const top = (periodMode
+    ? Object.keys((periodCfg && periodCfg.portfolios) || {})
+        .filter(p=>p!==TOD && p!=="Geral" && naBase(p))
+        .map(p=>({p, s:(periodMetric(c,p,"Promessas")||0)+(periodMetric(c,p,"Pagamentos")||0)+(periodMessages(c,p)||0)/1000}))
+        .filter(x=>x.s>0).sort((a,b)=>b.s-a.s).map(x=>x.p)
+    : ranking(c)).slice(0,4);
   const e2 = [["Promessas","#13c9a0"],["Pagamentos","#2d6cff"]];
   legend("lg2", e2);
-  barChart("c2", top.map(nome).map(n=>n.replace("DIGIMAIS FASE","DIG.").replace(DIG,"DIGIMAIS"))   , e2.map(([n,col])=>({name:n,color:col,values:top.map(p=>val(c,p,n))})), t=>nC.format(t), t=>nI.format(t));
+  barChart("c2", top.map(nome).map(n=>n.replace("DIGIMAIS FASE","DIG.").replace(DIG,"DIGIMAIS"))   , e2.map(([n,col])=>({name:n,color:col,values:top.map(p=>periodMode?periodMetric(c,p,n):val(c,p,n))})), t=>nC.format(t), t=>nI.format(t));
   // 3 volume por canal
-  const q = CH.map(ch=>({ch, x:cv(c,k,ch)})).filter(r=>r.ch!=="URA"||r.x);
+  const q = CH.map(ch=>({ch, x:periodMode?periodChannel(c,k,ch):cv(c,k,ch)})).filter(r=>r.ch!=="URA"||r.x);
   const mx = Math.max(0,...q.map(r=>r.x?r.x.q:0));
   $("c3").innerHTML = mx>0 ? '<div class="hb">'+q.map(r=>'<div><span>'+r.ch+'</span><span class="tr"><i style="width:'+(r.x?Math.max(r.x.q/mx*100,1.5):0)+'%;background:'+CHC[r.ch]+'"></i></span><b class="num">'+fI(r.x?r.x.q:0)+'</b></div>').join("")+'</div>' : '<div class="empty">Sem envios neste período.</div>';
   // 4 conversão
   legend("lg4", [["Índice de conversão","#27c4ff"]]);
-  const cvals = win.map(x=>val(x,k,CONV));
+  const cvals = win.map(x=>periodMode?periodMetric(x,k,CONV):val(x,k,CONV));
   if(cvals.every(v=>v==null)) vazio("c4", k===ALL ? "Conversão consolidada indisponível neste data.json (requer v1.1.0 com “base”)." : "Sem dados neste período.");
   else lineChart("c4", lab, [{name:"Conversão",color:"#27c4ff",values:cvals}], {min:0,max:100,fmt:t=>nI.format(t)+"%",tip:t=>nD.format(t).replace(/,00$/,",0")+"%",badge:true});
   const b = rv(c,k,CONV); $("n4").textContent = b && b.base!=null && b.base<30 ? "Base pequena ("+b.base+" promessas): leia com cautela." : "";
   // 5 custos por carteira
-  const ct = carteirasDe(c).map(p=>({p, v:custo(c,p)})).filter(x=>x.v>0).sort((a,b)=>b.v-a.v).slice(0,3);
+  const costPortfolios = periodMode
+    ? Object.keys((periodCfg && periodCfg.portfolios) || {}).filter(p=>p!==TOD && p!=="Geral" && naBase(p))
+    : carteirasDe(c);
+  const ct = costPortfolios.map(p=>({p, v:periodMode?periodCost(c,p):custo(c,p)})).filter(x=>x.v>0).sort((a,b)=>b.v-a.v).slice(0,3);
   legend("lg5", ct.map((x,j)=>[nome(x.p),SER[j]]));
   const chs = CH.filter(ch=>ch!=="URA");
-  barChart("c5", chs, ct.map((x,j)=>({name:nome(x.p),color:SER[j],values:chs.map(ch=>{const y=cv(c,x.p,ch);return y?y.c:null;})})), t=>nC.format(t), t=>fB(t));
+  barChart("c5", chs, ct.map((x,j)=>({name:nome(x.p),color:SER[j],values:chs.map(ch=>{const y=periodMode?periodChannel(c,x.p,ch):cv(c,x.p,ch);return y?y.c:null;})})), t=>nC.format(t), t=>fB(t));
 }
 
 /* ---------- controles ---------- */
@@ -752,7 +981,7 @@ $("dig").onclick = () => {
   if(st.dig && DIG_RE.test(st.cart)) st.cart = DIG; else if(!st.dig && st.cart===DIG) st.cart = ALL;
   aplicarDig(); render();
 };
-$("cmp").onclick = () => { st.cmp = !st.cmp; $("cmp").setAttribute("aria-checked", String(st.cmp)); kpis(); custos(); };
+$("cmp").onclick = () => { st.cmp = !st.cmp; $("cmp").setAttribute("aria-checked", String(st.cmp)); render(); };
 
 function erro(msg){ const al = $("alert"); al.className = "alert err"; al.style.display = "block"; al.innerHTML = "<b>Não foi possível carregar a base.</b> "+esc(msg); }
 async function carregar(primeira){
